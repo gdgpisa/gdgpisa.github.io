@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Android Async HTTP Clients</title>
+
+    <meta name="description" content="Presentation for 'Android Async HTTP Clients' seminar @IO Extended 2016 Pisa">
+    <meta name="author" content="Nicola Corti">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/material.css" id="theme">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/darkula.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+        <section class="home">
+            <h1>Android Async HTTP Client</h1>
+            <h4>...or <i>How I learnt to do not reinvent the wheel</i></h4>
+            <p>
+                <small style="float: left">Nicola Corti</small>
+                <small style="float: right"><i class="fa fa-google" aria-hidden="true"></i> Google Developer Group Pisa
+                </small>
+            </p>
+        </section>
+
+        <section data-background="img/back_nic.jpg">
+            <div style="width: 100%;">
+                <div class="author nico">
+                    <h3><strong>Nicola Corti</strong></h3>
+                    <p class="job">
+                        <strong>Android Software Engineer<br/>@ Monetas AG</strong>
+                    </p>
+                    <p class="contacts">
+                        <i class="fa fa-paper-plane"></i> <a
+                            href="mailto:corti.nico@gmail.com"><strong>corti.nico@gmail.com</strong></a><br/>
+                        <i class="fa fa-twitter"></i> <a
+                            href="https://twitter.com/cortinico"><strong>@cortinico</strong></a><br/>
+                        <i class="fa fa-github"></i> <a
+                            href="https://github.com/cortinico"><strong>github.com/cortinico</strong></a>
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Is this talk for you...?</h3>
+            <ul>
+                <li class="fragment">Are you an Android/Java Developer?</li>
+                <li class="fragment">Have you ever done an HTTP request?</li>
+                <li class="fragment myred">...are you still using plain <b>HttpUrlConnection</b>?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Android Vanilla</h2>
+            <section>
+                <blockquote class="smallquote fragment colored">
+                    <p>Prior to Froyo, HttpURLConnection had some frustrating bugs.
+                        In particular, calling close() on a readable InputStream could poison the connection pool...</p>
+                    <p class="fragment">...the large size of this API makes it difficult for us to improve it without
+                        breaking
+                        compatibility. The Android team is not actively working on Apache HTTP Client.</p>
+                    <p class="fragment quotefooter">From <a target="_blank"
+                                                            href="http://android-developers.blogspot.it/2011/09/androids-http-clients.html">Android's
+                        HTTP Clients - Android Developers Blog</a></p>
+                </blockquote>
+            </section>
+            <section>
+                <pre><code class="hljs java" contenteditable data-noescape>
+public static JSONObject requestRestResponse() {
+    HttpURLConnection urlConnection = null;
+    try {
+        // create connection
+        URL urlToRequest = new URL("http://mybackend.com/v1/req");
+        urlConnection = (HttpURLConnection)
+            urlToRequest.openConnection();
+        urlConnection.setConnectTimeout(CONNECTION_TIMEOUT);
+        urlConnection.setReadTimeout(DATARETRIEVAL_TIMEOUT);
+                </code></pre>
+            </section>
+            <section><pre><code class="hljs java" contenteditable data-noescape>
+        // handle issues
+        int statusCode = urlConnection.getResponseCode();
+        if (statusCode == HttpURLConnection.HTTP_UNAUTHORIZED) {
+            // handle unauthorized (if service requires user login)
+        } else if (statusCode != HttpURLConnection.HTTP_OK) {
+            // handle any other errors, like 404, 500,..
+        }
+
+        // create JSON object from content
+        InputStream in =
+            new BufferedInputStream(urlConnection.getInputStream());
+        return new JSONObject(getResponseText(in));
+                </code></pre>
+            </section>
+            <section><pre><code class="hljs java" contenteditable data-noescape>
+    } catch (MalformedURLException e) {
+        // URL is invalid
+    } catch (SocketTimeoutException e) {
+        // data retrieval or connection timed out
+    } catch (IOException e) {
+        // could not read response body
+    } catch (JSONException e) {
+        // response body is no valid JSON string
+    <span class="fragment current-visible">}
+    return null;
+}</span><span class="fragment current-visible">} finally {
+        if (urlConnection != null) {
+            // Don't forget to release resources
+            urlConnection.disconnect();
+        }
+    }
+    return null;
+}</span></code></pre>
+            </section>
+            <section>
+                <img src="img/wtf.jpg" style="alignment: center">
+            </section>
+            <section>
+                <br/>
+                <p class="fragment">Don't forget about <b>NetworkOnMainThreadException</b>. The most common
+                    solution for this kind of problems are <b>AsyncTasks</b>!</p>
+                <p class="fragment">Have you ever wrote?</p>
+            <pre class="fragment noshadow"><code class="hljs java" contenteditable data-noescape>
+@Override
+protected void onPostExecute(String result) {
+  <span class="fragment">if (getActivity() == null){
+    return; <span class="fragment">// Here Activity is gone...</span>
+  }
+  ...</span>
+}
+            </code>
+            </pre>
+            </section>
+            <section>
+                What about...?<br/>
+                <ul>
+                    <li class="fragment">Request cancellation</li>
+                    <li class="fragment">Parallel request</li>
+                    <li class="fragment">Scheduling</li>
+                    <li class="fragment">Caching</li>
+                    <li class="fragment myred">...and <b>boilerplate?</b></li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h2>HTTP Client libraries</h2>
+            <section>
+                <img src="img/donotreinvent.jpg" style="alignment: center"/>
+            </section>
+            <section>
+                <br/>
+                <p>If you have more than</p>
+                <p class="fragment grow">1K lines</p>
+                <p>of code for creating and handling your HTTP requests...</p>
+                <br/>
+                <p class="fragment grow highlight-red"><b>Ask yourself if you're doing it right!</b></p>
+            </section>
+            <section>
+                There a bunch of good HTTP clients for Android!<br/>
+                <ul>
+                    <li class="fragment">Retrofit</li>
+                    <li class="fragment">Volley</li>
+                    <li class="fragment">OkHTTP</li>
+                    <li class="fragment">Picasso</li>
+                    <li class="fragment">...and more</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h2>Retrofit 2.0</h2>
+            <section>
+                <ul>
+                    <li class="fragment">From <a target="_blank" href="http://square.github.io/">square.github.io</a>
+                    </li>
+                    <li class="fragment">Works with <b>Java Annotations</b></li>
+                    <li class="fragment">Support both <b>Sync/Async</b> execution</li>
+                    <li class="fragment"><b>Apache 2 Licensed</b></li>
+                    <li class="fragment">Recently released (<b>2016-03-11 v2.0.0</b>)</li>
+                </ul>
+                <pre class="fragment"><code class="hljs groovy" contenteditable data-noescape>
+compile 'com.squareup.retrofit2:retrofit:2.0.0'
+                </code></pre>
+            </section>
+        </section>
+
+        <section>
+            <h2>Usage</h2>
+            <section>
+                Just use @<i>&lt;VERB&gt;</i> annotations.
+                <pre><code class="hljs java markable" data-trim contenteditable data-noescape>
+public interface GitHubService {
+  <span class="fragment">@GET("users/{user}/repos")</span>
+  <span class="fragment">Call&lt;List&lt;Repo&gt;&gt; listRepos(@Path(&quot;user&quot;) String user);</span>
+}
+            </code></pre>
+                <pre class="fragment"><code class="hljs java" data-trim contenteditable data-noescape>
+Retrofit retrofit = new Retrofit.Builder()
+    <span class="fragment">.baseUrl("https://api.github.com/")</span>
+    <span class="fragment">.build();</span>
+
+<span class="fragment">GitHubService service</span><span
+        class="fragment"> = retrofit.create(GitHubService.class);</span>
+                </code></pre>
+            </section>
+
+            <section>
+                Paths and Queries
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+public interface GitHubService {
+  <span class="fragment">@GET("users/{user}/repos")
+  Call&lt;List&lt;Repo&gt;&gt; listRepos(
+            @Path("user") String user);</span>
+
+  <span class="fragment">@GET("users/{user}/repos")
+  Call&lt;List&lt;Repo&gt;&gt; listRepos(
+            @Path("user") String user,
+            @Query("type") String type);</span>
+
+  <span class="fragment">@GET("users/{user}/repos")
+  Call&lt;List&lt;Repo&gt;&gt; listRepos(
+            @Path("user") String user,
+            @QueryMap Map&lt;String, String&gt; options);</span>
+}
+                </code></pre>
+            </section>
+
+            <section>
+                Headers
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+public interface GitHubService {
+    <span class="fragment">@Headers("User-Agent: my-Awesome-Retrofit-powered-app")
+    @GET("users/{user}/repos")
+    Call&lt;List&lt;Repo&gt;&gt; listRepos(@Path("user") String user);</span>
+
+    <span class="fragment">@GET("gists/public")
+    Call&lt;List&lt;Gist&gt;&gt; listGists(@Header("User-Agent") String uAgent)</span>
+}
+                </code></pre>
+            </section>
+
+            <section>
+                Custom URLs and Body
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+public interface GitHubService {
+    <span class="fragment">@GET
+    Call&lt;List&lt;User&gt;&gt; getCustomUsers(@Url String reqUrl);</span>
+
+    <span class="fragment">@POST("gists")
+    Call&lt;Gist&gt; createGist(@Body GistRequest grequest);</span>
+}
+                </code></pre>
+            </section>
+            <section>
+                <br/><img src="img/nice.png">
+            </section>
+        </section>
+
+        <section>
+            <h2>Converters</h2>
+            <section>
+                Retrofit 2 can be extended with <b>custom converters</b><br/>
+                <ul class="fragment" style="font-size: 70%">
+                    <li><b>Gson</b><code> com.squareup.retrofit:converter-gson</code></li>
+                    <li><b>Jackson</b><code> com.squareup.retrofit:converter-jackson</code></li>
+                    <li><b>Moshi</b><code> com.squareup.retrofit:converter-moshi</code></li>
+                    <li><b>Protobuf</b><code> com.squareup.retrofit:converter-protobuf</code></li>
+                    <li><b>Wire</b><code> com.squareup.retrofit:converter-wire</code></li>
+                    <li><b>Simple XML</b><code> com.squareup.retrofit:converter-simplexml</code></li>
+                </ul>
+                <p class="fragment">You can also implement yours with <b>Converter.Factory</b></p>
+            </section>
+            <section>
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+<span class="fragment semi-fade-out" data-fragment-index="1">Retrofit retrofit = new Retrofit.Builder()
+        .baseUrl("https://api.github.com/")</span>
+        .addConverterFactory(JacksonConverterFactory.create())
+<span class="fragment semi-fade-out" data-fragment-index="1">        .build();
+
+service = retrofit.create(GitHubService.class);</span>
+                </code></pre>
+            </section>
+            <section>
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+Gson gson = new GsonBuilder()
+        .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
+        .create();
+
+<span class="fragment semi-fade-out" data-fragment-index="1">Retrofit retrofit = new Retrofit.Builder()
+        .baseUrl("https://api.github.com/")
+        .addConverterFactory(</span>GsonConverterFactory.create(gson)<span class="fragment semi-fade-out"
+                                                                           data-fragment-index="1">)
+        .build();
+
+service = retrofit.create(GitHubService.class);</span>
+                </code></pre>
+            </section>
+        </section>
+
+        <section>
+            <h2>Call Adapters</h2>
+            <section>
+                By default interface exposes methods returning a <b>Call</b><br/>
+                <p class="fragment">You can plug a <b>Call Adapter</b> to work with:</p>
+                <ul class="fragment">
+                    <li>Observables (RxJava)</li>
+                    <li>ListeanableFuture (Guava)</li>
+                    <li>CompletableFuture (Java8)</li>
+                </ul>
+            </section>
+            <section>
+                Without Call Adapter - Sync
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+// Sync call
+
+Call&lt;Repo&gt; call = service.loadRepo();
+<span class="fragment" data-fragment-index="2">Response&lt;Repo&gt; response = </span><span class="fragment"
+                                                                                            data-fragment-index="1">call.execute();</span>
+                </code></pre>
+            </section>
+            <section>
+                Without Call Adapter - Async
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+// Async call
+
+Call&lt;Repo&gt; call = service.loadRepo();
+<span class="fragment" data-fragment-index="1">call.enqueue</span><span class="fragment" data-fragment-index="2">(new Callback&lt;Repo&gt;() {</span>
+    <span class="fragment" data-fragment-index="3">@Override
+    public void onResponse(Response&lt;Repo&gt; response) {
+        // Get result Repo from response.body()
+    }</span>
+    <span class="fragment" data-fragment-index="4">
+    @Override
+    public void onFailure(Throwable t) {
+        // Handle failure
+    }</span>
+<span class="fragment" data-fragment-index="2">});</span>
+                </code></pre>
+            </section>
+            <section>
+                With RxJava
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+<span class="fragment semi-fade-out" data-fragment-index="1">Retrofit retrofit = new Retrofit.Builder()
+    .baseUrl("https://api.github.com/")</span>
+    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+<span class="fragment semi-fade-out" data-fragment-index="1">    .build();</span>
+                </code></pre>
+            </section>
+            <section>
+                With RxJava
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+<span class="fragment semi-fade-out" data-fragment-index="1">public interface APIService {
+    
+    @GET("gists/public")
+    Call&lt;Gists&gt; getGists();
+
+    @GET("gists/public")</span>
+    Observable&lt;Gists&gt; getGistsRx();
+<span class="fragment semi-fade-out" data-fragment-index="1">}</span>
+                </code></pre>
+                <pre class="fragment"><code class="hljs java" data-trim contenteditable data-noescape>
+getGistsRx()<span class="fragment">.subscribeOn(Schedulers.io())</span>
+    <span class="fragment">.observeOn(AndroidSchedulers.mainThread())</span>
+    <span class="fragment">.subscribe(</span><span class="fragment">gists</span><span class="fragment"> -> {
+        Toast.makeText(getApplicationContext(),
+            "Fetched gists: " + gists.size(),
+             Toast.LENGTH_SHORT).show();
+        });</span>
+                </code></pre>
+            </section>
+        </section>
+
+        <section>
+            <h1>1 vs 2</h1>
+        </section>
+
+        <section>
+            <h2>1 vs 2</h2>
+            <section>
+                <h3>Interface Declaration</h3>
+                                <pre><code class="hljs java markable" data-trim contenteditable data-noescape>
+public interface GitHubService {
+    <span class="fragment">@POST("/list")
+    Repo loadRepo();</span>
+
+    <span class="fragment">@POST("/list")
+    void loadRepo(Callback&lt;Repo&gt; cb);</span>
+}
+            </code></pre>
+                <pre><code class="hljs java markable" data-trim contenteditable data-noescape>
+public interface GitHubService {
+    <span class="fragment">@POST("/list")
+    Call&lt;Repo&gt; loadRepo();</span>
+}
+            </code></pre>
+            </section>
+            <section>
+                <h3>OkHttp Interceptors</h3>
+                <pre><code class="hljs java markable" data-trim contenteditable data-noescape>
+<span class="fragment">HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();</span>
+
+<span class="fragment">// Choose desired logging level
+interceptor.setLevel(HttpLoggingInterceptor.Level.BODY); // Or FULL</span>
+
+<span class="fragment">OkHttpClient client = new OkHttpClient.Builder()</span>
+    <span class="fragment">.addInterceptor(interceptor).build();</span>
+
+<span class="fragment">Retrofit retrofit = new Retrofit.Builder()
+        .baseUrl("https://api.github.com/")
+        .client(client)
+        .build();</span>
+            </code></pre>
+                <pre class="fragment"><code class="hljs groovy" contenteditable data-noescape>compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'</code></pre>
+            </section>
+            <section>
+                <h3>Certificate Pinning</h3>
+                <pre><code class="hljs java markable" data-trim contenteditable data-noescape>
+<span class="fragment">OkHttpClient client = new OkHttpClient.Builder()</span>
+    <span class="fragment">.certificatePinner(new CertificatePinner.Builder()</span>
+    <span class="fragment">.add("example.com", "sha1/DmxUShsZuNiqPQsX2Oi9uv2sCnw=")</span>
+    <span class="fragment">.add("example.com", "sha1/SXxoaOSEzPC6BgGmxAt/EAcsajw=")</span>
+    <span class="fragment">.build())</span>
+<span class="fragment">.build();</span>
+                </code></pre>
+            </section>
+            <section>
+                <blockquote class="smallquote colored">
+                    <p>Use CertificatePinner to restrict which certificates and certificate authorities are trusted.</p>
+                    <p>Certificate pinning increases security, but limits your server team’s abilities to update their
+                        TLS certificates.</p>
+                    <p><strong>Do not use certificate pinning without the blessing of your server’s TLS
+                        administrator!</strong></p>
+                    <p class="quotefooter">From <a target="_blank"
+                                                   href="https://github.com/square/okhttp/wiki/HTTPS">OkHTTP Official
+                        Wiki</a></p>
+                </blockquote>
+
+            </section>
+            <section>
+                <h2>...and more!</h2>
+            </section>
+            <section>
+
+                <ul>
+                    <li class="fragment">OkHTTP as default RAW HTTP Client</li>
+                    <li class="fragment">GSON Converter not by default</li>
+                    <li class="fragment">New URL resolving mechanism</li>
+                    <li class="fragment">setEndpoit <i class="fa fa-long-arrow-right" aria-hidden="true"></i> baseURL</li>
+                    <li class="fragment">RestAdapter <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Retrofit</li>
+                    <li class="fragment">Dynamic URLs</li>
+                    <li class="fragment">Request cancellation</li>
+                </ul>
+                <pre class="fragment"><code class="hljs java" contenteditable data-noescape>call.cancel();</code></pre>
+            </section>
+        </section>
+
+        <section>
+            <h2>Volley</h2>
+            <section>
+                <ul>
+                    <li class="fragment">From <a target="_blank"
+                                                 href="http://developer.android.com/training/volley/index.html">Google</a>
+                    </li>
+                    <li class="fragment">Available from the <b>AOSP</b> repo</li>
+                    <li class="fragment">Excellent for <b>populating the UI</b> with text and images</li>
+                    <li class="fragment">Excellent for <b>caching</b></li>
+                    <li class="fragment"><b>Apache 2</b> licensed</li>
+                    <li class="fragment myred"><b>Not well documented :(</b></li>
+                </ul>
+            <pre class="fragment"><code class="hljs groovy" contenteditable data-noescape>
+compile 'com.android.volley:volley:1.0.0'
+                </code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Thread model</h2>
+                <img src="img/volley-cache.png" style="alignment: center" width="600px">
+            </section>
+        </section>
+        <section>
+            <h2>Usage</h2>
+            <section>
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+<span class="fragment">RequestQueue queue =
+    Volley.newRequestQueue(getApplicationContext());</span>
+
+<span class="fragment">StringRequest request = new StringRequest(
+    Request.Method.GET,
+    "https://api.github.com/gists/public",
+    this::handleResponse,
+    this::handleError);</span>
+
+<span class="fragment">request.setShouldCache(true);</span>
+<span class="fragment">request.setTag(requestTag); // A class member 'requestTag'</span>
+
+<span class="fragment">queue.add(request);</span>
+                </code></pre>
+            </section>
+            <section>
+                Request cancellation
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+<span class="fragment" data-fragment-index="1">@Override
+protected void onStop() {</span>
+    <span class="fragment" data-fragment-index="2">queue.cancelAll(requestTag);</span>
+    <span class="fragment" data-fragment-index="1">super.onStop();
+}</span>
+                </code></pre>
+                <p class="fragment grow">Don't forget to do it!</p>
+            </section>
+            <section>
+                Image management
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+<span class="fragment">ImageLoader mImageLoader;
+NetworkImageView mNetworkImageView;</span>
+
+<span class="fragment">private static final String IMAGE_URL =
+    "http://i.imgur.com/RLKixQW.png";</span>
+
+<span class="fragment">// Retrieve the ImageLoader (singleton/application/...)
+// Retrieve the NetworkImageView (findViewById)</span>
+
+<span class="fragment">mNetworkImageView.setImageUrl(IMAGE_URL, mImageLoader);</span>
+                </code></pre>
+            </section>
+            <section>
+                The NetworkImageView
+                <pre><code class="hljs xml" data-trim contenteditable data-noescape>
+&lt;com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/networkImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true" /&gt;
+                </code></pre>
+            </section>
+            <section>
+                The ImageLoader
+                <pre><code class="hljs java" data-trim contenteditable data-noescape>
+<span class="fragment" data-fragment-index="1">mImageLoader = new ImageLoader(</span><span class="fragment"
+                                                                                           data-fragment-index="2">mRequestQueue,
+        new ImageLoader.ImageCache() {</span>
+
+    <span class="fragment" data-fragment-index="3">private final LruCache&lt;String, Bitmap&gt; cache = new LruCache&lt;&gt;(20);</span>
+
+    <span class="fragment" data-fragment-index="4">@Override
+    public Bitmap getBitmap(String url) {
+        return cache.get(url);
+    }</span>
+
+    <span class="fragment" data-fragment-index="5">@Override
+    public void putBitmap(String url, Bitmap bitmap) {
+        cache.put(url, bitmap);
+    }</span>
+<span class="fragment" data-fragment-index="2">}</span><span class="fragment" data-fragment-index="1">);</span>
+                </code></pre>
+            </section>
+            <section>
+                <pre><code class="hljs bash" data-trim contenteditable data-noescape>
+~$ adb shell setprop log.tag.Volley VERBOSE
+                </code></pre>
+
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable data-noescape>
+D/Volley (670  ms) [ ] https://api.github.com/users/cortinico
+D/Volley (+0   ) [ 1] add-to-queue
+D/Volley (+0   ) [238] cache-queue-take
+D/Volley (+0   ) [238] cache-miss
+D/Volley (+10  ) [242] network-queue-take
+D/Volley (+630 ) [242] network-http-complete
+D/Volley (+0   ) [242] network-parse-complete
+D/Volley (+0   ) [242] network-cache-written
+D/Volley (+0   ) [242] post-response
+D/Volley (+30  ) [ 1] done
+D/Volley (10   ms) [ ] https://api.github.com/users/cortinico
+D/Volley (+0   ) [ 1] add-to-queue
+D/Volley (+0   ) [238] cache-queue-take
+D/Volley (+0   ) [238] cache-hit
+D/Volley (+0   ) [238] cache-hit-parsed
+D/Volley (+0   ) [238] post-response
+D/Volley (+10  ) [ 1] done
+                </code></pre>
+            </section>
+        </section>
+
+        <section>
+            <h2>Which client?</h2>
+            <section>
+                <ul class="fragment" data-fragment-index="1">
+                    <li class="fragment" data-fragment-index="1"><span class="fragment" data-fragment-index="1">Want less and elegant code?</span><b
+                            class="fragment" data-fragment-index="2"> ...Retrofit!</b></li>
+                    <li class="fragment" data-fragment-index="3"><span class="fragment" data-fragment-index="3">Want control over scheduling/caching?</span><b
+                            class="fragment" data-fragment-index="4"> ...Volley!</b></li>
+                    <li class="fragment" data-fragment-index="5"><span class="fragment" data-fragment-index="5">Want image management?</span><b
+                            class="fragment" data-fragment-index="6"> Volley!</b> <b class="fragment"
+                                                                                     data-fragment-index="7">...or
+                        Retrofit + Picasso</b></li>
+                    <li class="fragment" data-fragment-index="8"><span class="fragment" data-fragment-index="8">Default choose?</span><b
+                            class="fragment" data-fragment-index="8"> ...Retrofit!</b></li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="questions">
+            <h1>Questions?</h1>
+            <section>
+                <br/><br/><br/>
+                <p>
+                    <strong><i class="fa fa-github"></i> <a href="https://gdgpisa.github.com/io16">gdgpisa.github.com/io16</a></strong><br/>
+                    <small style="margin: 20px"><strong>
+                        <a href="https://creativecommons.org/licenses/by/4.0/"><i
+                                class="fa fa-creative-commons"></i> By 4.0</a>
+                    </strong></small>
+                </p>
+                <br/>
+                <div class="author nico">
+                    <h3 class="final"><strong>Nicola</strong><br/>Corti</h3>
+                    <p class="contacts final">
+                        <i class="fa fa-paper-plane"></i> <a href="mailto:corti.nico@gmail.com">corti.nico@gmail.com</a><br/>
+                        <i class="fa fa-twitter"></i> <a href="https://twitter.com/cortinico">@cortinico</a><br/>
+                        <i class="fa fa-github"></i> <a href="https://github.com/cortinico">github.com/cortinico</a>
+                    </p>
+                </div>
+                <div class="author other">
+                    <p class="contacts final">
+                        <img src="img/gdg.png" width="70%" class="img-noborder"/>
+                        <a href="mailto:gdgpisa@googlegroups.com">gdgpisa@googlegroups.com</a> <i
+                            class="fa fa-paper-plane"></i><br/>
+                        <a href="https://twitter.com/gdgPisa">@gdgPisa</a> <i class="fa fa-twitter"></i><br/>
+                        <a href="https://facebook.com/gdgpisa">gdgpisa</a> <i class="fa fa-facebook"></i>
+                    </p>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+
+<a href="https://github.com/gdgpisa/android-async-http-clients"><img
+        style="position: absolute; top: 0; left: 0; border: 0;"
+        src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67"
+        alt="Fork me on GitHub"
+        data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide',
+
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+</script>
+</body>
+</html>
