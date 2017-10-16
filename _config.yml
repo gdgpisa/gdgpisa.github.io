@@ -5,13 +5,13 @@ logo: /static/img/avatar.png
 github: https://github.com/gdgpisa
 about: Google Developer Group Pisa
 
-baseurl: "http://www.test2.gdgpisa.it"
+baseurl: "http://gdgpisa.github.io"
 url: ""
 
 allowsearch: true
 
 # disqus_shortname: aboutashu
-google_analytics: UA-72862926-1
+# google_analytics: UA-72862926-1
 
 share:
   twitter_username: \#
