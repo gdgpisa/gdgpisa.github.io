@@ -1,0 +1,23 @@
+[
+	{
+		"name": "Seminario 1",
+		"image": "placeholder.jpg",
+		"url": "#",
+		"date": "Oct 2017",
+		"tags": ["Firebase","Android"]
+	},
+	{
+		"name": "Seminario 2",
+		"image": "placeholder.jpg",
+		"url": "#",
+		"date": "June 2017",
+		"tags": ["Android"]
+	},
+	{
+		"name": "Seminario 3",
+		"image": "placeholder.jpg",
+		"url": "#",
+		"date": "May 2017",
+		"tags": ["Firebase","Angular"]
+	}
+]

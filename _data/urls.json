@@ -1,0 +1,28 @@
+[
+  {
+    "text": "Home",
+    "url": "/",
+    "icon": "fa-home",
+    "layout": "post"
+  },
+  {
+    "text": "About",
+    "url": "/about/",
+    "icon": "fa-comments"
+  },
+  {
+    "text": "Seminari",
+    "url": "/projects",
+    "icon": "fa-desktop"
+  },
+  {
+    "text": "Meetup",
+    "url": "https://www.meetup.com/GDG-Pisa/",
+    "icon": "fa-link",
+  },
+  {
+    "text": "Github",
+    "url": "https://www.Github.com/gdgpisa",
+    "icon": "fa-github"
+  }
+]

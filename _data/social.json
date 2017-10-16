@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "fa-facebook",
+    "link": "http://facebook.com/gdgPisa"
+  },
+  {
+    "icon": "fa-twitter",
+    "link": "http://twitter.com/gdgPisa"
+  },
+  {
+    "icon": "fa-github",
+    "link": "http://github.com/gdgPisa"
+  },
+  {
+    "icon": "fa-link",
+    "link": "https://www.meetup.com/GDG-Pisa/"
+  }
+]
