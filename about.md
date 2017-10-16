@@ -1,7 +1,5 @@
 ---
 layout: page
-title: About
-permalink: /about/
+redirect_to: "http://google.com"
+permalink: /feedbackform/
 ---
-
-Il Google Developers Group (GDG) Pisa si pone come obiettivo di raccogliere appassionati di tecnologia, web e social media.
