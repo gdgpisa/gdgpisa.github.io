@@ -1,0 +1,7 @@
+{
+  "name": "GDG Pisa",
+  "start_url": "index.html",
+  "theme_color": "aliceblue",
+  "display": "standalone",
+  "orientation": "portrait-primary"
+}
