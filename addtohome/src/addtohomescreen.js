@@ -197,7 +197,7 @@ _extend(ath, {
 ath.language = ath.language && ath.language in ath.intl ? ath.language : 'en_us';
 
 ath.isMobileSafari = ath.isIDevice && _ua.indexOf('Safari') > -1 && _ua.indexOf('CriOS') < 0;
-ath.OS = ath.isIDevice ? 'ios' || ath.isIDevice ? 'ios';
+ath.OS = ath.isIDevice ? 'ios' : ath.isIDevice ? 'ios' : ath.isIDevice ? 'ios';
 
 ath.isStandalone = 'standalone' in window.navigator && window.navigator.standalone;
 ath.isTablet = (ath.isMobileSafari && _ua.indexOf('iPad') > -1);
