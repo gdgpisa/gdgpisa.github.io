@@ -11,7 +11,6 @@
         <meta name="author" content="{{ site.author }}" />
         <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
         <meta name="keywords" content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}" />
-        //Inizializzazione notifiche push
         <link rel="manifest" href="/_includes/manifest_pushnot.json">
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
         <script>
@@ -24,7 +23,6 @@
                         }
                 }]);
         </script>
-        //Notifiche push inizializzate
         <meta content="{{ site.share.fb_appid }}" property="fb:app_id">
         <meta content="{{ site.title }}" property="og:site_name">
         {% if page.title %}
