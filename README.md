@@ -11,6 +11,7 @@ This is a simple website made with Jekyll. We use OneSignal for push notificatio
 * Responsive
 * Push Notifications
 * WebApp ready
+* HTML5 cache support
 * Awesome community behind
 
 #### Screenshot
