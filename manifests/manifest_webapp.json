@@ -3,12 +3,12 @@
 	"name": "GDG Pisa",
 	"start_url": "/?utm_source=homescreen",
 	"icons": [
-    	{
-      "src": "/static/img/logo.png",
-      "sizes": "1280x1280",
-      "type": "image/png"
-    }
-  ],
+    		{
+      			"src": "/static/img/logo.png",
+      			"sizes": "1280x1280",
+      			"type": "image/png"
+    		}
+  	],
 	"theme_color": "aliceblue",
 	"display": "standalone",
 	"orientation": "portrait-primary"
