@@ -1,6 +1,6 @@
 {
   "name": "GDG Pisa",
-  "start_url": "index.html",
+  "start_url": "/",
   "theme_color": "aliceblue",
   "display": "standalone",
   "orientation": "portrait-primary"
