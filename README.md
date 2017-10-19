@@ -1,22 +1,18 @@
-## HCZ Material theme
+## GDG Pisa's website
 
-This is a simple personal material theme, best suited for personal authors, programmars, bloggers. 
+This is a simple website made with Jekyll. We use OneSignal for push notifications.
 
 ### Demo
-* [https://codeasashu.github.io/hcz-jekyll-blog](https://codeasashu.github.io/hcz-jekyll-blog/)
+* [https://gdgpisa.it/](https://gdgpisa.it/)
 
 #### Feature
 
-* Sitemap and XML Feed
-* Site Search 
-* Projects and tags
-* Paginations in homepage
-* Posts under category
-* Related Posts
-* Highlight pre
-* Next & Previous Post
-* Disqus comment
+* Material Design
+* Responsive
+* Push Notifications
+* WebApp ready
+* Awesome community behind
 
 #### Screenshot
 
-![Screenshot Home Page](https://raw.githubusercontent.com/ashutosh2k12/jekyllthemes/master/thumbnails/hcz-material.png  "Screenshot Home Page")
+![Screenshot Home Page](https://github.com/gdgpisa/gdgpisa.github.io/blob/master/static/img/screenshot-post-page.png  "Screenshot Home Page")
