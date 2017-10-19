@@ -14,13 +14,13 @@
         <script>
                 addToHomescreen();
         </script>                                                                  
-        <link rel="manifest" href="/_includes/manifest_webapp.json"/>
+        <link rel="manifest" href="/manifests/manifest_webapp.json"/>
         <link rel="shortcut icon" href="/static/img/favicon.ico" />
         <link rel="icon" href="/static/img/logo.png">
         <meta name="author" content="{{ site.author }}" />
         <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
         <meta name="keywords" content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}" />
-        <link rel="manifest" href="/_includes/manifest_pushnot.json">
+        <link rel="manifest" href="/manifests/manifest_pushnot.json">
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
         <script>
                 var OneSignal = window.OneSignal || [];
