@@ -258,7 +258,7 @@ ath.Class = function (options) {
 	// setup the debug environment
 	if ( this.options.debug ) {
 		ath.isCompatible = true;
-		ath.OS = typeof this.options.debug == 'string' ? this.options.debug : ath.OS == 'unsupported' ? 'android' : ath.OS;
+		ath.OS = typeof this.options.debug == 'string' ? this.options.debug : ath.OS == 'unsupported';
 		ath.OSVersion = ath.OS == 'ios' ? '8' : '4';
 	}
 
