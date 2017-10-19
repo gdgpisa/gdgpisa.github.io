@@ -10,7 +10,7 @@
         <link rel="manifest" href="/_includes/manifest_webapp.json">
         <link rel="shortcut icon" href="/static/img/favicon.ico" />
         <link rel="icon" href="/static/img/logo.png">
-        <title>{{ site.title }}</title>
+        <title>{{ page.title }} - {{ site.title }}</title>
         <meta name="author" content="{{ site.author }}" />
         <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
         <meta name="keywords" content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}" />
