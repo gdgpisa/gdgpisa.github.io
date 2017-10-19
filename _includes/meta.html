@@ -32,6 +32,12 @@
                                 }
                 }]);
         </script>
+        <link rel="manifest" href="/manifests/cache.manifest">
+        <script type="text/javascript">
+        window.applicationCache.addEventListener('updateready', function(){
+		window.applicationCache.swapCache();
+        }, false);
+        </script>
         <meta content="{{ site.share.fb_appid }}" property="fb:app_id">
         <meta content="{{ site.title }}" property="og:site_name">
         {% if page.title %}
