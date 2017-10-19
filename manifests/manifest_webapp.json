@@ -1,8 +1,8 @@
 {
-  "short_name": "GDG Pisa",
-  "name": "GDG Pisa",
-  "start_url": "/?utm_source=homescreen",
-  "theme_color": "aliceblue",
-  "display": "standalone",
-  "orientation": "portrait-primary"
+	"short_name": "GDG Pisa",
+	"name": "GDG Pisa",
+	"start_url": "/?utm_source=homescreen",
+	"theme_color": "aliceblue",
+	"display": "standalone",
+	"orientation": "portrait-primary"
 }
