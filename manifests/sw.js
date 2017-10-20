@@ -6,7 +6,7 @@ layout: null
 var cacheName = 'gdgpisa-cache-v1';
 var filesToCache = [
     {% for page in site.html_pages %}
-        {{ page.url }}',
+        '{{ page.url }}',
     {% endfor %}
   // can be automated rather than manual entries
   "/assets/header.jpg",
