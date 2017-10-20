@@ -21,10 +21,6 @@ CACHE:
 /static/js/projects.js
 /static/js/super-search.js
 /static/js/thickbox-compressed.js
-/_layouts/default.html
-/_layouts/page.html
-/_layouts/post.html
-/_layouts/project.html
 /assets/header.jpg
 
 
@@ -35,4 +31,3 @@ FALLBACK:
 /static/css/projects.css
 /static/css/syntax.css
 /static/css/thickbox.css
-/manifests/manifest_webapp.json
