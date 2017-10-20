@@ -9,43 +9,5 @@
 <script src="{{ site.baseurl }}/static/js/material.min.js"></script>
 <script src="{{ site.baseurl }}/static/js/main.js"></script>
 <script src="{{ site.baseurl }}/static/js/projects.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript">
-  $("#navbar-burger").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#material-menu").offset().top
-    }, 800);
-  });
-</script>
-<script>
-function showOfflineToast() {
- let offlineToast = document.querySelector('.offline-ready');
-  offlineToast.classList.add('active');
-  setTimeout(function(){ 
-    offlineToast.className = offlineToast.className.replace("active", "").trim();
-  }, 5500);
-}
- 
-// (1)
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/manifests/sw.js').then(function(reg) {
-      if (!reg.installing) return;
-      console.log("[*] ServiceWorker is installing...");
- 
-      var worker = reg.installing;
- 
-      worker.addEventListener('statechange', function() {
-          if (worker.state == 'redundant') {
-              console.log('[*] Install failed');
-          }
-          if (worker.state == 'installed') {
-              console.log('[*] Install successful!');
-          }
-          // (2)
-          if (worker.state == 'activated' && !navigator.serviceWorker.controller) {
-            showOfflineToast();
-          }
-      });
-  });
-}
-</script>
+<script src="{{ site.baseurl }}/static/js/ui-scripts.js"></script>
+<script src="{{ site.baseurl }}/static/js/web-application.js"></script>

@@ -16,22 +16,9 @@
         <meta name="author" content="{{ site.author }}" />
         <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
         <meta name="keywords" content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}" />
-        <link rel="manifest" href="/manifests/manifest_pushnot.json">
-	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-        <script>
-                var OneSignal = window.OneSignal || [];
-                OneSignal.push(["init", {
-                        appId: "5924776e-80ca-4b3b-972b-700beb9fc5e2",
-                        autoRegister: true,
-                        notifyButton: {
-                                enable: false
-                        },
-                        welcomeNotification: {
-                                "title": "GDG Pisa",
-                                "message": "Grazie per esserti iscritto!",
-                                }
-                }]);
-        </script>
+        <link rel="manifest" href="{{ site.baseurl }}/manifests/manifest_pushnot.json">
+        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+        <script src="{{ site.baseurl }}/static/js/onesignal-init.js"></script>
         <meta content="{{ site.share.fb_appid }}" property="fb:app_id">
         <meta content="{{ site.title }}" property="og:site_name">
         {% if page.title %}
