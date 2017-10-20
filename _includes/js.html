@@ -16,40 +16,24 @@
       return 'UNCACHED';
       break;
     case appCache.IDLE: // IDLE == 1
-      return 'IDLE';
+      return '1';
       break;
     case appCache.CHECKING: // CHECKING == 2
-      return 'CHECKING';
+      return '2';
       break;
     case appCache.DOWNLOADING: // DOWNLOADING == 3
-      return 'DOWNLOADING';
+      return '3';
       break;
     case appCache.UPDATEREADY:  // UPDATEREADY == 4
-      return 'UPDATEREADY';
+      return '4';
       break;
     case appCache.OBSOLETE: // OBSOLETE == 5
-      return 'OBSOLETE';
+      return '5';
       break;
     default:
       return 'UKNOWN CACHE STATUS';
       break;
   };
-</script>
-<script>
-   // Check if a new cache is available on page load.
-  window.addEventListener('load', function(e) {
-    window.applicationCache.addEventListener('updateready', function(e) {
-      if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-        // Browser downloaded a new app cache.
-        if (confirm('A new version of this site is available. Load it?')) {
-          window.location.reload();
-        }
-      } else {
-        // Manifest didn't changed. Nothing new to server.
-      }
-    }, false);
-
-  }, false);
 </script>
 <script>
    function handleCacheEvent(e) {
@@ -82,4 +66,21 @@
 
   // Fired when the manifest resources have been newly redownloaded.
   appCache.addEventListener('updateready', handleCacheEvent, false);
+</script>
+
+<script>
+   // Check if a new cache is available on page load.
+  window.addEventListener('load', function(e) {
+    window.applicationCache.addEventListener('updateready', function(e) {
+      if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+        // Browser downloaded a new app cache.
+        if (confirm('A new version of this site is available. Load it?')) {
+          window.location.reload();
+        }
+      } else {
+        // Manifest didn't changed. Nothing new to server.
+      }
+    }, false);
+
+  }, false);
 </script>
