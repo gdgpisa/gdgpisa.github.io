@@ -13,7 +13,7 @@ CACHE:
 /assets/header.jpg
 /OneSignalSDKWorker.js
 /manifests/manifest_webapp.json
-/manifests/manifest_nopush.json
+/manifests/manifest_notpush.json
 https://cdn.onesignal.com/sdks/OneSignalSDK.js
 
 FALLBACK:
