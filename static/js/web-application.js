@@ -8,7 +8,7 @@ function showOfflineToast() {
  
 // (1)
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('{{ site.baseurl }}/sw.js').then(function(reg) {
+  navigator.serviceWorker.register('/sw.js').then(function(reg) {
       if (!reg.installing) return;
       console.log("[*] ServiceWorker is installing...");
  
