@@ -9,7 +9,13 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="apple-mobile-web-app-title" content="GDG Pisa">
         <link rel="apple-touch-icon" sizes="1280x1280" href="/static/img/logo.png">
-        <link rel="apple-touch-icon-precomposed" sizes="1280x1280" href="/static/img/logo.png">                                                                
+        <link rel="apple-touch-icon-precomposed" sizes="1280x1280" href="/static/img/logo.png">   
+	<link rel="manifest" href="/manifests/cache.appcache">
+        <script type="text/javascript">
+        	window.applicationCache.addEventListener('updateready', function(){
+			window.applicationCache.swapCache();
+        	}, false);
+        </script>
         <link rel="manifest" href="/manifests/manifest_webapp.json"/>
         <link rel="shortcut icon" href="/static/img/favicon.ico" />
         <link rel="icon" href="/static/img/logo.png">
@@ -31,12 +37,6 @@
                                 "message": "Grazie per esserti iscritto!",
                                 }
                 }]);
-        </script>
-        <link rel="manifest" href="/manifests/cache.appcache">
-        <script type="text/javascript">
-        	window.applicationCache.addEventListener('updateready', function(){
-			window.applicationCache.swapCache();
-        }, false);
         </script>
         <meta content="{{ site.share.fb_appid }}" property="fb:app_id">
         <meta content="{{ site.title }}" property="og:site_name">
