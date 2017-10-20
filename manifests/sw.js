@@ -6,7 +6,7 @@ self.addEventListener('install', e => {
     caches.open('offline').then(cache => {
       return cache.addAll([
         `/`,
-        `offline.html?timestamp=${timeStamp}`
+        `/manifests/offline.html?timestamp=${timeStamp}`
       ])
       .then(() => self.skipWaiting());
     })
