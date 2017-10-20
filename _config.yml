@@ -20,7 +20,8 @@ share:
 
 enableTags: true
 tagarray: []
-
+offline:
+  strategy: cache-then-network
 paginate: 20
 per_page: 20
 paginate_path: "/blog/page:num/"
