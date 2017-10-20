@@ -72,7 +72,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-self.addEventListener("fetch", event => {
+self.addEventListener("fetch", function(event){
   // We only want to call event.respondWith() if this is a navigation request
   // for an HTML page.
   // request.mode of 'navigate' is unfortunately not supported in Chrome
