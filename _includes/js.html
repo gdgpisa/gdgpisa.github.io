@@ -10,9 +10,14 @@
 <script src="{{ site.baseurl }}/static/js/main.js"></script>
 <script src="{{ site.baseurl }}/static/js/projects.js"></script>
 <script>
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker
-           .register('/manifests/sw.js')
-           .then(function() { console.log("Service Worker Registered"); });
-}
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/manifests/sw.js')
+        .then(function(registration) {
+          console.log('Service Worker registration successful with scope: ',
+          registration.scope);
+        })
+        .catch(function(err) {
+          console.log('Service Worker registration failed: ', err);
+        });
+    }
 </script>
