@@ -6,7 +6,7 @@ github: https://github.com/gdgpisa
 about: Google Developer Group Pisa
 
 baseurl: "https://gdgpisa.it"
-url: "https://gdgpisa.it"
+url: "https://gdgpisa.github.io"
 
 allowsearch: true
 
