@@ -9,6 +9,14 @@
 <script src="{{ site.baseurl }}/static/js/material.min.js"></script>
 <script src="{{ site.baseurl }}/static/js/main.js"></script>
 <script src="{{ site.baseurl }}/static/js/projects.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+  $("#navbar-burger").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#material-menu").offset().top
+    }, 800);
+  });
+</script>
 <script>
 function showOfflineToast() {
  let offlineToast = document.querySelector('.offline-ready');
