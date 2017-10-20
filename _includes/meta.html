@@ -11,13 +11,6 @@
         <link rel="apple-touch-icon" sizes="1280x1280" href="/static/img/logo.png">
         <link rel="apple-touch-icon-precomposed" sizes="1280x1280" href="/static/img/logo.png"> 
 	<link rel="manifest" href="/manifests/manifest_webapp.json"/>
-        <script type="text/javascript">
-        	var appCache = window.applicationCache;
-		appCache.update(); // Attempt to update the user's cache.
-		if (appCache.status == window.applicationCache.UPDATEREADY) {
-  			appCache.swapCache();  // The fetch was successful, swap in the new cache.
-		}
-        </script>
         <link rel="shortcut icon" href="/static/img/favicon.ico" />
         <link rel="icon" href="/static/img/logo.png">
         <meta name="author" content="{{ site.author }}" />
