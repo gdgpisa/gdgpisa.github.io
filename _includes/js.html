@@ -10,7 +10,9 @@
 <script src="{{ site.baseurl }}/static/js/main.js"></script>
 <script src="{{ site.baseurl }}/static/js/projects.js"></script>
 <script>
-  if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/manifests/sw.js');
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('/manifests/sw.js')
+           .then(function() { console.log("Service Worker Registered"); });
 }
 </script>
