@@ -10,16 +10,3 @@
 <script src="{{ site.baseurl }}/static/js/main.js"></script>
 <script src="{{ site.baseurl }}/static/js/projects.js"></script>
 
-<script>
-   // Check if a new cache is available on page load.
-  window.addEventListener('load', function(e) {
-    window.applicationCache.addEventListener('updateready', function(e) {
-      if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-          window.location.reload()
-      } else {
-        // Manifest didn't changed. Nothing new to server.
-      }
-    }, false);
-
-  }, false);
-</script>
