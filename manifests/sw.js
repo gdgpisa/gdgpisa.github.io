@@ -16,7 +16,7 @@ limitations under the License.
 
   var filesToCache = [
     '.',
-    '/manifests/offline.html'
+    'offline.html'
   ];
 
   var staticCacheName = 'pages-cache-v2';
