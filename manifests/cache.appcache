@@ -14,6 +14,7 @@ CACHE:
 /OneSignalSDKWorker.js
 /manifests/manifest_webapp.json
 /manifests/manifest_nopush.json
+https://cdn.onesignal.com/sdks/OneSignalSDK.js
 
 FALLBACK:
 /static/css/bootstrap-material-design.min.css
@@ -33,3 +34,4 @@ FALLBACK:
 /static/js/thickbox-compressed.js
 /assets/header.jpg
 /OneSignalSDKWorker.js
+https://cdn.onesignal.com/sdks/OneSignalSDK.js
