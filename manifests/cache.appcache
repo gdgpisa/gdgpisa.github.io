@@ -1,17 +1,6 @@
 CACHE MANIFEST
 
 CACHE:
-/_includes/css.html
-/_includes/footer.html
-/_includes/header.html
-/_includes/js.html
-/_includes/main.html
-/_includes/meta.html
-/_includes/navigation.html
-/_includes/project_tags.html
-/_includes/share-page.html
-/_includes/sidemenu.html
-/_includes/social_links.html
 /static/img/avatar.png
 /static/img/macFFBHack.png
 /static/js/bootstrap.min.js
