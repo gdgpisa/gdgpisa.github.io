@@ -15,8 +15,8 @@ var urlsToCache = [
     "/static/css/main.css",
     "/static/css/bootstrap-material-design.min.css",
     "/static/css/bootstrap.min.css",
-    "/about.md",
-    "/blog.html"
+    // "/about.md",
+    // "/blog.html"
 ];
 
 self.addEventListener('install', function(event) {
