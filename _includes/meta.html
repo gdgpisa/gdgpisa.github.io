@@ -12,9 +12,11 @@
         <link rel="apple-touch-icon-precomposed" sizes="1280x1280" href="/static/img/logo.png">   
 	<link rel="manifest" href="/manifests/cache.appcache">
         <script type="text/javascript">
-        	window.applicationCache.addEventListener('updateready', function(){
-			window.applicationCache.swapCache();
-        	}, false);
+        	var appCache = window.applicationCache;
+		appCache.update(); // Attempt to update the user's cache.
+		if (appCache.status == window.applicationCache.UPDATEREADY) {
+  			appCache.swapCache();  // The fetch was successful, swap in the new cache.
+		}
         </script>
         <link rel="manifest" href="/manifests/manifest_webapp.json"/>
         <link rel="shortcut icon" href="/static/img/favicon.ico" />
