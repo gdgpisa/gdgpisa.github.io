@@ -5,8 +5,8 @@ logo: /static/img/avatar.png
 github: https://github.com/gdgpisa
 about: Google Developer Group Pisa
 
-baseurl: ""
-url: "https://gdgpisa.github.io"
+baseurl: "https://gdgpisa.it"
+url: "https://gdgpisa.it"
 
 allowsearch: true
 
