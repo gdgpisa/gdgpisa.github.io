@@ -12,6 +12,8 @@ CACHE:
 /static/js/thickbox-compressed.js
 /assets/header.jpg
 /OneSignalSDKWorker.js
+/manifests/manifest_webapp.json
+/manifests/manifest_nopush.json
 
 FALLBACK:
 /static/css/bootstrap-material-design.min.css
