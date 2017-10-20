@@ -28,6 +28,11 @@ input:-ms-input-placeholder {
     color: #ffffff !important;  
     font-style: italic;
 }
+/* Bootstrap custom css */
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
 /* Default style */
 .main.outer{padding-top: 50px;}
 .header-panel.shadow-z-2 {
