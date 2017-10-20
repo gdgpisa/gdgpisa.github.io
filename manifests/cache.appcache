@@ -2,6 +2,7 @@ CACHE MANIFEST
 
 CACHE:
 /static/img/avatar.png
+/static/img/logo.png
 /static/js/bootstrap.min.js
 /static/js/jquery.min.js
 /static/js/main.js
