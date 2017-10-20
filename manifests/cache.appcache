@@ -11,7 +11,7 @@ CACHE:
 /static/js/super-search.js
 /static/js/thickbox-compressed.js
 /assets/header.jpg
-
+/OneSignalSDKWorker.js
 
 FALLBACK:
 /static/css/bootstrap-material-design.min.css
@@ -30,3 +30,4 @@ FALLBACK:
 /static/js/super-search.js
 /static/js/thickbox-compressed.js
 /assets/header.jpg
+/OneSignalSDKWorker.js
