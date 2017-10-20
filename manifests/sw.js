@@ -9,18 +9,15 @@ var filesToCache = [
     // Pages and assets
     {% for page in site.html_pages %}
         {% if page.url contains 'projects' or page.url contains '404'   %}
-            
+       
         {% else %}
             '{{ page.url }}',
         {% endif %}
-        
     {% endfor %}
-
     // Blog posts
     {% for post in site.posts %}
         '{{ post.url }}',
     {% endfor %}
- 
   // can be automated rather than manual entries
   "/assets/header.jpg",
   "/static/img/avatar.png",
