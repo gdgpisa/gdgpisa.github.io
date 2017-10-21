@@ -8,7 +8,7 @@ permalink: /
 
 ### Cosa è un GDG
 
-Il **Google Developer Group** è unacommunity in cui si possono
+Il **Google Developer Group** è una community in cui si possono
 condividere liberamente le proprie idee, le proprie conoscenze
 ed esperienze in campo tecnologico.
 Non è richiesta nessuna competenza particolare, se sei semplicemente
