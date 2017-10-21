@@ -1,6 +1,7 @@
-var cacheName = 'gdgpisa-cache-v1';
+var cacheName = 'gdgpisa-cache-v1.1';
 var urlsToCache = [
-    '/',      
+    '/',
+    '/index.html',      
     '/blog/',
     '/feedbackform/',
     '/blog/',
@@ -8,6 +9,8 @@ var urlsToCache = [
     '/category/others',
     '/io16/plugin/markdown/example.html',
     '/io16/css/theme/',
+    '/manifests/manifest_webapp.json',
+    '/manifests/manifest_notpush.json',
     // can be automated rather than manual entries
     "/assets/header.jpg",
     "/static/img/avatar.png",
