@@ -1,13 +1,14 @@
 {
 	"short_name": "GDG Pisa",
 	"name": "GDG Pisa",
-	"start_url": "/?utm_source=homescreen",
+	"start_url": "/",
 	"icons": [{
 		"src": "/static/img/logo.png",
 		"sizes": "1280x1280",
 		"type": "image/png"
 	}],
 	"theme_color": "#2196F3",
+	"background_color": "#2196F3",
 	"display": "standalone",
 	"orientation": "portrait-primary"
 }
