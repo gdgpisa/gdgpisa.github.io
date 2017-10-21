@@ -84,7 +84,7 @@ principalmente in 4 tipologie.
     <div class="row">
         <div class="col-sm-6 text-center center-block">
             <h4><strong>Iscriviti al nostro gruppo telegram</strong></h4>
-            <a href="http://google.it"><img class="center-block" src="/static/img/Telegram_Messenger.png"></a>
+            <a href="https://t.me/joinchat/B1xkFD9ooAqvs5r2xLO9KQ"><img class="center-block" src="/static/img/Telegram_Messenger.png"></a>
         </div>
         <div class="col-sm-6 text-center">
             <h4><strong>Partecipa ai nostri eventi</strong></h4>
