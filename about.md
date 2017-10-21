@@ -23,7 +23,7 @@ principalmente in 4 tipologie.
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/avatar.png">
+            <img src="/static/img/meetup.png">
         </div>
         <div class="col-sm-9">
             <h4><strong>Meetup</strong></h4>
@@ -84,7 +84,7 @@ principalmente in 4 tipologie.
     <div class="row">
         <div class="col-sm-6 text-center center-block">
             <h4><strong>Iscriviti al nostro gruppo telegram</strong></h4>
-            <a href="http://google.it"><img class="center-block" src="/static/img/avatar.png"></a>
+            <a href="http://google.it"><img class="center-block" src="/static/img/Telegram_Messenger.png"></a>
         </div>
         <div class="col-sm-6 text-center">
             <h4><strong>Partecipa ai nostri eventi</strong></h4>
