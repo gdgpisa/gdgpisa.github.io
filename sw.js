@@ -1,4 +1,4 @@
-var cacheName = 'gdgpisa-cache-v1.1';
+var cacheName = 'gdgpisa-cache-v1.2';
 var urlsToCache = [
     '/',
     '/index.html',      
@@ -12,14 +12,15 @@ var urlsToCache = [
     '/manifests/manifest_webapp.json',
     '/manifests/manifest_notpush.json',
     // can be automated rather than manual entries
-    "/assets/header.jpg",
-    "/static/img/avatar.png",
-    "/static/img/logo.png",
-    "/static/css/main.css",
-    "/static/css/bootstrap-material-design.min.css",
-    "/static/css/bootstrap.min.css",
-    // "/about.md",
-    // "/blog.html"
+    '/assets/header.jpg',
+    '/static/img/avatar.png',
+    '/static/img/logo.png',
+    '/static/css/main.css',
+    '/static/css/bootstrap-material-design.min.css',
+    '/static/css/bootstrap.min.css',
+    '/static/css/syntax.css',
+    '/static/css/thickbox.css',
+    '/static/css/projects.css'
 ];
 
 self.addEventListener('install', function(event) {
