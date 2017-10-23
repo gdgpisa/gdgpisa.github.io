@@ -19,5 +19,19 @@
 		"url": "https://www.meetup.com/GDG-Pisa/events/239784476/",
 		"date": "May 17 2017",
 		"tags": ["Firebase","Android","AndroidThings","GoogleAssistant"]
+	},
+	{
+		"name": "Welcome to the material design",
+		"image": "placeholder.jpg",
+		"url": "https://www.eventbrite.it/e/biglietti-welcome-to-the-material-design-33062381473",
+		"date": "April 22 2017",
+		"tags": ["MaterialDesign","WomenTechMakers"]
+	},
+	{
+		"name": "#Hashcode Gym Party",
+		"image": "placeholder.jpg",
+		"url": "https://www.eventbrite.it/e/biglietti-hashcode-gym-party-31485657449",
+		"date": "February 9 2017",
+		"tags": ["HashCode"]
 	}
 ]
