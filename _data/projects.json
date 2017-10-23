@@ -1,23 +1,23 @@
 [
 	{
-		"name": "Seminario 1",
+		"name": "GDD Europe 2017 Extended - Pisa",
 		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "Oct 2017",
-		"tags": ["Firebase","Android"]
+		"url": "https://www.meetup.com/GDG-Pisa/events/242326529/",
+		"date": "September 27 2017",
+		"tags": ["Firebase","Android","AndroidThings"]
 	},
 	{
-		"name": "Seminario 2",
+		"name": "Go Codelab: Summer Session",
 		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "June 2017",
-		"tags": ["Android"]
+		"url": "https://www.meetup.com/GDG-Pisa/events/241421858/",
+		"date": "July 22 2017",
+		"tags": ["GoLang"]
 	},
 	{
-		"name": "Seminario 3",
+		"name": "Google I/O Extended 2017 - Pisa",
 		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "May 2017",
-		"tags": ["Firebase","Angular"]
+		"url": "https://www.meetup.com/GDG-Pisa/events/239784476/",
+		"date": "May 17 2017",
+		"tags": ["Firebase","Android","AndroidThings","GoogleAssistant"]
 	}
 ]
