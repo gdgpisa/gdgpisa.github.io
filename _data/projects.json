@@ -1,23 +1,44 @@
 [
 	{
-		"name": "Seminario 1",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "Oct 2017",
-		"tags": ["Firebase","Android"]
+		"name": "GDD Europe 2017 Extended - Pisa",
+		"image": "GDD.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/242326529/",
+		"date": "September 27 2017",
+		"tags": ["Firebase","Android","AndroidThings"]
 	},
 	{
-		"name": "Seminario 2",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "June 2017",
-		"tags": ["Android"]
+		"name": "Go Codelab: Summer Session",
+		"image": "Godelab.jpeg",
+		"url": "https://www.meetup.com/GDG-Pisa/events/241421858/",
+		"date": "July 22 2017",
+		"tags": ["GoLang"]
 	},
 	{
-		"name": "Seminario 3",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "May 2017",
-		"tags": ["Firebase","Angular"]
+		"name": "Google I/O Extended 2017 - Pisa",
+		"image": "IO17.jpg",
+		"url": "https://www.meetup.com/GDG-Pisa/events/239784476/",
+		"date": "May 17 2017",
+		"tags": ["Firebase","Android","AndroidThings","GoogleAssistant"]
+	},
+	{
+		"name": "Welcome to the material design",
+		"image": "IWD17.jpg",
+		"url": "https://www.eventbrite.it/e/biglietti-welcome-to-the-material-design-33062381473",
+		"date": "April 22 2017",
+		"tags": ["MaterialDesign","WomenTechMakers"]
+	},
+	{
+		"name": "#Hashcode Gym Party",
+		"image": "gymparty17.png",
+		"url": "https://www.eventbrite.it/e/biglietti-hashcode-gym-party-31485657449",
+		"date": "February 9 2017",
+		"tags": ["HashCode"]
+	},
+	{
+		"name": "Firebase, from Zero to Hero",
+		"image": "firebase17.png",
+		"url": "https://www.eventbrite.it/e/biglietti-firebase-from-zero-to-hero-29779475212",
+		"date": "December 16 2016",
+		"tags": ["Firebase"]
 	}
 ]
