@@ -17,6 +17,7 @@
         <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
         <meta name="keywords" content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}" />
         <link rel="manifest" href="{{ site.baseurl }}/manifests/manifest_pushnot.json">
+	<link rel="manifest" href="/manifest.webapp">
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
         <script src="{{ site.baseurl }}/static/js/onesignal-init.js"></script>
         <meta content="{{ site.share.fb_appid }}" property="fb:app_id">
