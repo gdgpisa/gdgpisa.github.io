@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "name": "GDG Pisa",
+  "launch_path": "/",
+  "description": "Il Google Developer Group è una community in cui si possono condividere liberamente le proprie idee, le proprie conoscenze ed esperienze in campo tecnologico. Non è richiesta nessuna competenza particolare, se sei semplicemente interessato alla tecnologia non ti resta che entrare in contatto con noi ",
+  "icons": {
+    "1024": "/imgs/1024x1024.png"
+  },
+  "developer": {
+    "name": "GDG Pisa",
+    "url": "https://gdgpisa.it"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "it",
+  "permissions": {
+  }
+}
