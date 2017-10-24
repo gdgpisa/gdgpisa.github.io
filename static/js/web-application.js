@@ -12,7 +12,7 @@ function showOfflineToast() {
               		console.log('[*] Install successful!');
           		}
           		if (worker.state == 'activated' && !navigator.serviceWorker.controller) {
-            		setInterval(showOfflineToast(),3000);
+            		setInterval(showOfflineToast(),30);
           		}
       		});
   		});
