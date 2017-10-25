@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 var cacheName = 'gdgpisa-cache-v1.2';
 var urlsToCache = [];
 
