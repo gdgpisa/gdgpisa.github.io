@@ -17,6 +17,9 @@ var urlsToCache = [
     '/static/css/bootstrap.min.css',
     '/static/css/syntax.css',
     '/static/css/thickbox.css',
+    'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+    'https://code.jquery.com/jquery-migrate-1.2.1.min.js',
+    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
     '/static/css/projects.css'
 ];
 
