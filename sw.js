@@ -2,7 +2,7 @@
 layout: null
 ---
 
-var cacheName = 'gdgpisa-cache-v1.4';
+var cacheName = 'gdgpisa-cache-v1.5';
 var urlsToCache = [
     '/',
     '/index.html',      
@@ -10,6 +10,10 @@ var urlsToCache = [
     '/manifests/manifest_webapp.json',
     '/manifests/manifest_notpush.json',
     '/assets/header.jpg',
+    '/static/img/1.png',
+    '/static/img/2.png',
+    '/static/img/3.png',
+    '/static/img/4.png',
     '/static/img/avatar.png',
     '/static/img/logo.png',
     '/static/css/main.css',
