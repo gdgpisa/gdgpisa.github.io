@@ -23,7 +23,7 @@ principalmente in 4 tipologie.
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/meetup.png">
+            <img src="/static/img/1.png">
         </div>
         <div class="col-sm-9">
             <h4><strong>Meetup</strong></h4>
@@ -36,7 +36,7 @@ principalmente in 4 tipologie.
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/avatar.png">
+            <img src="/static/img/2.png">
         </div>
         <div class="col-sm-9">
             <h4><strong>Codelab</strong></h4>
@@ -48,7 +48,7 @@ principalmente in 4 tipologie.
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/avatar.png">
+            <img src="/static/img/3.png">
         </div>
         <div class="col-sm-9">
             <h4><strong>Hackathon</strong></h4>
@@ -62,7 +62,7 @@ principalmente in 4 tipologie.
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/avatar.png">
+            <img src="/static/img/4.png">
         </div>
         <div class="col-sm-9">
             <h4><strong>Talk</strong></h4>
@@ -88,7 +88,7 @@ principalmente in 4 tipologie.
         </div>
         <div class="col-sm-6 text-center">
             <h4><strong>Partecipa ai nostri eventi</strong></h4>
-            <a href="http://google.it"><img class="center-block" src="/static/img/avatar.png"></a>
+            <a href="https://www.meetup.com/it-IT/GDG-Pisa/"><img class="center-block" src="/static/img/meetup.png"></a>
         </div>
     </div>
 </div>
