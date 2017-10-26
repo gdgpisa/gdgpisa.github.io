@@ -20,6 +20,7 @@ var urlsToCache = [
     'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
     'https://code.jquery.com/jquery-migrate-1.2.1.min.js',
     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
+    'https://use.fontawesome.com/18475ccca4.js',
     '/static/css/projects.css'
 ];
 
