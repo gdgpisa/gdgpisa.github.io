@@ -47,6 +47,10 @@ self.addEventListener('install', function(event) {
   );
 });
 
+self.addEventListener('activate', function(event) {
+  console.log('Finally active. Ready to start serving content!');  
+});
+ 
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
