@@ -10,7 +10,7 @@ This is a simple website made with Jekyll. We use OneSignal for push notificatio
 * Material Design
 * Responsive
 * Push Notifications
-* WebApp ready
+* ProgressiveWebApp ready
 * HTML5 cache support
 * Awesome community behind
 
