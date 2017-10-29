@@ -33,12 +33,14 @@ $text_size: 13px;
 .project-outer {
 
     vertical-align: top;
-
+    height:400px;
+  
     .project-headlines {
 
         @include margins(5px 0);
         @include borderbtm( #EEE );
         font-size: $heading_size;
+        padding-top:10px;
 
     }
 
@@ -64,6 +66,8 @@ $text_size: 13px;
         clear: both;
         display: inline-block;
         width: 100%;
+        position:absolute;
+        bottom:40px;
 
         .project-link {
             display: inline-block;
@@ -74,11 +78,12 @@ $text_size: 13px;
         .project-timeline {
 
             display: inline-block;
-            position: relative;
             float: right;
             font-size: $text_size;
             font-style: italic;
             vertical-align: middle;
+            position:absolute;
+            right:75px;
             @include margins(10px 0);
             @include pad(5px 0);
         }
