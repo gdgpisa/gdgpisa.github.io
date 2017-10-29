@@ -43,9 +43,10 @@ input:-ms-input-placeholder {
 }
 .full{ font-size: 16px; }
 .logo-img {
-    width: 56px;
+    /*width: 56px;
     height: 56px;
-    border-radius: 60px;
+    border-radius: 60px;*/
+    width: 250px;
     margin: 0 auto;
 }
 .logo-turner {
@@ -84,19 +85,21 @@ p.info a {
     height: auto;
 }
 .social-icons {
-    margin: 20px 0 0;
+    margin: 20px 0 0 30px;
 }
 .icon {
-    background: rgba(255, 255, 255, 0.63);
+    /*background: rgba(255, 255, 255, 0.63);*/
     border-radius: 100%;
     text-align: center;
-    line-height: 20px;
-    font-size: 20px;
-    color: #2196f3;
-    padding: 5px;
+    line-height: 10px;
+    font-size: 30px;
+    /*color: #2196f3;*/
+    color: #ffffff;
+    /*padding: 5px;*/
     width: 30px;
     height: 30px;
     display: inline-block;
+    margin-right: 10px;
 }
 .icon:hover {
     color: rgba(255, 255, 255, 0.63);
