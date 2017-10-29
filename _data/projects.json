@@ -1,5 +1,12 @@
 [
 	{
+		"name": "L'assistente personale che hai sempre voluto... con Actions on Google!",
+		"image": "AoG.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/244273880/",
+		"date": "October 26 2017",
+		"tags": ["GoogleAssistant"]
+	},
+	{
 		"name": "GDD Europe 2017 Extended - Pisa",
 		"image": "GDD.png",
 		"url": "https://www.meetup.com/GDG-Pisa/events/242326529/",
