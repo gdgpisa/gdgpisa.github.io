@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Projects
+title: Seminari
 permalink: /projects/
 ---
 
-Few of my projects.
+I nostri ultimi seminari.
