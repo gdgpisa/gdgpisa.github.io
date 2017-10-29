@@ -36,7 +36,15 @@ $text_size: 13px;
     height:400px;
   
     .project-headlines {
-
+         /** Overflow con ellipsis oltre la terza riga */
+        display: inline;
+        -webkit-line-clamp: 3;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;
+        /** Fine overflow con ellipsis */
         @include margins(5px 0);
         @include borderbtm( #EEE );
         font-size: $heading_size;
