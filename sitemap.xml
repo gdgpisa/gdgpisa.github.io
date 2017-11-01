@@ -30,7 +30,13 @@ layout: null
       <item>
         <title>{{ project.name | xml_escape }}</title>
         <description>{{ project.name | xml_escape }}</description>
-        <link>{{ project.url | prepend: site.url }}</link>
+        <link>
+            {% if project.url contains '://' %}
+                {{ project.url }}
+            {% else %}
+                {{ project.url | prepend: site.url }}
+            {% endif %}
+        </link>
         <pubDate>{{ project.date | date_to_rfc822 }}</pubDate>
         {% for tag in project.tags %}
         <category>{{ tag | xml_escape }}</category>
