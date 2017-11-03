@@ -1,6 +1,6 @@
 # How to contribute 🇬🇧
 
-([Italian is below](#come-contribuire))
+([Italian is below](#come-contribuire-))
 
 I'm really glad you're reading this, because we need volunteer to help our website grow and get better.
 
