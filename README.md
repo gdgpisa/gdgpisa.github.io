@@ -44,7 +44,48 @@ This will allow you to **preview what the generated site** will look like in you
 
 ### Linux
 
-TODO
+1. Install [Ruby](https://www.ruby-lang.org/en/) with your package manager.
+```
+Debian
+sudo apt install ruby
+
+ArchLinux
+sudo pacman -S ruby
+```
+
+2. Clone this repository (you need `git` installed).
+```
+git clone https://github.com/gdgpisa/gdgpisa.github.io.git
+cd gdgpisa.github.io/
+```
+
+3. To configure gems user-wide add the following line to your shell configuration files, for example `~/.bashrc` or `~/.zshrc`
+```
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+```
+
+4. Open your terminal and install `jekyll` and `bundler`
+```
+gem install jekyll
+gem install bundler
+```
+
+5. To run executable gems, without typing the full location, run the following command or add it to your shell configuration files, for example `~/.bashrc` or `~/.zshrc`.
+```
+PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
+```
+
+6. To install gems into `GEM_HOME`
+```
+bundle install
+```
+
+7. Serve the website with the following command, 
+```
+bundle exec jekyll serve
+```
+
+You should be able to see the local website at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
 ### Mac OS
 
