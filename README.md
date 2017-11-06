@@ -24,6 +24,9 @@ The website is publicly available on [http://gdgpisa.it/](http://gdgpisa.it/).
 
 Feel free to fork ⸑ or star ⭐️ this repo! Contributions are really appreciated. Please have a look at the [Contributing Guidelines](.github/CONTRIBUTING.md) or at the [TODO](#contributing-) list down there. You can easily start having a look at our [Issues](https://github.com/gdgpisa/gdgpisa.github.io/issues).
 
+-**Don't know where to start?** 🤔 have a look at our [**help wanted**](https://github.com/gdgpisa/gdgpisa.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) or [**good first issue**](https://github.com/gdgpisa/gdgpisa.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) tickets.
+-
+
 ## Feature 💅
 
 * Material Designed (based on [hcz-jekyll-blog](https://github.com/codeasashu/hcz-jekyll-blog) theme) 🎨
@@ -149,7 +152,6 @@ Feel free to [open a issue](https://github.com/gdgpisa/gdgpisa.github.io/issues/
 Here a short TODO list:
 
 - [ ] Create the *hall of fame* page.
-- [ ] Add the *fork me on github* page.
 - [ ] Writing Linux setup steps to this Readme.
 - [ ] Writing Windows setup steps to this Readme.
 - [ ] Fix naming issues (mix of `-` and `_` in file naming).
