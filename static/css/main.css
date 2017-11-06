@@ -7,7 +7,7 @@
 .header-panel.header-home {
     padding: 30px 0 15px 0;
     height: 80%;
-    background: url(/assets/header.jpg);
+    background: url(/static/img/header.jpg);
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
