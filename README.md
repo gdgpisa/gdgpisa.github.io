@@ -45,11 +45,13 @@ This will allow you to **preview what the generated site** will look like in you
 ### Linux
 
 1. Install [Ruby](https://www.ruby-lang.org/en/) with your package manager.
-*Debian*
-`# apt install ruby`
+```
+Debian
+# apt install ruby
 
-*ArchLinux*
-`# pacman -S ruby`
+ArchLinux
+# pacman -S ruby
+```
 
 2. Clone this repository (you need `git` installed).
 ```
@@ -67,11 +69,14 @@ $ gem install bundler
 ```
 
 4. Before serve the website add path to jekyll to your `$PATH`. You can add it to your shell configuration files, for example `~/.bashrc` or `~/.zshrc`.
-`PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH`
-
+```
+PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
+```
 
 5. Serve the website with the following command, 
-`$ jekyll serve`
+```
+$ jekyll serve
+```
 
 You should be able to see the local website at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
