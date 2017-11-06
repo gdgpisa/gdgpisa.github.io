@@ -6,16 +6,16 @@
   <img src="static/img/readme-screenshots.png" alt="readme screenshot"/>
 </p>
 
-   * [GDG Pisa's public website <g-emoji alias="earth_americas" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f30e.png" ios-version="6.0">🌎</g-emoji>](#gdg-pisas-public-website-)
-      * [Feature <g-emoji alias="nail_care" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f485.png" ios-version="6.0">💅</g-emoji>](#feature-)
-      * [Getting Started (builing the website locally) <g-emoji alias="hammer_and_wrench" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f6e0.png" ios-version="9.1">🛠</g-emoji>](#getting-started-builing-the-website-locally-)
-         * [Linux](#linux)
-         * [Mac OS](#mac-os)
-      * [Writing a post <g-emoji alias="memo" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4dd.png" ios-version="6.0">📝</g-emoji>](#writing-a-post-)
-      * [Updating the feedback form shortlink <g-emoji alias="arrow_right_hook" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/21aa.png" ios-version="6.0">↪️</g-emoji>](#updating-the-feedback-form-shortlink-️)
-      * [Website Structure <g-emoji alias="world_map" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f5fa.png" ios-version="9.1">🗺</g-emoji>](#website-structure-)
-      * [Contributing <g-emoji alias="handshake" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f91d.png" ios-version="10.2">🤝</g-emoji>](#contributing-)
-      * [License <g-emoji alias="page_facing_up" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4c4.png" ios-version="6.0">📄</g-emoji>](#license-)
+* [GDG Pisa's public website](#gdg-pisas-public-website-)
+  + [Feature](#feature-)
+  + [Getting Started (builing the website locally)](#getting-started-builing-the-website-locally-)
+     + [Linux](#linux)
+     + [Mac OS](#mac-os)
+  + [Writing a post](#writing-a-post-)
+  + [Updating the feedback form shortlink](#updating-the-feedback-form-shortlink-️)
+  + [Website Structure](#website-structure-)
+  + [Contributing](#contributing-)
+  + [License](#license-)
 
 
 Welcome to the Google Developer Group Pisa public website 🌎 The website is written with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
