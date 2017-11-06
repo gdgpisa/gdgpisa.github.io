@@ -3,7 +3,7 @@
  [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT) [![Twitter](https://img.shields.io/badge/Twitter-@gdgPisa-blue.svg?style=flat)](http://twitter.com/gdgPisa)
 
 <p align="center">
-  <img src="static/img/readme-screenshots.png" alt="readme screenshot"/>
+  <img src="static/img/readme-screenshot.png" alt="readme screenshot"/>
 </p>
 
 * [GDG Pisa's public website](#gdg-pisas-public-website-)
