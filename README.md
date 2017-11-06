@@ -20,7 +20,7 @@
 
 Welcome to the Google Developer Group Pisa public website 🌎 The website is written with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
 
-The website is publicly available on [http://gdgpisa.it/](http://gdgpisa.it/). 
+The website is publicly available on [https://gdgpisa.it/](https://gdgpisa.it/). 
 
 Feel free to fork ⸑ or star ⭐️ this repo! Contributions are really appreciated. Please have a look at the [Contributing Guidelines](.github/CONTRIBUTING.md) or at the [TODO](#contributing-) list down there. You can easily start having a look at our [Issues](https://github.com/gdgpisa/gdgpisa.github.io/issues).
 
@@ -192,7 +192,7 @@ Feel free to [open a issue](https://github.com/gdgpisa/gdgpisa.github.io/issues/
 Here a short TODO list:
 
 - [ ] Create the *hall of fame* page.
-- [ ] Writing Linux setup steps to this Readme.
+- [√] Writing Linux setup steps to this Readme.
 - [ ] Writing Windows setup steps to this Readme.
 - [ ] Fix naming issues (mix of `-` and `_` in file naming).
 - [ ] Clean-up the `static` folder.
