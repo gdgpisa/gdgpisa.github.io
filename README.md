@@ -192,7 +192,7 @@ Feel free to [open a issue](https://github.com/gdgpisa/gdgpisa.github.io/issues/
 Here a short TODO list:
 
 - [ ] Create the *hall of fame* page.
-- [√] Writing Linux setup steps to this Readme.
+- [x] Writing Linux setup steps to this Readme.
 - [ ] Writing Windows setup steps to this Readme.
 - [ ] Fix naming issues (mix of `-` and `_` in file naming).
 - [ ] Clean-up the `static` folder.
