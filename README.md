@@ -55,9 +55,8 @@ To be able to build the site locally, you need [Homebrew](https://brew.sh/index.
 git clone https://github.com/gdgpisa/gdgpisa.github.io.git
 cd gdgpisa.github.io/
 ```
-2. Open your terminal and install `brew`, `ruby`, `jekyll` and `bundler` (skip the related command if you already have the package installed).
+2. Open your terminal and install `ruby`, `jekyll` and `bundler` (skip the related command if you already have the package installed).
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install ruby
 sudo gem install jekyll
 sudo gem install bundler
