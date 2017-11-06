@@ -24,7 +24,8 @@ The website is publicly available on [http://gdgpisa.it/](http://gdgpisa.it/).
 
 Feel free to fork ⸑ or star ⭐️ this repo! Contributions are really appreciated. Please have a look at the [Contributing Guidelines](.github/CONTRIBUTING.md) or at the [TODO](#contributing-) list down there. You can easily start having a look at our [Issues](https://github.com/gdgpisa/gdgpisa.github.io/issues).
 
-**Don't know where to start?** 🤔 have a look at our [**help wanted**](https://github.com/gdgpisa/gdgpisa.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) or [**good first issue**](https://github.com/gdgpisa/gdgpisa.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) tickets.
+-**Don't know where to start?** 🤔 have a look at our [**help wanted**](https://github.com/gdgpisa/gdgpisa.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) or [**good first issue**](https://github.com/gdgpisa/gdgpisa.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) tickets.
+-
 
 ## Feature 💅
 
@@ -51,10 +52,10 @@ To be able to build the site locally, you need [Homebrew](https://brew.sh/index.
 
 1. Clone this repository (you need `git` installed).
 ```
-git clone git@github.com:gdgpisa/gdgpisa.github.io.git
+git clone https://github.com/gdgpisa/gdgpisa.github.io.git
 cd gdgpisa.github.io/
 ```
-2. Instally `ruby`, `jekyll` and `bundler` (skip the related command if you already have the package installed).
+2. Open your terminal and install `ruby`, `jekyll` and `bundler` (skip the related command if you already have the package installed).
 ```
 brew install ruby
 sudo gem install jekyll
@@ -150,7 +151,6 @@ Feel free to [open a issue](https://github.com/gdgpisa/gdgpisa.github.io/issues/
 Here a short TODO list:
 
 - [ ] Create the *hall of fame* page.
-- [ ] Add the *fork me on github* page.
 - [ ] Writing Linux setup steps to this Readme.
 - [ ] Writing Windows setup steps to this Readme.
 - [ ] Fix naming issues (mix of `-` and `_` in file naming).
