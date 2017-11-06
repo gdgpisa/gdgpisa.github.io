@@ -47,10 +47,10 @@ This will allow you to **preview what the generated site** will look like in you
 1. Install [Ruby](https://www.ruby-lang.org/en/) with your package manager.
 ```
 Debian
-# apt install ruby
+sudo apt install ruby
 
 ArchLinux
-# pacman -S ruby
+sudo pacman -S ruby
 ```
 
 2. Clone this repository (you need `git` installed).
@@ -59,23 +59,30 @@ git clone https://github.com/gdgpisa/gdgpisa.github.io.git
 cd gdgpisa.github.io/
 ```
 
-3. Open your terminal and install `jekyll`, `jekyll-paginate`, `jekyll-gist`, `jekyll-redirect-from` and `bundler`
+3. To configure gems user-wide add the following line to your shell configuration files, for example `~/.bashrc` or `~/.zshrc`
 ```
-$ gem install jekyll
-$ gem install jekyll-paginate
-$ gem install jekyll-gist
-$ gem install jekyll-redirect-from
-$ gem install bundler
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 ```
 
-4. Before serve the website add path to jekyll to your `$PATH`. You can add it to your shell configuration files, for example `~/.bashrc` or `~/.zshrc`.
+4. Open your terminal and install `jekyll` and `bundler`
+```
+gem install jekyll
+gem install bundler
+```
+
+5. To run executable gems, without typing the full location, run the following command or add it to your shell configuration files, for example `~/.bashrc` or `~/.zshrc`.
 ```
 PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
 ```
 
-5. Serve the website with the following command, 
+6. To install gems into `GEM_HOME`
 ```
-$ jekyll serve
+bundle install
+```
+
+7. Serve the website with the following command, 
+```
+bundle exec jekyll serve
 ```
 
 You should be able to see the local website at [http://127.0.0.1:4000](http://127.0.0.1:4000)
