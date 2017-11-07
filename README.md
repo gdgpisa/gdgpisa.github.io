@@ -195,7 +195,7 @@ Here a short TODO list:
 - [x] Writing Linux setup steps to this Readme.
 - [ ] Writing Windows setup steps to this Readme.
 - [ ] Fix naming issues (mix of `-` and `_` in file naming).
-- [ ] Clean-up the `static` folder.
+- [x] Clean-up the `static` folder.
 
 ## License 📄
 

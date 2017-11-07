@@ -23,7 +23,7 @@ principalmente in 4 tipologie.
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/1.png">
+            <img src="/static/img/balloon_1.png">
         </div>
         <div class="col-sm-9">
             <h4><strong>Meetup</strong></h4>
@@ -36,7 +36,7 @@ principalmente in 4 tipologie.
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/2.png">
+            <img src="/static/img/balloon_2.png">
         </div>
         <div class="col-sm-9">
             <h4><strong>Codelab</strong></h4>
@@ -48,7 +48,7 @@ principalmente in 4 tipologie.
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/3.png">
+            <img src="/static/img/balloon_3.png">
         </div>
         <div class="col-sm-9">
             <h4><strong>Hackathon</strong></h4>
@@ -62,7 +62,7 @@ principalmente in 4 tipologie.
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/4.png">
+            <img src="/static/img/balloon_4.png">
         </div>
         <div class="col-sm-9">
             <h4><strong>Talk</strong></h4>
