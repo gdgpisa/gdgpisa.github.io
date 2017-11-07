@@ -14,7 +14,6 @@ var urlsToCache = [
     '/static/img/balloon_2.png',
     '/static/img/balloon_3.png',
     '/static/img/balloon_4.png',
-    '/static/img/avatar.png',
     '/static/img/logo.png',
     '/static/css/main.css',
     '/static/css/bootstrap-material-design.min.css',
