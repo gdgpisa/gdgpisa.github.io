@@ -1789,6 +1789,9 @@ legend {
     width: calc(100% - 92px);
     min-height: 66px
 }
+.row-content{
+    margin-top:10px;
+}
 .list-group .list-group-item .row-content .action-secondary {
     position: absolute;
     right: 16px;
