@@ -11,6 +11,7 @@
   + [Getting Started (builing the website locally)](#getting-started-builing-the-website-locally-)
      + [Linux](#linux)
      + [Mac OS](#mac-os)
+     + [Windows](#windows)
   + [Writing a post](#writing-a-post-)
   + [Updating the feedback form shortlink](#updating-the-feedback-form-shortlink-️)
   + [Website Structure](#website-structure-)
@@ -103,6 +104,27 @@ sudo gem install bundler
 ```
 3. Serve the website with the following command
 ```
+bundle exec jekyll serve
+```
+
+You should be able to see the local website at [http://127.0.0.1:4000/](http://127.0.0.1:4000/).
+
+### Windows
+You must have [git](https://git-scm.com/downloads) for windows installed in your system.
+
+1. Download and install **Ruby** and **Rubygems** using [rubyInstaller for windows](https://rubyinstaller.org/)
+
+2. Using git bash, clone this repository.
+```bash
+git clone https://github.com/gdgpisa/gdgpisa.github.io.git
+cd gdgpisa.github.io/
+```
+2. On your terminal install `jekyll` and `bundler`
+```bash
+gem install jekyll bundler
+```
+3. Serve the website with the following command
+```bash
 bundle exec jekyll serve
 ```
 
