@@ -110,7 +110,7 @@ You should be able to see the local website at [http://127.0.0.1:4000/](http://1
 
 ## Writing a post 📝
 
-To add a new post to the blog page, you need to create a new file in the [`_blog`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_posts) folder. Please follow the naming of the file, like:
+To add a new post to the blog page, you need to create a new file in the [`_post`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_posts) folder. Please follow the naming of the file, like:
 ```
 2017-10-10-hello-world.md
 ```
