@@ -260,3 +260,7 @@ footer {
     position: absolute;
     right: 12px;
 }
+
+.post-content {    
+   display: inline-block;
+}
