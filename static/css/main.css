@@ -264,3 +264,7 @@ footer {
 .post-content {    
    display: inline-block;
 }
+.row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
