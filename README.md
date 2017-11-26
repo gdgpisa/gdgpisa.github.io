@@ -9,6 +9,7 @@
 * [GDG Pisa's public website](#gdg-pisas-public-website-)
   + [Feature](#feature-)
   + [Getting Started (builing the website locally)](#getting-started-builing-the-website-locally-)
+     + [Docker](#docker)
      + [Linux](#linux)
      + [Mac OS](#mac-os)
      + [Windows](#windows)
@@ -41,6 +42,36 @@ Feel free to fork ⸑ or star ⭐️ this repo! Contributions are really appreci
 To get starting developing, we really recommend to clone the website locally and start developing on your machine. 
 
 This will allow you to **preview what the generated site** will look like in your browser locally. Jekyll comes also with a *auto-regenerate* feature, this will allow you to quickly iterate over different changes to the website (useful if you're touching the CSS files). More info about the *auto-regenerate* feature on the [Jekyll usage page](https://jekyllrb.com/docs/usage/).
+
+### Docker
+
+1. Be sure to have Docker installed on your local machine
+```
+Ubuntu
+sudo apt-get install docker
+
+ArchLinux
+sudo pacman -S docker
+```
+
+2. Clone this repository (you need `git` on your machine)
+```
+git clone https://github.com/gdgpisa/gdgpisa.github.io.git
+cd gdgpisa.github.io/
+```
+
+3. Run a Docker container with `jekyll/jekyll` image and serve the site
+```
+docker run --rm -it \
+-p 4000:4000 -v "$PWD":/srv/jekyll
+jekyll/jekyll jekyll serve
+```
+
+You should be able to see the local website at [http://127.0.0.1:4000](http://127.0.0.1:4000)
+
+This command will download the [`jekyll/jekyll`]() image from Docker Hub and build a container from that image.  
+Container port 4000 is linked to `localhost:4000`, so that you can access the site from that address.  
+Every time this container is executed, it'll automatically do a `bundle install`, thus retrieving all Gem dependencies before building and serving.
 
 ### Linux
 
