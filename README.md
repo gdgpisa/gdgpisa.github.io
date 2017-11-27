@@ -12,6 +12,7 @@
      + [Linux](#linux)
      + [Mac OS](#mac-os)
      + [Windows](#windows)
+     + [Docker](#docker)
   + [Writing a post](#writing-a-post-)
   + [Updating the feedback form shortlink](#updating-the-feedback-form-shortlink-️)
   + [Website Structure](#website-structure-)
@@ -129,6 +130,36 @@ bundle exec jekyll serve
 ```
 
 You should be able to see the local website at [http://127.0.0.1:4000/](http://127.0.0.1:4000/).
+
+### Docker
+
+1. Be sure to have Docker installed on your local machine
+```
+Ubuntu
+sudo apt-get install docker
+
+ArchLinux
+sudo pacman -S docker
+```
+
+2. Clone this repository (you need `git` on your machine)
+```
+git clone https://github.com/gdgpisa/gdgpisa.github.io.git
+cd gdgpisa.github.io/
+```
+
+3. Run a Docker container with `jekyll/jekyll` image and serve the site
+```
+docker run --rm -it \
+-p 4000:4000 -v "$PWD":/srv/jekyll \
+jekyll/jekyll jekyll serve
+```
+
+You should be able to see the local website at [http://127.0.0.1:4000](http://127.0.0.1:4000)
+
+This command will download the [`jekyll/jekyll`](https://hub.docker.com/r/jekyll/builder/) image from Docker Hub and build a container from that image.  
+Container port 4000 is linked to `localhost:4000`, so that you can access the site from that address.  
+Every time this container is executed, it'll automatically do a `bundle install`, thus retrieving all Gem dependencies before building and serving.
 
 ## Writing a post 📝
 
