@@ -5,9 +5,7 @@ date:   2017-11-30 09:00:00
 categories: others
 ---
 
-<p style="text-align: center">
-    <img src="https://www.datocms-assets.com/1787/1490697651-golab-logo-small-png"/>
-</p>
+<img style="display: block; margin: 0 auto;" src="https://i.imgur.com/k15bIJr.png"/>
 
 É con immenso piacere che vi informiamo che il GDG Pisa é ufficialmente **Media Partner** del [Linux Lab 2017](https://2017.linux-lab.it/), la conferenza dedicata interamente all'ecosistema Linux 🐧.
 
