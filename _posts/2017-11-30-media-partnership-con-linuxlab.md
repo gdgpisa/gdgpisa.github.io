@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Media Partnership con Linux Lab
 date:   2017-11-30 09:00:00
