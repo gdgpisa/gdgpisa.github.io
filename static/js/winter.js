@@ -5,7 +5,7 @@ var monthf = '10';
 var dayCheck = today.getDate();
 var monthCheck = today.getMonth();
 
-if(((monthCheck == 00 && dayCheck <= 6) || (monthCheck == 11 && dayCheck >= 3))) {
+if(((monthCheck == 00 && dayCheck <= 6) || (monthCheck == 11 && dayCheck >= 2))) {
 	var snowMax=35;var snowColor=["#DDD","#EEE"];var snowEntity="&#x2022;";var snowSpeed=0.75;var snowMinSize=8;var snowMaxSize=24;var snowRefresh=50;var snowStyles="cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;";var snow=[],pos=[],coords=[],lefr=[],marginBottom,marginRight;function randomise(range){rand=Math.floor(range*Math.random());return rand;}
 	function initSnow(){var snowSize=snowMaxSize- snowMinSize;marginBottom=document.body.scrollHeight- 5;marginRight=document.body.clientWidth- 15;for(i=0;i<=snowMax;i++){coords[i]=0;lefr[i]=Math.random()*15;pos[i]=0.03+ Math.random()/ 10;
 	snow[i]=document.getElementById("flake"+ i);snow[i].style.fontFamily="inherit";snow[i].size=randomise(snowSize)+ snowMinSize;snow[i].style.fontSize=snow[i].size+"px";snow[i].style.color=snowColor[randomise(snowColor.length)];snow[i].style.zIndex=1000;snow[i].sink=snowSpeed*snow[i].size/5;snow[i].posX=randomise(marginRight- snow[i].size);snow[i].posY=randomise(2*marginBottom- marginBottom- 2*snow[i].size);snow[i].style.left=snow[i].posX+"px";snow[i].style.top=snow[i].posY+"px";}
