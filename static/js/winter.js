@@ -16,4 +16,3 @@ if(((monthCheck == 00 && dayCheck <= 6) || (monthCheck == 11 && dayCheck >= 6)))
 	for(i=0;i<=snowMax;i++){document.write("<span id='flake"+ i+"' style='"+ snowStyles+"position:absolute;top:-"+ snowMaxSize+"'>"+ snowEntity+"</span>");}
 	window.onresize=resize;window.onload=initSnow;
 }
-</script>
