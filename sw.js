@@ -24,7 +24,6 @@ var urlsToCache = [
     'https://code.jquery.com/jquery-migrate-1.2.1.min.js',
     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
     'https://use.fontawesome.com/18475ccca4.js',
-    'https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png',
     '/static/css/projects.css'
 ];
 
