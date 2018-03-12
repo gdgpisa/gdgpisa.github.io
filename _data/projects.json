@@ -7,6 +7,13 @@
 		"tags": ["DevFest"]
 	},
 	{
+		"name": "#Hashcode 2018",
+		"image": "hashcode18.jpg",
+		"url": "https://www.meetup.com/it-IT/GDG-Pisa/events/246522981/",
+		"date": "March 1 2018",
+		"tags": ["HashCode"]
+	},
+	{
 		"name": "JavaScript from Zero to Jedi",
 		"image": "jsfromzerotojedi.jpg",
 		"url": "/events/2017/12/08/javascript-from-zero-to-jedi",
