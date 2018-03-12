@@ -1,5 +1,12 @@
 [
 	{
+		"name": "DevFest 0.1 Pisa",
+		"image": "devfest01.jpg",
+		"url": "devfest.gdgpisa.it",
+		"date": "March 10 2018",
+		"tags": ["DevFest"]
+	},
+	{
 		"name": "JavaScript from Zero to Jedi",
 		"image": "jsfromzerotojedi.jpg",
 		"url": "/events/2017/12/08/javascript-from-zero-to-jedi",
