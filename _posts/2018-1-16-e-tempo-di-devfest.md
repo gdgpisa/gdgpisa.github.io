@@ -2,9 +2,9 @@
 layout: post
 title: È tempo di DevFest
 date:   2018-1-16 00:00:00
-categories: events
+categories: devfest
 ---
-# 🔶 È tempo di DevFest  🔶
+# È tempo di DevFest!
 
 Con grande orgoglio il GDG Pisa è felicissimo di annunciarvi la **DevFest Pisa 0.1**. È la prima volta che viene organizzato tale evento a Pisa/in tutta la toscana, per questo motivo 0.1.
 

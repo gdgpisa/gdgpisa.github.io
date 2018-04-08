@@ -2,7 +2,7 @@
 layout: post
 title: DevFest Pisa 0.1 raccontata da un outsider
 date:   2018-4-01 00:00:00
-categories: others
+categories: devfest
 ---
 
 # DevFest Pisa 0.1 raccontata da un outsider
