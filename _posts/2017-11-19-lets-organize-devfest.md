@@ -2,7 +2,7 @@
 layout: post
 title: Let's organize DevFest!
 date:   2017-11-19 11:20:00
-categories: events
+categories: devfest
 ---
 
 ## 📅 Let's organize DevFest!

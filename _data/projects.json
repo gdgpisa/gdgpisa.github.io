@@ -1,8 +1,15 @@
 [
 	{
+		"name": "Google IO Extended 2018 - Pisa",
+		"image": "io18.png",
+		"url": "https://www.eventbrite.it/e/biglietti-google-io-extended-2018-pisa-44163839232",
+		"date": "May 8 2018",
+		"tags": ["MaterialDesign", "Firebase","Android","AndroidThings","GoogleAssistant"]
+	},
+	{
 		"name": "DevFest 0.1 Pisa",
 		"image": "devfest01.jpg",
-		"url": "devfest.gdgpisa.it",
+		"url": "https://devfest.gdgpisa.it/",
 		"date": "March 10 2018",
 		"tags": ["DevFest"]
 	},
@@ -43,7 +50,7 @@
 	},
 	{
 		"name": "Google I/O Extended 2017 - Pisa",
-		"image": "IO17.jpeg",
+		"image": "io17.png",
 		"url": "https://www.meetup.com/GDG-Pisa/events/239784476/",
 		"date": "May 17 2017",
 		"tags": ["Firebase","Android","AndroidThings","GoogleAssistant"]

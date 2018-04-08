@@ -13,7 +13,7 @@ Anche questo evento è passato, indubbiamente il nostro evento più emozionante 
 
 Molto ci hanno chiesto **com'è andata questa DevFest?** Vedendo i feedback form che ci avete lasciato ed i pareri durante l'evento, siamo felici di rispondere alla domanda con un sonoro: **È andata benissimo!!!** 🎉 I talk sono stati pieni di persone interessate e ci ha fatto veramente piacere vedere il clima di networking che si é creato fra i partecipanti.
 
-Ecco a voi quale **numero** di questa DevFest
+Ecco a voi qualche **numero** di questa DevFest
 
 * **230** partecipanti in totale!
 * **16** speakers provenienti da Italia, Regno Unito, Germania e Israele.
