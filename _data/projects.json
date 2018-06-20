@@ -1,6 +1,20 @@
 [
 	{
 		"name": "Google IO Extended 2018 - Pisa",
+		"image": "howtotrainyourgophers.jpg",
+		"url": "https://www.eventbrite.it/e/biglietti-how-to-train-your-gophers-introduzione-a-go-47253066193",
+		"date": "July 5 2018",
+		"tags": ["GoLang"]
+	},
+	{
+		"name": "Kotlin Lab",
+		"image": "kotlinlab.jpg",
+		"url": "https://www.meetup.com/GDG-Pisa/events/251621352/",
+		"date": "June 18 2018",
+		"tags": ["Kotlin", "Android"]
+	},
+	{
+		"name": "Google IO Extended 2018 - Pisa",
 		"image": "io18.png",
 		"url": "https://www.eventbrite.it/e/biglietti-google-io-extended-2018-pisa-44163839232",
 		"date": "May 8 2018",
