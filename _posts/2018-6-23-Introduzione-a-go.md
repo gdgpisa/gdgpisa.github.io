@@ -8,7 +8,7 @@ categories: events
 #### Introduzione a Go
 <img style="display: block; margin: 0 auto;" src="https://secure.meetupstatic.com/photos/event/e/6/2/6/highres_472198918.jpeg"/>
 
-Prima di andare in vacanza, vorremmo svolgere questo ultimo evento che avrà con oggetto uno dei temi ricorrenti del GDG Pisa, ovvero **Go Lang** 🎉🎉🎉
+Prima di andare in vacanza al mare, stiamo organizzando un ultimo evento che avrà con oggetto uno dei temi ricorrenti del GDG Pisa, ovvero **Go Lang** 🎉🎉🎉  
 Un ringraziamento particolare va a *Federico Paolinelli*, nostro speaker d'eccezione proveniente da List Group, il quale darà una rinfrescata generale a quelle che sono le basi del linguaggio.  
 
 ##### Dove? Quando? 🌎
