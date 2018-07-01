@@ -58,6 +58,16 @@ self.addEventListener('activate', function(event) {
   console.log('Finally active. Ready to start serving content!');  
 });
  
+function updateservicew(request) {
+  return caches.open(cacheName).then(function (cache) {
+    return fetch(request).then(function (response) {
+      return cache.put(request, response.clone()).then(function () {
+        return response;
+      });
+    });
+  });
+}
+ 
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
@@ -69,5 +79,8 @@ self.addEventListener('fetch', function(event) {
         return fetch(event.request);
       }
     )
+  );
+  event.waitUntil(
+	updateservicew(event.request)
   );
 });
