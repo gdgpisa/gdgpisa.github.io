@@ -37,7 +37,7 @@ Feel free to fork ⸑ or star ⭐️ this repo! Contributions are really appreci
 * HTML5 Cache support ♻️
 * Awesome Community behind 🤝
 
-## Getting Started (builing the website locally) 🛠
+## Getting Started (building the website locally) 🛠
 
 To get starting developing, we really recommend to clone the website locally and start developing on your machine. 
 
