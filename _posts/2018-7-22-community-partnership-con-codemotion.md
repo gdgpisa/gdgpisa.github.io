@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Community Partnership con Codemotion Milano
-date:   2018-07-15 12:00:00
+date:   2018-07-22 09:00:00
 categories: others
 ---
 
