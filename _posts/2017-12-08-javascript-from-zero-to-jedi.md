@@ -41,6 +41,6 @@ Sei pronto a scoprire come **Javascript** può guidarti contro il lato oscuro? L
 
 [Vi aspettiamo!](https://www.meetup.com/GDG-Pisa/events/245661502/).
 
-* [GDG Pisa on Telegram](https://t.me/joinchat/B1xkFD9ooAqvs5r2xLO9KQ)
+* [GDG Pisa on Telegram](https://t.me/joinchat/B1xkFD9ooAoxNZLgoJU9-A)
 * [GDG Pisa on Twitter](http://twitter.com/gdgPisa)
 * [GDG Pisa on Facebook](http://facebook.com/gdgPisa)
