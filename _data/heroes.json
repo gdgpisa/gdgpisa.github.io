@@ -3,7 +3,9 @@
 		"name": "Nicola Corti",
 		"image": "nicolacorti.jpg",
 		"twitter": "cortinico",
+		"instagram": "cortinico",
 		"github": "cortinico",
+		"linkedin": "cortinico",
 		"link": "https://ncorti.com/"
 	},
 	{
@@ -17,15 +19,19 @@
 		"image": "domenicoblanco.jpeg",
 		"info": "IoT and Raspberry Pi enthusiast. Currently developing PWA and working on home automation.",
 		"facebook": "domenico.blanco.16",
+		"twitter": "domenicoblanco",
+		"instagram": "iosonododo",
 		"github": "domenicoblanco"
 	},
 	
 	{
 		"name": "Place Holder",
 		"image": "placeholder.png",
-		"facebook": "placeholder",
+		"facebook": "",
 		"twitter": "",
-		"github": "placeholder",
+		"instagram": "",
+		"github": "",
+		"linkedin": "",
 		"link": ""
 	}
 ]

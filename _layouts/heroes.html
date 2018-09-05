@@ -31,8 +31,14 @@ layout: default
 					{% if i.twitter %} 
     				<a href="https://twitter.com/@{{ i.twitter }}" class="fa fa-twitter fa-2x"></a>
 					{% endif %}
+					{% if i.instagram %} 
+    				<a href="https://instagr.am/{{ i.instagram }}" class="fa fa-instagram fa-2x"></a>
+					{% endif %}
 					{% if i.github %} 
     				<a href="https://github.com/{{ i.github }}" class="fa fa-github fa-2x"></a>
+					{% endif %}
+					{% if i.linkedin %} 
+    				<a href="https://linkedin.com/in/{{ i.linkedin }}" class="fa fa-linkedin fa-2x"></a>
 					{% endif %}
 					{% if i.link %} 
     				<a href="{{ i.link }}" class="fa fa-link fa-2x"></a>
