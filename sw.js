@@ -2,7 +2,7 @@
 layout: null
 ---
 
-var cacheName = 'gdgpisa-cache-v2.4';
+var cacheName = 'gdgpisa-cache-v2.5';
 var urlsToCache = [
     '/',
     '/index.html',      
@@ -24,7 +24,9 @@ var urlsToCache = [
     'https://code.jquery.com/jquery-migrate-1.2.1.min.js',
     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
     'https://use.fontawesome.com/18475ccca4.js',
-    '/static/css/projects.css'
+    '/static/css/projects.css',
+    '/heroes/index.html',
+    '/projects/index.html'
 ];
 
 {% for asset in site.static_files %}
