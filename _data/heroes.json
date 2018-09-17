@@ -1,0 +1,45 @@
+[
+	{
+		"name": "Nicola Corti",
+		"image": "nicolacorti.jpg",
+		"twitter": "cortinico",
+		"instagram": "cortinico",
+		"github": "cortinico",
+		"linkedin": "cortinico",
+		"link": "https://ncorti.com/"
+	},
+	{
+		"name": "Giovanni Bartolomeo",
+		"image": "giovannibartolomeo.jpg",
+		"info": "Open Source evangelist, Back-End Developer, annoyng security paranoid and Beer 🍺 lover. But I also have flaws...",
+		"facebook": "giobarty",
+		"twitter": "Giobarty01"
+	},
+	{
+		"name": "Domenico Blanco",
+		"image": "domenicoblanco.jpeg",
+		"info": "IoT and Raspberry Pi enthusiast. Currently developing PWA and working on home automation.",
+		"facebook": "domenico.blanco.16",
+		"twitter": "domenicoblanco",
+		"instagram": "iosonododo",
+		"github": "domenicoblanco"
+	},
+	
+	{
+		"name": "Diana Bernabei",
+		"image": "dianabernabei.jpg",
+		"facebook": "dianabernabei",
+		"twitter": "dianabernabei",
+		"instagram": "dianabernabei",
+		"github": "dianaberna",
+		"linkedin": "",
+		"link": "https://www.dianabernabei.com/"
+	},
+	{
+		"name": "Andrea Stevanato",
+		"image": "andreastevanato.jpeg",
+		"instagram": "andrea.stevanato",
+		"github": "thymbahutymba",
+		"linkedin": "andrea-stevanato-643510162"
+	}
+]

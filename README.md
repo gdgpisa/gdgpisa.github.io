@@ -202,6 +202,7 @@ Here a short description of the project structure:
 * [`_config.yml`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_config.yml) **Jekyll config file**, used to provide projectwise configuration. 
 * [`_data`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_data) Contains JSON files used to build pages
     - [`_data/project.json`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_data/project.json) Used to build the [/projects](https://gdgpisa.it/projects/) page.
+    - [`_data/heroes.json`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_data/heroes.json) Used to build the [/heroes](https://gdgpisa.it/heroes/) page.
     - [`_data/social.json`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_data/social.json) Used to create the social buttons.
     - [`_data/urls.json`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_data/social.json) Used to create the navigation bar.
 * [`_includes`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_includes) Static HTML files that will be used to generate web pages
@@ -221,6 +222,7 @@ Here a short description of the project structure:
     - [`_layouts/post.html`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_layouts/post.html) **Blogpost layout**, used to render blogposts from the [`_posts`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_posts) folder).
     - [`_layouts/posts_by_gategory.html`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_layouts/posts_by_gategory.html) Layout used when user clicks on a specific category.
     - [`_layouts/project.html`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_layouts/project.html) **Projects layout**, used to display seminars with Cards.
+    - [`_layouts/heroes.html`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/_layouts/heroes.html) **Hall of Fame layout**, used to display our Heroes.
 * [`blog/index.html`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/blog/intex.html) Index file for the [blog](https://gdgpisa.it/blog/) page. Used by the [`jekyll-paginate`](https://jekyllrb.com/docs/pagination/).
 * [`category`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/category) Contains one file for every **category**. Please add files here before using new categories in blogposts.
 * [`manifests`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/manifests) Contains manifests file for the PWA.
@@ -231,6 +233,7 @@ Here a short description of the project structure:
 * [`about.md`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/about.md) **About page**, Markdown file used to create it.
 * [`feed.xml`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/feed.xml) XML File used to create the RSS feed.
 * [`projects.md`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/projects.md) **Projects page**, Markdown file used to create it. For cards creation refer to the project layout file.
+* [`heroes.md`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/heroes.md) **Heroes page**, Markdown file used to create it. For cards creation refer to the project layout file.
 * [`feed.xml`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/feed.xml) XML File used to create the RSS feed.
 * [`feedbackform.md`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/feedbackform.md) **Feedback form** redirect page, used to handle the feedback form QR code.
 * [`sw.js`](https://github.com/gdgpisa/gdgpisa.github.io/tree/master/sw.js) Service Worker used for PWA purpose.
@@ -243,9 +246,9 @@ Feel free to [open a issue](https://github.com/gdgpisa/gdgpisa.github.io/issues/
 
 Here a short TODO list:
 
-- [ ] Create the *hall of fame* page.
+- [x] Create the *hall of fame* page.
 - [x] Writing Linux setup steps to this Readme.
-- [ ] Writing Windows setup steps to this Readme.
+- [x] Writing Windows setup steps to this Readme.
 - [ ] Fix naming issues (mix of `-` and `_` in file naming).
 - [x] Clean-up the `static` folder.
 

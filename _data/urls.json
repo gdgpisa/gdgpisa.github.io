@@ -16,6 +16,11 @@
     "icon": "fa-desktop"
   },
   {
+    "text": "Hall of Fame",
+    "url": "/heroes",
+    "icon": "fa-trophy"
+  },
+  {
     "text": "Meetup",
     "url": "https://www.meetup.com/GDG-Pisa/",
     "icon": "fa-meetup",
