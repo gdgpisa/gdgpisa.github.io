@@ -26,13 +26,20 @@
 	},
 	
 	{
-		"name": "Place Holder",
-		"image": "placeholder.png",
-		"facebook": "",
-		"twitter": "",
-		"instagram": "",
-		"github": "",
+		"name": "Diana Bernabei",
+		"image": "dianabernabei.jpg",
+		"facebook": "dianabernabei",
+		"twitter": "dianabernabei",
+		"instagram": "dianabernabei",
+		"github": "dianaberna",
 		"linkedin": "",
-		"link": ""
+		"link": "https://www.dianabernabei.com/"
+	},
+	{
+		"name": "Andrea Stevanato",
+		"image": "andreastevanato.jpeg",
+		"instagram": "andrea.stevanato",
+		"github": "thymbahutymba",
+		"linkedin": "andrea-stevanato-643510162"
 	}
 ]
