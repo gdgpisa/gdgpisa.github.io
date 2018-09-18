@@ -2,7 +2,7 @@
 layout: null
 ---
 
-var cacheName = 'gdgpisa-cache-v2.5';
+var cacheName = 'gdgpisa-cache-v2.6';
 var urlsToCache = [
     '/',
     '/index.html',      
