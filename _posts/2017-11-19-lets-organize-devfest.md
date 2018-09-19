@@ -26,6 +26,5 @@ Nel caso te lo stessi chiedendo la risposta è semplice: **tu sei già parte del
 
 ### 📇 Contatti
 Se hai delle domande da farci o semplicemente vuoi tenerti in contatto con noi eccoti i nostri contatti:
-* [GDG Pisa on Telegram](https://t.me/joinchat/B1xkFD9ooAoxNZLgoJU9-A)
 * [GDG Pisa on Twitter](http://twitter.com/gdgPisa)
 * [GDG Pisa on Facebook](http://facebook.com/gdgPisa)
