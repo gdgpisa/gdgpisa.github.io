@@ -20,6 +20,5 @@ L’Agtech Hackathon è l’evento che connette ed unisce Aziende a startup esis
 
 Non vedi l'ora? Allora prendi subito il biglietto! [https://www.eventbrite.it/e/registrazione-agtech-hackathon-48726577505](https://www.eventbrite.it/e/registrazione-agtech-hackathon-48726577505)
 
-* [GDG Pisa on Telegram](https://t.me/joinchat/B1xkFD9ooAoxNZLgoJU9-A)
 * [GDG Pisa on Twitter](http://twitter.com/gdgPisa)
 * [GDG Pisa on Facebook](http://facebook.com/gdgPisa)
