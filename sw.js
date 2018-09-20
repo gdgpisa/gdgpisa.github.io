@@ -2,7 +2,7 @@
 layout: null
 ---
 
-var cacheName = 'gdgpisa-cache-v2.6';
+var cacheName = 'gdgpisa-cache-v2.81';
 var urlsToCache = [
     '/',
     '/index.html',      
@@ -20,10 +20,10 @@ var urlsToCache = [
     '/static/css/bootstrap.min.css',
     '/static/css/syntax.css',
     '/static/css/thickbox.css',
-    'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-    'https://code.jquery.com/jquery-migrate-1.2.1.min.js',
-    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
-    'https://use.fontawesome.com/18475ccca4.js',
+    '/static/js/jquery.min.js',
+	'/static/js/bootstrap.min.js',
+    '/static/js/jquery-migrate-1.2.1.min.js',
+    '/static/js/18475ccca4.js',
     '/static/css/projects.css',
     '/heroes/index.html',
     '/projects/index.html'
@@ -59,17 +59,7 @@ self.addEventListener('install', function(event) {
 self.addEventListener('activate', function(event) {
   console.log('Finally active. Ready to start serving content!');  
 });
- 
-function updateservicew(request) {
-  return caches.open(cacheName).then(function (cache) {
-    return fetch(request).then(function (response) {
-      return cache.put(request, response.clone()).then(function () {
-        return response;
-      });
-    });
-  });
-}
- 
+
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
@@ -84,5 +74,29 @@ self.addEventListener('fetch', function(event) {
   );
   event.waitUntil(
 	updateservicew(event.request)
+	.then(refresh)
   );
 });
+
+function updateservicew(request) {
+  return caches.open(cacheName).then(function (cache) {
+    return fetch(request).then(function (response) {
+      return cache.put(request, response.clone()).then(function () {
+        return response;
+      });
+    });
+  });
+}
+
+function refresh(response) {
+  return self.clients.matchAll().then(function (clients) {
+    clients.forEach(function (client) {
+		var message = {
+        type: 'refresh',
+        url: response.url,
+		eTag: response.headers.get('ETag')
+      };
+	  client.postMessage(JSON.stringify(message));
+    });
+  });
+}

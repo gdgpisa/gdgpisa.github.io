@@ -9,6 +9,22 @@
 		"link": "https://ncorti.com/"
 	},
 	{
+		"name": "Gianni Modica",
+		"image": "giannimodica.jpg",
+		"twitter": "infernatico",
+		"info": "Co-manager e co-founder di GDG Pisa. Android software developer per Car2Go"
+	},
+	{
+		"name": "Diana Bernabei",
+		"image": "dianabernabei.jpg",
+		"facebook": "dianabernabei",
+		"twitter": "dianabernabei",
+		"instagram": "dianabernabei",
+		"github": "dianaberna",
+		"linkedin": "",
+		"link": "https://www.dianabernabei.com/"
+	},
+	{
 		"name": "Giovanni Bartolomeo",
 		"image": "giovannibartolomeo.jpg",
 		"info": "Open Source evangelist, Back-End Developer, annoyng security paranoid and Beer 🍺 lover. But I also have flaws...",
@@ -23,17 +39,6 @@
 		"twitter": "domenicoblanco",
 		"instagram": "iosonododo",
 		"github": "domenicoblanco"
-	},
-	
-	{
-		"name": "Diana Bernabei",
-		"image": "dianabernabei.jpg",
-		"facebook": "dianabernabei",
-		"twitter": "dianabernabei",
-		"instagram": "dianabernabei",
-		"github": "dianaberna",
-		"linkedin": "",
-		"link": "https://www.dianabernabei.com/"
 	},
 	{
 		"name": "Andrea Stevanato",
