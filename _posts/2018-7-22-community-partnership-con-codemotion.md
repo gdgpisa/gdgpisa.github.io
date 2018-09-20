@@ -17,10 +17,9 @@ Non perdere l'occasione di partecipare a questo evento assieme agli **altri memb
 
 L'evento si terrà a Milano, presso il [Superstudio](https://goo.gl/maps/gnXTRXCgbYA2).
 
-Sei stanco di partire da solo e stai cercando un compagno di viaggio? [**Entra in community!**](https://t.me/joinchat/B1xkFD9ooAoxNZLgoJU9-A), ci saranno tanti altri appassionati come te!
+Sei stanco di partire da solo e stai cercando un compagno di viaggio? **Entra in community!**, ci saranno tanti altri appassionati come te!
 
 Ti aspettiamo 😉
 
-* [GDG Pisa on Telegram](https://t.me/joinchat/B1xkFD9ooAoxNZLgoJU9-A)
 * [GDG Pisa on Twitter](http://twitter.com/gdgPisa)
 * [GDG Pisa on Facebook](http://facebook.com/gdgPisa)

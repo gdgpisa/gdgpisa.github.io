@@ -21,10 +21,9 @@ L'evento si terrà a Firenze, presso il [Grand Hotel Mediterraneo](https://golab
 
 Se vuoi partecipare da solo puoi prendere i biglietti [direttamente online](https://ti.to/develer/golab2018/?_ga=2.2592179.280560236.1531666314-184803994.1528866559)
 
-Ma se stai cercando qualcuno per condividere il viaggio, [**entra in community!**](https://t.me/joinchat/B1xkFD9ooAoxNZLgoJU9-A). Ci stiamo organizzando per andare assieme.
+Ma se stai cercando qualcuno per condividere il viaggio, **entra in community!**. Ci stiamo organizzando per andare assieme.
 
 Ti aspettiamo 😉
 
-* [GDG Pisa on Telegram](https://t.me/joinchat/B1xkFD9ooAoxNZLgoJU9-A)
 * [GDG Pisa on Twitter](http://twitter.com/gdgPisa)
 * [GDG Pisa on Facebook](http://facebook.com/gdgPisa)
