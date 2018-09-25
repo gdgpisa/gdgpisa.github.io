@@ -1,20 +1,5 @@
 [
 	{
-		"name": "Nicola Corti",
-		"image": "nicolacorti.jpg",
-		"twitter": "cortinico",
-		"instagram": "cortinico",
-		"github": "cortinico",
-		"linkedin": "cortinico",
-		"link": "https://ncorti.com/"
-	},
-	{
-		"name": "Gianni Modica",
-		"image": "giannimodica.jpg",
-		"twitter": "infernatico",
-		"info": "Co-manager e co-founder di GDG Pisa. Android software developer per Car2Go"
-	},
-	{
 		"name": "Diana Bernabei",
 		"image": "dianabernabei.jpg",
 		"facebook": "dianabernabei",
@@ -39,6 +24,20 @@
 		"twitter": "domenicoblanco",
 		"instagram": "iosonododo",
 		"github": "domenicoblanco"
+	},
+	{
+		"name": "Nicola Corti",
+		"info": "Co-manager and co-founder off GDG Pisa. Android developer @ Yelp and Community Lover!",
+		"image": "nicolacorti.jpg",
+		"twitter": "cortinico",
+		"github": "cortinico",
+		"link": "https://ncorti.com/"
+	},
+	{
+		"name": "Gianni Modica",
+		"image": "giannimodica.jpg",
+		"twitter": "infernatico",
+		"info": "Co-manager and co-founder off GDG Pisa. Android software developer per Car2Go"
 	},
 	{
 		"name": "Andrea Stevanato",
