@@ -6,7 +6,8 @@
 		"twitter": "dianabernabei",
 		"instagram": "dianabernabei",
 		"github": "dianaberna",
-		"linkedin": "",
+		"linkedin": "dianabernabei",
+		"info": "CS student, Front-end web developer, web designer and dreamer",
 		"link": "https://www.dianabernabei.com/"
 	},
 	{
@@ -23,11 +24,12 @@
 		"facebook": "domenico.blanco.16",
 		"twitter": "domenicoblanco",
 		"instagram": "iosonododo",
+		"linkedin": "domenico-blanco-700877171",
 		"github": "domenicoblanco"
 	},
 	{
 		"name": "Nicola Corti",
-		"info": "Co-manager and co-founder off GDG Pisa. Android developer @ Yelp and Community Lover!",
+		"info": "Co-manager and co-founder of GDG Pisa. Android developer @ Yelp and Community Lover!",
 		"image": "nicolacorti.jpg",
 		"twitter": "cortinico",
 		"github": "cortinico",
@@ -37,7 +39,7 @@
 		"name": "Gianni Modica",
 		"image": "giannimodica.jpg",
 		"twitter": "infernatico",
-		"info": "Co-manager and co-founder off GDG Pisa. Android software developer per Car2Go"
+		"info": "Co-manager and co-founder of GDG Pisa. Android software developer for Car2Go"
 	},
 	{
 		"name": "Andrea Stevanato",

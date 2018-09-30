@@ -77,6 +77,7 @@ principalmente in 4 tipologie.
     </div>
 </div>
 
+&emsp;<strong>Vuoi occuparti di un evento? <a href="https://goo.gl/forms/EiD8DFAztmgSPYot1">Clicca qui!</a></strong>
 
 # Join us!
 
