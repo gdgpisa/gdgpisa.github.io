@@ -9,7 +9,7 @@ categories: others
 
 > Gophers are coming to town!
 
-Il prossimo **23 e 24 Ottobre**, Firenze verrà invasa dai Gopher 🐹! Torna [GoLab 2018](https://golab.io/), la conferenza internazionale su Golang organizzata da [Develer](https://www.develer.com/).
+Il prossimo **22 e 23 Ottobre**, Firenze verrà invasa dai Gopher 🐹! Torna [GoLab 2018](https://golab.io/), la conferenza internazionale su Golang organizzata da [Develer](https://www.develer.com/).
 
 Siamo lieti di annunciare che GDG Pisa é ufficialmente **Media Partner** di Golab! Non perdere l'occasione di partecipare a questo evento assieme agli **altri membri del GDG Pisa**. 
 
