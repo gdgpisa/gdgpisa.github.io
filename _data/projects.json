@@ -1,5 +1,12 @@
 [
 	{
+		"name": "Introducing GDG Pisa",
+		"image": "tjf.png",
+		"url": "https://docs.google.com/presentation/d/e/2PACX-1vTP6goxLZ2GGmSlQ1UYEs-YwUdwAbr1lO1KheOWQc8UahuvTykKJ-qg4jwPn9NEohZHzUrE2COlTf4T/pub?start=false&loop=false&delayms=5000",
+		"date": "October 13 2018",
+		"tags" : ["others"]
+	},
+	{
 		"name": "How to train your Gophers - Introduzione a Go",
 		"image": "howtotrainyourgophers.jpg",
 		"url": "https://www.eventbrite.it/e/biglietti-how-to-train-your-gophers-introduzione-a-go-47253066193",
@@ -30,7 +37,7 @@
 	{
 		"name": "#Hashcode 2018",
 		"image": "hashcode18.jpg",
-		"url": "https://www.meetup.com/it-IT/GDG-Pisa/events/246522981/",
+		"url": "https://www.meetup.com/GDG-Pisa/events/246522981/",
 		"date": "March 1 2018",
 		"tags": ["HashCode"]
 	},
