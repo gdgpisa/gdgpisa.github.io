@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Materiale del talk: Smart Home Made Easy
-date:   2018-11-8 10:30:00
+title: Materiale talk Smart Home Made Easy
+date:   2018-11-8 18:30:00
 categories: events
 ---
 ### Materiale del talk: Smart Home Made Easy
