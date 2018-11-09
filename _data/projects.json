@@ -1,5 +1,12 @@
 [
 	{
+		"name": "Smart Home Made Easy",
+		"image": "shme.png",
+		"url": "https://docs.google.com/presentation/d/e/2PACX-1vTyJ95doLKj3GTfI-7mTkyea9Zp_-BylhKhLsNrC4kva3HfA0J9h--hmQ1dkxvDo8Y5wote1Fm20Ktk/pub?start=true&loop=false&delayms=10000",
+		"date": "November 8 2018",
+		"tags": ["Python", "RaspberryPi"]
+	},
+	{
 		"name": "Introducing GDG Pisa",
 		"image": "tjf.png",
 		"url": "https://docs.google.com/presentation/d/e/2PACX-1vTP6goxLZ2GGmSlQ1UYEs-YwUdwAbr1lO1KheOWQc8UahuvTykKJ-qg4jwPn9NEohZHzUrE2COlTf4T/pub?start=false&loop=false&delayms=5000",
