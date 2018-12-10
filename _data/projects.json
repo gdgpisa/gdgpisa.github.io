@@ -1,5 +1,12 @@
 [
 	{
+		"name": "Developers' Day",
+		"image": "developersday.png",
+		"url": "https://www.eventbrite.it/e/biglietti-developers-day-53498142384",
+		"date": "December 14 2018",
+		"tags": ["Android", "others", "Kotlin"]
+	},
+	{
 		"name": "Smart Home Made Easy",
 		"image": "shme.png",
 		"url": "https://docs.google.com/presentation/d/e/2PACX-1vTyJ95doLKj3GTfI-7mTkyea9Zp_-BylhKhLsNrC4kva3HfA0J9h--hmQ1dkxvDo8Y5wote1Fm20Ktk/pub?start=true&loop=false&delayms=10000",
