@@ -11,6 +11,11 @@
     "layout": "post"
   },
   {
+    "text": "WTM",
+    "url": "/wtm",
+    "imglink": "/static/img/wtm_logo.png"
+  },
+  {
     "text": "Seminari",
     "url": "/projects",
     "icon": "fa-desktop"
@@ -23,7 +28,7 @@
   {
     "text": "Meetup",
     "url": "https://www.meetup.com/GDG-Pisa/",
-    "icon": "fa-meetup",
+    "icon": "fa-meetup"
   },
   {
     "text": "Github",
