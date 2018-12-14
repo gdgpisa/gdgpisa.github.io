@@ -34,10 +34,10 @@ Le attività del WTM Pisa ruotano principalmente attorno all'organizzazione di e
                 la condivisione con gli altri e ad incentivare un maggior numero di donne speaker.            
                 </p>
                 &emsp;<strong>Vuoi proporre un evento? <a href="https://goo.gl/forms/EiD8DFAztmgSPYot1">Clicca qui!</a></strong>
-            </div>
         </div>
     </div>
 </div>
+
 
 ![img wtm2](/static/img/wtm02.jpeg)
 
