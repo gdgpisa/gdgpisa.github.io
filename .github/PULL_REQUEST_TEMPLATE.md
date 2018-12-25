@@ -14,4 +14,3 @@ piu' comprensibile il tuo cambio.
 
 * [ ] Have you tested the website locally?
 * [ ] Have you checked the logs?
-* [ ] Have you commented your code?
