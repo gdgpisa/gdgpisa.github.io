@@ -11,9 +11,9 @@ categories: others
 
 Ebbense sì, anche un altro anno é passato. Questo 2018 che oramai sta finendo é stato un **anno veramente fantastico** per noi del GDG Pisa. Fra un panettone e un pandoro, vogliamo ringraziare tutta la community per essere stata presente ad ogni evento che abbiamo organizzato e per averci aiutato a costruire qualcosa di fantastico.
 
-Nel 2018 non sono mancati i nostri appunamenti _classici_ quale HashCode (a Marzo) e il Google I/O Extended (a Maggio). Eventi che si sono riconfermati come appuntamenti fissi e molto apprezzati di tantissimi partecipanti.
+Nel 2018 non sono mancati i nostri appunamenti _classici_ quale HashCode (a Marzo) e il Google I/O Extended (a Maggio). Eventi che si sono riconfermati come appuntamenti fissi e molto apprezzati da tantissimi partecipanti.
 
-Non sono mancati i **seminari** e **workshop** a tema: Kotlin, Go e IoT. Vogliamo ringraziare Gianni, Danilo, Domenico e Giovanni per il tempo che hanno dedicato a creare contenuti per rendere questi eventi possibili. Ci teniamo a ricordare che il GDG Pisa e' aperto a **chiunque** abbiamo un argomento di cui [voglia parlare](https://goo.gl/forms/EiD8DFAztmgSPYot1).
+Non sono mancati i **seminari** e **workshop** a tema: Kotlin, Go e IoT. Vogliamo ringraziare Gianni, Danilo, Domenico e Giovanni per il tempo che hanno dedicato a creare contenuti per rendere questi eventi possibili. Ci teniamo a ricordare che il GDG Pisa e' aperto a **chiunque** abbia un argomento di cui [voglia parlare](https://goo.gl/forms/EiD8DFAztmgSPYot1).
 
 Ma la vera protagonista di questo 2018 é stata la nostra prima DevFest! Un'intera giornata di seminari (ben 20!) su Android, Cloud, Web e tecnologie Google. Ci teniamo nuovamente a ringraziarvi per aver reso la DevFest possibile.
 
