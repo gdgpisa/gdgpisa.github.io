@@ -29,6 +29,7 @@ Ebbene sì, li abbiamo letti tutti... e i VINCITORI sono:
 <img src="/static/img/personas/David.jpg" width="250" align="left" hspace="20"/>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-Queste erano le "Personas" scelte dalla maggior parte di voi, ma se non vi sentite rappresentati da nessuna di categorie, non esitate a scrivercelo a pisagdg@gmail.com
+Queste erano le "Personas" scelte dalla maggior parte di voi, ma se non vi sentite rappresentati da nessuna di categorie, non esitate a scrivercelo a pisagdg@gmail.com.
+<br>
 Buona giornata GDGers!!! ;)
 
