@@ -1,5 +1,12 @@
 [
 	{
+		"name": "Introduzione al Testing in Go",
+		"image": "testingcongo.png",
+		"url": "https://talks.godoc.org/github.com/golangtalks/testingwithgo/testingwithgo.slide#1",
+		"date": "January 24 2019",
+		"tags": ["GoLang", "Testing"]
+	},
+	{
 		"name": "Developers' Day",
 		"image": "developersday.png",
 		"url": "https://www.eventbrite.it/e/biglietti-developers-day-53498142384",
