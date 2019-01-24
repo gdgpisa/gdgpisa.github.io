@@ -1,0 +1,13 @@
+---
+layout: null
+---
+[
+    {% for post in site.posts %}
+            {
+                "title": {{ post.title | smartify | jsonify }},
+                "content_html": {{ post.content | strip_html | jsonify }},
+                "url": "{{ site.url }}{{ post.url }}",
+                "date_published": "{{ post.date }}"
+            }{% unless forloop.last == true %},{% endunless %}
+    {% endfor %}
+]
