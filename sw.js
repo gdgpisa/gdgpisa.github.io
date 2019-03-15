@@ -1,4 +1,11 @@
 // sw.js
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js');
+
+if (workbox) {
+  console.log(`Yay! GDG Pisa is warming up 🎉`);
+} else {
+  console.log(`But it got a cold 😬`);
+}
 workbox.setConfig({debug: false})
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
@@ -9,8 +16,8 @@ workbox.core.setCacheNameDetails({
 });
 
 // let Service Worker take control of pages ASAP
-workbox.skipWaiting();
-workbox.clientsClaim();
+//workbox.skipWaiting();
+//workbox.clientsClaim();
 
 // default to `networkFirst` strategy
 workbox.routing.setDefaultHandler(workbox.strategies.networkFirst());
