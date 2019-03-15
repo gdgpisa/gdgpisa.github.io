@@ -8,4 +8,5 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'kramdown'
   gem 'rouge'
+  gem 'jekyll-workbox-plugin'
 end
