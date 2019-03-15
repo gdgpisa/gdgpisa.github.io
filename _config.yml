@@ -18,16 +18,16 @@ share:
   twitter_username: \gdgpisa
   fb_appid: 000000000000
 
-plugins:
-- jekyll-workbox-plugin
-
 enableTags: true
 tagarray: []
 paginate: 20
 per_page: 20
 paginate_path: "/blog/page:num/"
 markdown: kramdown
-gems: [jekyll-paginate, jekyll-gist, jekyll-redirect-from]
+gems: [jekyll-paginate, jekyll-gist, jekyll-redirect-from, jekyll-workbox-plugin]
+
+plugins:
+  - jekyll-workbox-plugin
 
 workbox:
   sw_src_filepath: sw.js # Optional
