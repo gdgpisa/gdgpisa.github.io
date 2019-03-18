@@ -1,5 +1,12 @@
 [
 	{
+		"name": "GDG DevFest Pisa 2019",
+		"image": "devfest19.jpg",
+		"url": "https://devfest.gdgpisa.it/",
+		"date": "April 13 2019",
+		"tags": ["DevFest"]
+	},
+	{
 		"name": "Introduzione al Testing in Go",
 		"image": "testingcongo.png",
 		"url": "https://talks.godoc.org/github.com/golangtalks/testingwithgo/testingwithgo.slide#1",
@@ -49,9 +56,9 @@
 		"tags": ["MaterialDesign", "Firebase","Android","AndroidThings","GoogleAssistant"]
 	},
 	{
-		"name": "DevFest 0.1 Pisa",
+		"name": "GDG DevFest 0.1 Pisa",
 		"image": "devfest01.jpg",
-		"url": "https://devfest.gdgpisa.it/",
+		"url": "https://2018.devfest.gdgpisa.it/",
 		"date": "March 10 2018",
 		"tags": ["DevFest"]
 	},
