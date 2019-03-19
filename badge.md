@@ -34,7 +34,7 @@ button {
             <div class="card-body">
             <h3 class="card-title">Schedule</h3>
                 <p class="card-text">Have you lost the DevFest Agenda? You can find it here 🙃<br/>
-                <a href="https://devfest.gdgpisa.it/schedule"></a><button type="button" class="btn btn-raised btn-info">Open the Schedule</button>
+                <a href="https://devfest.gdgpisa.it/schedule"><button type="button" class="btn btn-raised btn-info">Open the Schedule</button></a>
                 </p>
             </div>
         </div>
