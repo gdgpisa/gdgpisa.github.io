@@ -24,5 +24,5 @@ Per ulteriori dettagli, biglietti e tutte le future news, seguici nel sito [**de
 Ricorda che cresciamo grazie al feedback ed al supporto della nostra attiva community, quindi...
 * Condividi la notizia se ti va 🌎
 * Facci sapere cosa ne pensi 👌
-* Se vuoi darci una mano, è un piacere averti nella nostra squadra.🍺
+* [Se vuoi darci una mano, è un piacere averti nella nostra squadra](https://goo.gl/forms/Rk7yeOwl7Y27aP8g2).🍺
 * Enjoy 😄
