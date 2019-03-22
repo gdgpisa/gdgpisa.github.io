@@ -31,7 +31,7 @@
 		"name": "Chiara Corrado",
 		"image": "chiaracorrado.jpeg",
 		"facebook": "chiara.corrado",
-		"twitter": "https://twitter.com/kiaruzza",
+		"twitter": "kiaruzza",
 		"instagram": "kiaruzza_dev",
 		"linkedin": "chiaracorrado",
 		"github": "kiaruzza",
@@ -57,5 +57,18 @@
 		"instagram": "andrea.stevanato",
 		"github": "thymbahutymba",
 		"linkedin": "andrea-stevanato-643510162"
+	},
+	{
+		"name": "Leonardo Dipilato",
+		"image": "leonardodipilato.jpg",
+		"facebook": "leonardo.dipilato.3",
+		"instagram": "leonardodipilato",
+		"linkedin": "leonardo-dipilato-512a42167",
+		"github": "LeonardoDipilato"
+	},
+	{
+		"name": "Mariagiovanna Rotundo",
+		"image": "mariagiovanna_rotundo.jpg",
+		"facebook": "mariagiovanna.rotundo"
 	}
 ]
