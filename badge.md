@@ -28,6 +28,7 @@ permalink: /badge/
         left:0;
         background:url(/static/img/devfest19background.png) center top no-repeat;
         position:fixed;
+        border: none;
         z-index:-1;
         -webkit-background-size:cover;
         -moz-background-size:cover;
