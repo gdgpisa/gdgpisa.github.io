@@ -37,8 +37,8 @@ permalink: /badge/
     }
 </style>
 
-<div id="background"></div>
 <div class="wrapper">
+    <div id="background"></div>
     <div class="center" style="max-width: 80%; display: inline-block; margin: 16px">
         <div class="card mb-2"> 
             <div class="card-body">
