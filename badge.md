@@ -26,7 +26,7 @@ button {
             <div class="card-body">
             <h3 class="card-title">Leave Your Feedback</h3>
                 <p class="card-text">Click here to leave your feedback and tell us if you liked <strong>DevFest Pisa 2019</strong>❤️<br/>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScVNYiEnKhMmMG5a0dX_8nqbRqCpc61md6fyYB4yMorFvVKUg/viewform"><button type="button" class="btn btn-raised btn-success">Lascia il tuo feedback/button></a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScVNYiEnKhMmMG5a0dX_8nqbRqCpc61md6fyYB4yMorFvVKUg/viewform"><button type="button" class="btn btn-raised btn-success">Lascia il tuo feedback</button></a>
                 <a href="/feedbackform"><button type="button" class="btn btn-raised btn-success">Leave your feedback</button></a>
                 </p>
             </div>
