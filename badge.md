@@ -13,6 +13,7 @@ permalink: /badge/
     }
     button {
         font-size: 1rem !important;
+        padding: 15px;
     }
 
     .wrapper {
