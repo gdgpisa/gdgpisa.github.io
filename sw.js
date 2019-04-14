@@ -9,7 +9,7 @@ if (workbox) {
 workbox.setConfig({debug: false})
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
-  prefix: "gdg-pisa-v3.2",
+  prefix: "gdg-pisa-v3.3",
   suffix: "v1",
   precache: "precache",
   runtime: "runtime-cache"
