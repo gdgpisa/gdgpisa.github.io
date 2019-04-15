@@ -5,7 +5,7 @@ layout: default
 	<div class="card">
 		<div class="card-body">
 			Vuoi proporti per un talk?
-			<a href="https://goo.gl/forms/EiD8DFAztmgSPYot1" class="card-link">Clicca qui!</a>
+			<a href="https://goo.gl/forms/EiD8DFAztmgSPYot1" target="_blank" class="card-link">Clicca qui!</a>
 		</div>
 	</div>
   <br>
@@ -21,7 +21,7 @@ layout: default
     			<a href="/static/img/projects/{{ i.image }}" class="thickbox">
     			<div class="project-img bordered" style="background-image: url('/static/img/projects/{{ i.image }}');"></div>
                 </a>
-                {% if i.url %} <a href="{{ i.url }}"> {% endif %}
+                {% if i.url %} <a href="{{ i.url }}" target="_blank"> {% endif %}
     			<h3 class="project-headlines">{{ i.name }}</h3>
     			{% if i.url %} </a> {% endif %}
     			<div class="project-content">
@@ -36,7 +36,7 @@ layout: default
     			</div>
     			<div class="project-footer"> 
     				{% if i.url %} 
-    				<a href="{{ i.url }}" class="btn btn-info btn-raised btn-sm project-link">View</a>
+    				<a href="{{ i.url }}" target="_blank" class="btn btn-info btn-raised btn-sm project-link">View</a>
     				{% endif %}
     				<span class="project-timeline">{{ i.date }}</span>
     			</div>

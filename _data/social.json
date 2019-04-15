@@ -1,17 +1,21 @@
 [
   {
+    "name": "Facebook",
     "icon": "fa-facebook",
     "link": "http://facebook.com/gdgPisa"
   },
   {
+    "name": "Twitter",
     "icon": "fa-twitter",
     "link": "http://twitter.com/gdgPisa"
   },
   {
+    "name": "GitHub",
     "icon": "fa-github",
     "link": "http://github.com/gdgPisa"
   },
   {
+    "name": "Meetup",
     "icon": "fa-meetup",
     "link": "https://www.meetup.com/GDG-Pisa/"
   }

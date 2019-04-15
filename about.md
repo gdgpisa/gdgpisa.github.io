@@ -23,7 +23,7 @@ principalmente in 4 tipologie.
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/balloon_1.png">
+            <img src="/static/img/balloon_1.png" alt="Immagine di un Meetup">
         </div>
         <div class="col-sm-9">
             <h4><strong>Meetup</strong></h4>
@@ -36,7 +36,7 @@ principalmente in 4 tipologie.
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/balloon_2.png">
+            <img src="/static/img/balloon_2.png" alt="Immagine di un Codelab">
         </div>
         <div class="col-sm-9">
             <h4><strong>Codelab</strong></h4>
@@ -48,7 +48,7 @@ principalmente in 4 tipologie.
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/balloon_3.png">
+            <img src="/static/img/balloon_3.png" alt="Immagine dopo un evento">
         </div>
         <div class="col-sm-9">
             <h4><strong>Hackathon</strong></h4>
@@ -62,7 +62,7 @@ principalmente in 4 tipologie.
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/static/img/balloon_4.png">
+            <img src="/static/img/balloon_4.png" alt="Immagine di gadgets">
         </div>
         <div class="col-sm-9">
             <h4><strong>Talk</strong></h4>
@@ -85,11 +85,11 @@ principalmente in 4 tipologie.
     <div class="row">
         <div class="col-sm-6 text-center center-block">
             <h4><strong>Iscriviti al nostro gruppo telegram</strong></h4>
-            <a href="/telegram"><img class="center-block" src="/static/img/Telegram_Messenger.png"></a>
+            <a href="/telegram" target="_blank"><img class="center-block" src="/static/img/Telegram_Messenger.png" alt="Logo Telegram"></a>
         </div>
         <div class="col-sm-6 text-center">
             <h4><strong>Partecipa ai nostri eventi</strong></h4>
-            <a href="https://www.meetup.com/it-IT/GDG-Pisa/"><img class="center-block" src="/static/img/meetup.png"></a>
+            <a href="https://www.meetup.com/it-IT/GDG-Pisa/" target="_blank"><img class="center-block" src="/static/img/meetup.png" alt="Logo Meetup"></a>
         </div>
     </div>
 </div>
