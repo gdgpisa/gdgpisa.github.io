@@ -89,7 +89,7 @@ principalmente in 4 tipologie.
         </div>
         <div class="col-sm-6 text-center">
             <h4><strong>Partecipa ai nostri eventi</strong></h4>
-            <a href="https://www.meetup.com/it-IT/GDG-Pisa/" target="_blank"><img class="center-block" src="/static/img/meetup.png" alt="Logo Meetup"></a>
+            <a href="https://www.meetup.com/GDG-Pisa/" target="_blank" rel="noopener"><img class="center-block" src="/static/img/meetup.png" alt="Logo Meetup"></a>
         </div>
     </div>
 </div>
