@@ -4,7 +4,7 @@
 	"start_url": "/index.html",
 	"icons": [{
 		"src": "/static/img/logo.png",
-		"sizes": "1280x1280",
+		"sizes": "1474x1474",
 		"type": "image/png"
 	}],
 	"theme_color": "#2196F3",
