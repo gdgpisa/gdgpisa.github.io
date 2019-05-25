@@ -48,7 +48,7 @@ This will allow you to **preview what the generated site** will look like in you
 1. Install [Ruby](https://www.ruby-lang.org/en/) with your package manager.
 ```
 Debian
-sudo apt install ruby
+sudo apt install ruby ruby-dev
 
 ArchLinux
 sudo pacman -S ruby

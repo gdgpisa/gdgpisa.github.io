@@ -1,5 +1,11 @@
 [
 	{
+		"name": "Google I/O Extended 2019",
+		"image": "googleio19.gif",
+		"url": "https://www.meetup.com/it-IT/GDG-Pisa/events/260315371/",
+		"date": "May 7 2019",
+		"tags": ["Firebase","Android","GoogleAssistant"]
+	},{
 		"name": "GDG DevFest Pisa 2019",
 		"image": "devfest19.jpg",
 		"url": "https://devfest.gdgpisa.it/",
