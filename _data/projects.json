@@ -1,5 +1,12 @@
 [
 	{
+		"name": "REST API in Golang e MongoDB",
+		"image": "restapigolangmongo.png",
+		"url": "https://www.meetup.com/it-IT/GDG-Pisa/events/261759047/",
+		"date": "June 12 2019",
+		"tags": ["GoLang","MongoDB","REST"]
+	},
+	{
 		"name": "Google I/O Extended 2019",
 		"image": "googleio19.gif",
 		"url": "https://www.meetup.com/it-IT/GDG-Pisa/events/260315371/",
