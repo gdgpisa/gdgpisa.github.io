@@ -1,15 +1,17 @@
 <div class="share-page">
-    Share this on &rarr;
- <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.share.twitter_username }}">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  Share this on &rarr;
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.share.twitter_username }}">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-<!-- Google + -->
-<div class="g-plus" data-action="share" data-annotation="bubble"></div>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- Facebook -->
+  <div class="fb-share-button" data-href="{{site.url}}{{page.url}}" data-layout="button_count" style="position: relative; top: -6px; left: 3px;"></div>
 
-<!-- Facebook -->
-<div class="fb-share-button" data-href="{{site.url}}{{page.url}}" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+  <!-- Telegram -->
+  <style>.tl_telegram_share_btn{display: inline-flex;border-radius: 15px;background-color: #54a9eb;cursor: pointer;line-height: 22px;margin-left: 5px;padding: 5px 12px 5px 5px;color: #FFF;font-weight: bold;}.tl_telegram_share_btn:hover{color:#FFF;text-decoration: none;}i.tl_telegram_share_icon{display: inline-flex;width: 22px;height: 22px;background: url(https://telegram.org//img/share_logo_2x.png) 0 0 no-repeat;background-size: 22px 22px;margin-right: 7px;vertical-align: top;}</style>
+  <a href="https://t.me/share/url?url={{site.url}}{{page.url}}" class="tl_telegram_share_btn"><i class="tl_telegram_share_icon"></i>Forward</a>
+
 </div>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -18,3 +20,4 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId={{ site.share.fb_appid }}";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
