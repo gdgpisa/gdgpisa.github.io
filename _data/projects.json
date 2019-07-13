@@ -1,4 +1,11 @@
-[
+[	
+	{
+		"name": "Actions on Google D.I.Y.",
+		"image": "actionsongooglediy.jpeg",
+		"url": "https://docs.google.com/presentation/d/e/2PACX-1vR2vLmZeMmmVxzxrjb5VsQATe0mFNQZPc-QCGBeiB7kHVmiRJYXnkXVKjpIvR1Nelp1sDz116HA06W7/pub",
+		"date": "July 12 2019",
+		"tags": ["Python", "RaspberryPi", "GoogleAssistant"]
+	},
 	{
 		"name": "REST API in Golang e MongoDB",
 		"image": "restapigolangmongo.png",
