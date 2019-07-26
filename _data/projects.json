@@ -1,4 +1,11 @@
-[	
+[
+	{
+		"name": "Storia di un feedback form 2.0",
+		"image": "feedbackform2.jpg",
+		"url": "https://github.com/gdgpisa/feedbackform2",
+		"date": "July 24 2019",
+		"tags": ["Python", "RaspberryPi"]
+	},
 	{
 		"name": "Actions on Google D.I.Y.",
 		"image": "actionsongooglediy.jpeg",
