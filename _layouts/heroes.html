@@ -66,9 +66,9 @@ layout: default
     	<div class="projects row">
 		{% include heroes_tags.html %}
 		{% for i in site.data.heroes %}
-		<div class="project-item card" data-tags='{{ i.tags | jsonify | downcase }}'>
-			<img class="card-img" src="/static/img/heroes/{{ i.image }}" alt="{{ i.name }}">
-			<div class="card-container">
+		<div class="project-item card-heroes" data-tags='{{ i.tags | jsonify | downcase }}'>
+			<img class="card-heroes-img" src="/static/img/heroes/{{ i.image }}" alt="{{ i.name }}">
+			<div class="card-heroes-container">
 				<h3 style="font-weight: bold">{{ i.name }}</h4>
 				<p>{{ i.info }}</p>
 				<br>
