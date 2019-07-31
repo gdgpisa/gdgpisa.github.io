@@ -4,10 +4,6 @@ layout: default
 <article class="post">
 	<div class="post-content">
     	<h3>I nostri heroes!</h3>
-
-    	<div class="projects row">
-		{% include heroes_tags.html %}
-		{% for i in site.data.heroes %}
 		<style>
 			.btn {
 				border: 2px solid black;
@@ -67,7 +63,10 @@ layout: default
 				color:white!important;
 			}
 		</style>
-		<div class="card" data-tags='{{ i.tags | jsonify | downcase }}'>
+    	<div class="projects row">
+		{% include heroes_tags.html %}
+		{% for i in site.data.heroes %}
+		<div class="project-item card" data-tags='{{ i.tags | jsonify | downcase }}'>
 			<img class="card-img" src="/static/img/heroes/{{ i.image }}" alt="{{ i.name }}">
 			<div class="card-container">
 				<h3 style="font-weight: bold">{{ i.name }}</h4>
