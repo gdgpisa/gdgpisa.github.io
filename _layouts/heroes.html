@@ -67,7 +67,7 @@ layout: default
 				color:white!important;
 			}
 		</style>
-		<div class="project-item card" data-tags='{{ i.tags | jsonify | downcase }}'>
+		<div class="card" data-tags='{{ i.tags | jsonify | downcase }}'>
 			<img class="card-img" src="/static/img/heroes/{{ i.image }}" alt="{{ i.name }}">
 			<div class="card-container">
 				<h3 style="font-weight: bold">{{ i.name }}</h4>
