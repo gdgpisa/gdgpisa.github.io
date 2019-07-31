@@ -10,7 +10,8 @@ layout: default
 				background-color: white;
 				padding: 7px 17px;
 				font-size: 11px;
-				text-align: center
+				text-align: center;
+				pointer-events: none;
 			}
 			/* WTM */
 			.WTM {
@@ -105,15 +106,15 @@ layout: default
 					{% for j in i.tags %}
 						{% if j %}
 							{% if j == 'Organizer' %}
-								<button class="label tags tag-filter btn organizer" onclick="#"">{{ j }}</button>
+								<button class="label tags tag-filter btn organizer" onclick="#">{{ j }}</button>
 							{% elsif j == 'Former Organizer' %}
-								<button class="label tags tag-filter btn formermanager">{{ j }}</button>
+								<button class="label tags tag-filter btn formermanager" onclick="#">{{ j }}</button>
 							{% elsif j== 'Founder' %}
-								<button class="label tags tag-filter btn founder">{{ j }}</button>
+								<button class="label tags tag-filter btn founder" onclick="#">{{ j }}</button>
 							{% elsif j== 'WTM' %}
-								<button class="label tags tag-filter btn WTM">{{ j }}</button>
+								<button class="label tags tag-filter btn WTM" onclick="#">{{ j }}</button>
 							{% else %}
-								<button class="label tags tag-filter btn generichelper">{{ j }}</button>
+								<button class="label tags tag-filter btn generichelper" onclick="#">{{ j }}</button>
 							{% endif %}
 						{% endif %}
 					{% endfor %}
