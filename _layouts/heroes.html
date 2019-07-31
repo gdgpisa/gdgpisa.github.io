@@ -2,52 +2,117 @@
 layout: default
 ---
 <article class="post">
-  <div class="post-content">
-    <h3>I nostri heroes!</h3>
+	<div class="post-content">
+    	<h3>I nostri heroes!</h3>
 
-    <div class="projects row">
-    {% for i in site.data.heroes %}
-    <div class="project-item col-md-4 col-sm-6 col-xs-12">
-    	<div class="well project-outer">
-    		<div class="project-inner">
-    			<a href="/static/img/heroes/{{ i.image }}" class="thickbox">
-    			<div class="project-img bordered" style="background-image: url('/static/img/heroes/{{ i.image }}');"></div>
-                </a>
-    			<h3 class="project-headlines">{{ i.name }}</h3>
-    			</a>
-    			<div class="project-content">
-    				<div class="tag-holder">
-    				{% if i.info %} 
-    				<span>{{ i.info }}</span>
-    				{% endif %}
-    				</div>
-				</div>
+    	<div class="projects row">
+		{% include heroes_tags.html %}
+		{% for i in site.data.heroes %}
+		<style>
+			.btn {
+				border: 2px solid black;
+				background-color: white;
+				padding: 7px 17px;
+				font-size: 11px;
+				text-align: center
+			}
+			/* WTM */
+			.WTM {
+				border-color: #008080;
+				color: #008080!important;
+			}
+			.WTM:hover {
+				border-color: #008080;
+				background-color: #008080!important;
+				color: #fff!important;
+			}
+			/* Organizer */
+			.organizer {
+				border-color: #492aa0;
+				color: #492aa0!important
+			}
+			.organizer:hover {
+				border-color: #492aa0;
+				background-color: #492aa0!important;
+				color:white!important;
+			}
+			/* Former Manager */
+			.formermanager {
+				border-color: #ff9800;
+				color: orange!important;
+			}
+			.formermanager:hover {
+				border-color: #ff9800;
+				background-color: orange!important;
+				color: white!important;
+			}
+			/* Helper */
+			.generichelper {
+				border-color: green;
+				color: green!important;
+			}
+			.generichelper:hover {
+				border-color:green;
+				background-color: green!important;
+				color: white!important;
+			}
+			/* Founder */
+			.founder{
+				border-color: red;
+				color: red!important;
+			}
+			.founder:hover{
+				border-color: red;
+				background-color: red!important;
+				color:white!important;
+			}
+		</style>
+		<div class="project-item card" data-tags='{{ i.tags | jsonify | downcase }}'>
+			<img class="card-img" src="/static/img/heroes/{{ i.image }}" alt="{{ i.name }}">
+			<div class="card-container">
+				<h3 style="font-weight: bold">{{ i.name }}</h4>
+				<p>{{ i.info }}</p>
 				<br>
-    			<div class="project-footer"> 
-    				{% if i.facebook %} 
-    				<a href="https://facebook.com/{{ i.facebook }}" target="_blank" class="fa fa-facebook fa-2x"></a>
-					{% endif %}
-					{% if i.twitter %} 
-    				<a href="https://twitter.com/@{{ i.twitter }}" target="_blank" class="fa fa-twitter fa-2x"></a>
-					{% endif %}
-					{% if i.instagram %} 
-    				<a href="https://instagr.am/{{ i.instagram }}" target="_blank" class="fa fa-instagram fa-2x"></a>
-					{% endif %}
-					{% if i.github %} 
-    				<a href="https://github.com/{{ i.github }}" target="_blank" class="fa fa-github fa-2x"></a>
-					{% endif %}
-					{% if i.linkedin %} 
-    				<a href="https://linkedin.com/in/{{ i.linkedin }}" target="_blank" class="fa fa-linkedin fa-2x"></a>
-					{% endif %}
-					{% if i.link %} 
-    				<a href="{{ i.link }}" target="_blank" class="fa fa-link fa-2x"></a>
-					{% endif %}
-    			</div>
-    		</div>
-    	</div>
-        </div>
-    {% endfor %}
-    </div>
-  </div>
-
+				<div class="tag-holder" style="display: inline-block!important;">
+					{% for j in i.tags %}
+						{% if j %}
+							{% if j == 'Organizer' %}
+								<button class="label tags tag-filter btn organizer">{{ j }}</button>
+							{% elsif j == 'Former Organizer' %}
+								<button class="label tags tag-filter btn formermanager">{{ j }}</button>
+							{% elsif j== 'Founder' %}
+								<button class="label tags tag-filter btn founder">{{ j }}</button>
+							{% elsif j== 'WTM' %}
+								<button class="label tags tag-filter btn WTM">{{ j }}</button>
+							{% else %}
+								<button class="label tags tag-filter btn generichelper">{{ j }}</button>
+							{% endif %}
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+			<div style="padding-left: 17px;padding-bottom: 5px"> 
+				{% if i.facebook %} 
+					<a href="https://facebook.com/{{ i.facebook }}" target="_blank" class="fa fa-facebook fa-2x"></a>
+				{% endif %}
+				{% if i.twitter %} 
+					<a href="https://twitter.com/@{{ i.twitter }}" target="_blank" class="fa fa-twitter fa-2x"></a>
+				{% endif %}
+				{% if i.instagram %} 
+					<a href="https://instagr.am/{{ i.instagram }}" target="_blank" class="fa fa-instagram fa-2x"></a>
+				{% endif %}
+				{% if i.github %} 
+					<a href="https://github.com/{{ i.github }}" target="_blank" class="fa fa-github fa-2x"></a>
+				{% endif %}
+				{% if i.linkedin %} 
+					<a href="https://linkedin.com/in/{{ i.linkedin }}" target="_blank" class="fa fa-linkedin fa-2x"></a>
+				{% endif %}
+				{% if i.link %} 
+					<a href="{{ i.link }}" target="_blank" class="fa fa-link fa-2x"></a>
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+		</div>
+	</div>
 </article>

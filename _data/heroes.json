@@ -8,14 +8,16 @@
 		"github": "dianaberna",
 		"linkedin": "dianabernabei",
 		"info": "CS student, Front-end web developer, web designer and dreamer",
-		"link": "https://www.dianabernabei.com/"
+		"link": "https://www.dianabernabei.com/",
+		"tags": ["Organizer", "WTM"]
 	},
 	{
 		"name": "Giovanni Bartolomeo",
 		"image": "giovannibartolomeo.jpg",
 		"info": "Open Source evangelist, Back-End Developer, annoyng security paranoid and Beer 🍺 lover. But I also have flaws...",
 		"facebook": "giobarty",
-		"twitter": "Giobarty01"
+		"twitter": "Giobarty01",
+		"tags": ["Organizer"]
 	},
 	{
 		"name": "Domenico Blanco",
@@ -25,7 +27,8 @@
 		"twitter": "domenicoblanco",
 		"instagram": "iosonododo",
 		"linkedin": "domenico-blanco-700877171",
-		"github": "domenicoblanco"
+		"github": "domenicoblanco",
+		"tags": ["Organizer", "Telegram bot","Raspberry Pi"]
 	},
 	{
 		"name": "Chiara Corrado",
@@ -35,7 +38,8 @@
 		"instagram": "kiaruzza_dev",
 		"linkedin": "chiaracorrado",
 		"github": "kiaruzza",
-		"link": "https://medium.com/@kiaruzza_dev"
+		"link": "https://medium.com/@kiaruzza_dev",
+		"tags": ["Organizer", "WTM"]
 	},
 	{
 		"name": "Nicola Corti",
@@ -43,20 +47,23 @@
 		"image": "nicolacorti.jpg",
 		"twitter": "cortinico",
 		"github": "cortinico",
-		"link": "https://ncorti.com/"
+		"link": "https://ncorti.com/",
+		"tags": ["Organizer", "Founder"]
 	},
 	{
 		"name": "Gianni Modica",
 		"image": "giannimodica.jpg",
 		"twitter": "infernatico",
-		"info": "Co-manager and co-founder of GDG Pisa. Android software developer for Car2Go"
+		"info": "Co-manager and co-founder of GDG Pisa. Android software developer for Car2Go",
+		"tags": ["Former Organizer", "Founder"]
 	},
 	{
 		"name": "Andrea Stevanato",
 		"image": "andreastevanato.jpeg",
 		"instagram": "andrea.stevanato",
 		"github": "thymbahutymba",
-		"linkedin": "andrea-stevanato-643510162"
+		"linkedin": "andrea-stevanato-643510162",
+		"tags": ["Telegram bot"]
 	},
 	{
 		"name": "Leonardo Dipilato",
@@ -64,11 +71,13 @@
 		"facebook": "leonardo.dipilato.3",
 		"instagram": "leonardodipilato",
 		"linkedin": "leonardo-dipilato-512a42167",
-		"github": "LeonardoDipilato"
+		"github": "LeonardoDipilato",
+		"tags": ["Organizer"]
 	},
 	{
 		"name": "Mariagiovanna Rotundo",
 		"image": "mariagiovanna_rotundo.jpg",
-		"facebook": "mariagiovanna.rotundo"
+		"facebook": "mariagiovanna.rotundo",
+		"tags": ["Organizer"]
 	}
 ]

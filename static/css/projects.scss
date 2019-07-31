@@ -26,9 +26,40 @@ $text_size: 13px;
  * Project Block
  * //////////////////////////////////
  */
+
+
+.card {
+    display: inline-flexbox;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    width: 300px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    vertical-align: middle!important;
+}
+  
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+/* Add some padding inside the card container */
+.card-container {
+    padding: 2px 16px;
+}
+
+.card-img {
+    margin: auto;
+    border-radius: 5px 5px 0 0;
+    width: 300px;
+    height: 300px;
+}
+
+
 .project-item.not-show{ display: none; }
 
-.project-item.col-md-4.col-sm-6.col-xs-12{height:430px}
+.project-item.col-md-4.col-sm-6.col-xs-12{height:400px}
 
 .project-outer {
 
@@ -48,8 +79,7 @@ $text_size: 13px;
         @include margins(5px 0);
         @include borderbtm( #EEE );
         font-size: $heading_size;
-        padding-top:10px;
-
+        padding-top:5px;
     }
 
     .project-inner > a { display: block; }
@@ -106,7 +136,7 @@ $text_size: 13px;
  */
 
 .tag-group{
-    @include margins(0 0 25px 0);
+    @include margins(5px 5px 25px 5px);
 
     .tag-cloud {
         @include margins(0 2px);
@@ -115,4 +145,3 @@ $text_size: 13px;
         .active { background: #ccc; }
     }
 }
-

@@ -15,7 +15,7 @@ layout: default
     <div class="projects row">
     {% include project_tags.html %}
     {% for i in site.data.projects %}
-    <div class="project-item col-md-4 col-sm-6 col-xs-12" data-tags='{{ i.tags | jsonify | downcase }}'>
+    <div class="project-item col-md-4 col-sm-6 col-xs-12" data-tags='{{ i.tags | jsonify | downcase }}' style="margin-bottom: 15px!important">
     	<div class="well project-outer">
     		<div class="project-inner">
     			<a href="/static/img/projects/{{ i.image }}" class="thickbox">
@@ -31,8 +31,7 @@ layout: default
     					<span class="label tags tag-filter" data-tag="{{ j | downcase }}">{{ j }}</span>
     					{% endfor %}
     				{% endif %}
-    				</div>
-    				
+    				</div>	
     			</div>
     			<div class="project-footer"> 
     				{% if i.url %} 
