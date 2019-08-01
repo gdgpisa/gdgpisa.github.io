@@ -93,7 +93,7 @@ layout: default
 				height: 300px;
 			}
 		</style>
-    	<div class="projects row">
+    	<div class="projects row text-center">
 		{% include heroes_tags.html %}
 		{% for i in site.data.heroes %}
 		<div class="project-item card-heroes" data-tags='{{ i.tags | jsonify | downcase }}'>
