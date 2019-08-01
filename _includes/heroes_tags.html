@@ -1,6 +1,6 @@
 {% if site.enableTags ==  true %} 
 	<div id="tag-filter" class="col-md-12 col-xs-12 tag-group">
-		<span class="label tag-filter tag-cloud all">Reset</span>
+		<span class="label tag-filter tag-cloud all text-left">Reset</span>
         {% assign tagarray = site.tagarray %}
         {% for hero in site.data.heroes %}
             {% for tag in hero.tags %}
@@ -19,7 +19,7 @@
 
         {% assign taglist = tags | split: '|' | sort %}
         {% for tag in taglist %}
-            <span class="label tag-filter tag-cloud" data-tag="{{ tag | downcase }}">{{ tag }}</span>
+            <span class="label tag-filter tag-cloud text-left" data-tag="{{ tag | downcase }}">{{ tag }}</span>
         {% endfor %}
 	</div>
 {% endif %}

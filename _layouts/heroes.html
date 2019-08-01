@@ -71,9 +71,8 @@ layout: default
 				transition: 0.3s;
 				border-radius: 5px; /* 5px rounded corners */
 				width: 300px!important;
-				margin-bottom: 10px;
-				margin-right: 5px;
 				vertical-align: middle!important;
+				margin: auto 5px 10px 20px;
 			}
 			
 			/* On mouse-over, add a deeper shadow */
@@ -93,10 +92,10 @@ layout: default
 				height: 300px;
 			}
 		</style>
-    	<div class="projects row text-center">
+    	<div class="projects row">
 		{% include heroes_tags.html %}
 		{% for i in site.data.heroes %}
-		<div class="project-item card-heroes" data-tags='{{ i.tags | jsonify | downcase }}'>
+		<div class="project-item card-heroes center-block" data-tags='{{ i.tags | jsonify | downcase }}'>
 			<img class="card-heroes-img" src="/static/img/heroes/{{ i.image }}" alt="{{ i.name }}">
 			<div class="card-heroes-container">
 				<h3 style="font-weight: bold">{{ i.name }}</h4>
