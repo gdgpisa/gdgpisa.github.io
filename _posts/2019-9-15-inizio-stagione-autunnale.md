@@ -4,6 +4,8 @@ title: Inizio Stagione 2019/2020
 date:   2019-09-15 16:20:00
 categories: others
 ---
+![collage](/static/img/BirrataMeetup.png)
+# Inizio Stagione 2019/2020
 
 Con l'autunno alle porte 🍁 e il ritorno dalle vacanze estive ⛱️, è arrivato il momento dell'anno per il GDG Pisa di riaprire i battenti con nuove attività ed eventi.
 
