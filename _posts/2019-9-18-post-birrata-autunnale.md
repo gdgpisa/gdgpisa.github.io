@@ -8,8 +8,8 @@ categories: others
 
 ![collage](/static/img/community-birrata.jpg)
 
-Durante 🎉 un'entusiasmante e numerosa birrata 🍺 ci siamo potuti con alcuni ritrovare ed altri presentare e
-abbiamo avuto la possibilità di confrontarci sui prossimi possibili eventi. <br><br>
+Durante l'entusiasmante 🎉 e numerosa birrata 🍺 di inizio stagione, ci siamo potuti ritrovare con i già membri della community e presentarci con i nuovi, qui abbiamo colto l'occcasione di capire gli interessi di tutti e confrontarci, così da avere una lista sui futuri argomenti da trattare in talk e codelab da organizzare nei prossimi mesi. 📅
+<br><br>
 I partecipanti della community hanno designato che gli eventi più interessanti sono i seguenti:
 
 <div class="container-fluid">
@@ -54,11 +54,10 @@ I partecipanti della community hanno designato che gli eventi più interessanti 
     </div>
 </div>
 
-Siamo carichissimi per la nuova stagione ed entusiasti per il riscontro avuto da ogni singola persona che ha partecipato all'evento.
+Siamo carichissimi per la nuova stagione ed entusiasti per il riscontro avuto da ogni persona che ha partecipato all'evento.
 Ogni singola opionione è molto importante per capire se gli argomenti che tratteremo possono stimolare la creatività della community ed essere utili per una crescita culturale di ognuno. <br>
-Se vuoi proporre un argomento o vuoi essere tu lo speaker di un evento non esitare a contattarci. 
-
+Se vuoi proporre un argomento o vuoi essere tu lo speaker di un evento non esitare a [**contattarci**](https://goo.gl/forms/EiD8DFAztmgSPYot1).
 
 ![collage](/static/img/community-torre.jpeg)
 
-GDG e WTM Pisa Orga Team
+GDG e WTM Pisa core community
