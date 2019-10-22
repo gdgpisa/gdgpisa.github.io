@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resoconto ultimi eventi del GDG e WTM
-date:   2019-10-21 00:00:00
+date:   2019-10-22 00:00:00
 categories: others
 ---
 
