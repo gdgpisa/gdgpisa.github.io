@@ -20,8 +20,8 @@ share:
 
 enableTags: true
 tagarray: []
-paginate: 20
-per_page: 20
+paginate: 30
+per_page: 30
 paginate_path: "/blog/page:num/"
 markdown: kramdown
 plugins: [jekyll-paginate, jekyll-gist, jekyll-redirect-from, jekyll-workbox-plugin,jekyll-workbox-plugin]
