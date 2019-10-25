@@ -1,17 +1,31 @@
 [
 	{
+		"name": "WebDev for Dummies",
+		"image": "webdev-for-dummies.png",
+		"url": "https://docs.google.com/presentation/d/1n678h0Xzolmv72Wy1JjFI4h8mRXa31-2p8-8r5IW8Eg/edit?usp=sharing",
+		"date": "Oct 15 2019",
+		"tags": ["HTML", "CSS", "Bootstrap","WomenTechmakers"]
+	},
+	{
+		"name": "L'importanza dell'autopromozione e l'esperienza di un WTM Summit",
+		"image": "self-promotion-event.jpg",
+		"url": "https://www.meetup.com/GDG-Pisa/events/265043089/",
+		"date": "Sep 28 2019",
+		"tags": ["WomenTechmakers", "SoftSkills"]
+	},
+	{
 		"name": "Storia di un feedback form 2.0",
 		"image": "feedbackform2.jpg",
 		"url": "https://github.com/gdgpisa/feedbackform2",
 		"date": "July 24 2019",
-		"tags": ["Python", "RaspberryPi"]
+		"tags": ["Python", "RaspberryPi", "WomenTechmakers"]
 	},
 	{
 		"name": "Actions on Google D.I.Y.",
 		"image": "actionsongooglediy.jpeg",
 		"url": "https://docs.google.com/presentation/d/e/2PACX-1vR2vLmZeMmmVxzxrjb5VsQATe0mFNQZPc-QCGBeiB7kHVmiRJYXnkXVKjpIvR1Nelp1sDz116HA06W7/pub",
 		"date": "July 12 2019",
-		"tags": ["Python", "RaspberryPi", "GoogleAssistant"]
+		"tags": ["Python", "RaspberryPi", "GoogleAssistant", "WomenTechmakers"]
 	},
 	{
 		"name": "REST API in Golang e MongoDB",
