@@ -37,7 +37,7 @@ title: Blog
       {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
           <li class="active">
-             <a>{{ page }}<span class="sr-only">(current)</span></a>
+            <a href="{{page.url}}">{{ page }}<span class="sr-only">(current)</span></a>
           </li>
         {% elsif page == 1 %}
           <li><a href="/blog">{{ page }}</a></li>
