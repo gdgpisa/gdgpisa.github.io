@@ -18,13 +18,24 @@ share:
   twitter_username: \gdgpisa
   fb_appid: 000000000000
 
+plugins: [jekyll-paginate-v2, jekyll-gist, jekyll-redirect-from, jekyll-workbox-plugin,jekyll-workbox-plugin]
+
 enableTags: true
 tagarray: []
-paginate: 30
-per_page: 30
-paginate_path: "/blog/page:num/"
 markdown: kramdown
-plugins: [jekyll-paginate, jekyll-gist, jekyll-redirect-from, jekyll-workbox-plugin,jekyll-workbox-plugin]
+
+#pagination config
+permalink: /blog/:year/:month/
+pagination:
+  paginate_path: "/page:num/"
+  enabled: true
+  per_page: 10
+  sort_reverse: true
+  sort_field: 'date'
+  title: ':title'
+  trail:
+    before: 2
+    after: 2
 
 workbox:
   sw_src_filepath: sw.js # Optional
