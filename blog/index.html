@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Blog
-permalink: /blog/
 ---
 <div class="well">
     <div class="list-group">
@@ -20,7 +19,7 @@ permalink: /blog/
       <div class="list-group-separator"></div>
       {% endfor %}
     </div>
-   
+
 
     <!-- Pagination links -->
     {% if paginator.total_pages > 1 %}
@@ -33,7 +32,7 @@ permalink: /blog/
         <li class="previous disabled"><span aria-hidden="true">&laquo;</span></li>
       {% endif %}
 
-      <li><a href="/">First</a></li>
+      <li><a href="/blog">First</a></li>
 
       {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
@@ -41,7 +40,7 @@ permalink: /blog/
              <a>{{ page }}<span class="sr-only">(current)</span></a>
           </li>
         {% elsif page == 1 %}
-          <li><a href="/">{{ page }}</a></li>
+          <li><a href="/blog">{{ page }}</a></li>
         {% else %}
           <li>
             <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
@@ -49,7 +48,7 @@ permalink: /blog/
         {% endif %}
       {% endfor %}
 
-      <li><a href="/page{{ paginator.total_pages }}/">Last</a></li>
+      <li><a href="/blog/page{{ paginator.total_pages }}/">Last</a></li>
 
       {% if paginator.next_page %}
         <li class="next">
