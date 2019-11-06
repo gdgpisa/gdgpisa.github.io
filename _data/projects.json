@@ -1,5 +1,12 @@
 [
 	{
+		"name": "PWA From Scratch",
+		"image": "pwa-1.jpg",
+		"url": "https://www.meetup.com/GDG-Pisa/events/265879544/",
+		"date": "Oct 30 2019",
+		"tags": ["PWA"]
+	},
+	{
 		"name": "WebDev for Dummies",
 		"image": "webdev-for-dummies.png",
 		"url": "https://docs.google.com/presentation/d/1n678h0Xzolmv72Wy1JjFI4h8mRXa31-2p8-8r5IW8Eg/edit?usp=sharing",
