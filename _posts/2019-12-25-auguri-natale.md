@@ -28,7 +28,7 @@ Insomma, anche quest'anno siamo arrivati al natale soddisfatti del lavoro che ab
 Grazie a tutti quelli che ci seguono, grazie a tutti i nostri fantastici speaker e grazie a chi ci da preziosi feedback.<br>
 Un ringraziamento speciale va a tutto il **GDG Italia**, questo video challenge è per voi!  
 
-<iframe width="840" height="472,5" src="https://www.youtube.com/embed/SdkjptfYA5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="472,5" src="https://www.youtube.com/embed/SdkjptfYA5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 A questo punto non rimane altro che augurare a tutti un **Felice Natale** e **Buone Feste** 🎅🏽 🤶<br>
 Ci rivedremo da Gennaio con diversi nuovi eventi in programma.
