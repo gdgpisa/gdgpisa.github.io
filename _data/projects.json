@@ -1,5 +1,33 @@
 [
 	{
+		"name": "Meetup WTM - LGBT 101",
+		"image": "meetup-wtm-lgbt-101.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/267093051/",
+		"date": "Dec 14 2019",
+		"tags": ["WomenTechmakers"]
+	},
+	{
+		"name": "Android Development for Dummies",
+		"image": "android-development-for-dummies.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/267072294/",
+		"date": "Dec 13 2019",
+		"tags": ["Android"]
+	},
+	{
+		"name": "Come tenere un talk",
+		"image": "come-tenere-un-talk.png",
+		"url": "https://www.eventbrite.it/e/biglietti-come-tenere-un-talk-83693685065#",
+		"date": "Dec 4 2019",
+		"tags": ["SoftSkills"]
+	},
+	{
+		"name": "Practical Machine Learning for Beginners",
+		"image": "practical-machine-learning-for-beginners.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/266664177/",
+		"date": "Nov 28 2019",
+		"tags": ["Python","MachineLearning"]
+	},
+	{
 		"name": "Python from zero",
 		"image": "pythonfromzero.png",
 		"url": "https://github.com/xLinkOut/python-from-zero",
