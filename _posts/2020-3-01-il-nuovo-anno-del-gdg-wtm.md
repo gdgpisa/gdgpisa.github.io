@@ -20,7 +20,7 @@ Federico Paolinelli, con il suo talk **First Steps in Contributing to Open Sourc
 
 Ha provato a motivarci ad entrare in questo mondo e ci è riuscito!
 
-![foto evento Paolinelli(/static/img/open_source_paolinelli-min.jpg)
+![foto evento Paolinelli](/static/img/open_source_paolinelli-min.jpg)
 
 E dopo un breve riassunto del nuovo anno siamo lieti di potervi annunciare la **DevFest Pisa 2020**!
 
