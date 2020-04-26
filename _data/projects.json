@@ -1,5 +1,40 @@
 [
 	{
+		"name": "Let's Breakout the Love!",
+		"image": "breakout-the-love.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/270254610/",
+		"date": "May 14 2020",
+		"tags": ["LUA", "Love2D", "QuarantineTogheter"]
+	},
+	{
+		"name": "GDG DevParty Together",
+		"image": "dev-party-togheter.jpeg",
+		"url": "https://www.meetup.com/GDG-Pisa/events/270141198/",
+		"date": "May 2/3 2020",
+		"tags": ["DevPartyTogether", "Tech", "WomenTechmakers", "SoftSkills", "QuarantineTogheter"]
+	},
+	{
+		"name": "Kotlin vs Kovid",
+		"image": "kotlin-vs-kovid.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/270042041/",
+		"date": "Apr 22 2020",
+		"tags": ["Kotlin", "YouTube", "QuarantineTogheter"]
+	},
+	{
+		"name": "First steps in contributing to opensource",
+		"image": "opensource.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/268482779/",
+		"date": "Feb 19 2020",
+		"tags": ["OpenSource"]
+	},
+	{
+		"name": "Ciclo di seminari di CyberSecurity",
+		"image": "cyber-security.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/268018516/",
+		"date": "Jan 27 2020",
+		"tags": ["CyberSecurity"]
+	},
+	{
 		"name": "Meetup WTM - LGBT 101",
 		"image": "meetup-wtm-lgbt-101.png",
 		"url": "https://www.meetup.com/GDG-Pisa/events/267093051/",
