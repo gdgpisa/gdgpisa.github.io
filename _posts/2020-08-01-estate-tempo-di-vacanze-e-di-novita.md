@@ -17,7 +17,7 @@ Noi ci saremo, tuttavia continueremo con eventi in forma online ancora per un po
 
 Come anticipato dal titolo, abbiamo qualche novità interessante. Negli anni il ticketing dei nostri eventi ha vissuto diverse fasi. Inizialmente la piattaforma di riferimento era Eventbrite, successivamente tramite la partnership tra Google e Meetup abbiamo affettuato una migrazione pur mantenendo l'acquisto di ticket su Eventbrite. Adesso con la crescita delle community GDG e con l'aumentare di esigenze specifiche nasce una nuova piattaforma ad-hoc per i GDG. Stiamo parlando di [gdg.community.dev](https://gdg.community.dev/gdg-pisa/)
 
-![gdg community dev homepage](static/img/gdgcommunitydev_homepage.png)
+![gdg community dev homepage](/static/img/gdgcommunitydev_homepage.png)
 
 All'interno di questo portale potrete trovare tutti i GDG del mondo ed indovinate, ci siamo anche noi! Questa da oggi sarà la piattaforma di riferimento per i nostri eventi, tutto in un unico portale made by Big G.  
 
