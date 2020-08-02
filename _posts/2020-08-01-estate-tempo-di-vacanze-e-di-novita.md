@@ -25,13 +25,13 @@ All'interno di questo portale potrete trovare tutti i GDG del mondo ed indovinat
 
 Il 24 Giugno abbiamo vissuto insieme un viaggio nel passato, riscoprendo l'informatica prima degli IDE, l'informatica di un tempo che oggi ci sembra lontano ma che pensandoci è giusto dietro l'angolo. Per questo meetup abbiamo sperimento l'utilizzo della piattaforma Google Meet, in modo da favorire un ambiente dove è più facile conversare. Per chi non avesse avuto modo di partecipare ecco qui la registrazione della videoconferenza.  
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5QqJd9XzVzw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/5QqJd9XzVzw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Intro to Flutter
 
 Con Intro to Flutter possiamo dire conclusa questa prima metà dell'anno 2020 dando inizio alla pausa estiva. In questo evento abbiamo visto come Flutter potrebbe essere una valida scelta per lo sviluppo della nostra prossima App mobile, desktop o sito web. Come dimostra questo evento, organizzando un meetup virtuale si ha la possibilità di invitare speaker come Rihanna, che viene dal GDG Roma, con grande semplicità, permettendo alla community GDG di essere coesa anche in tempi come questi.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AXcRt6QdjJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/AXcRt6QdjJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Vuoi organizzare un evento con noi? 
 
