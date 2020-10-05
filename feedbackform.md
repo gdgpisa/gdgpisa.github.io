@@ -1,5 +1,5 @@
 ---
 layout: page
-redirect_to: "https://forms.gle/uQVNu4tjyYi2yBCh6"
+redirect_to: "https://forms.gle/bvzvUebMt9JhsC7D9"
 permalink: /feedbackform/
 ---
