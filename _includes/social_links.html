@@ -1,7 +1,7 @@
 <div class="social-icons">
 	{% for i in site.data.social %}
         <a class="icon" target="_blank" rel="noopener" href="{{ i.link }}" aria-label="{{ i.name }}">
-            {% if i.imglink contains '/' %}
+            {% if i.imglink %}
                 <img src="{{ i.imglink }}"/>
             {% else %}
                 <i class="fa {{ i.icon }}"></i>
