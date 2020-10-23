@@ -17,15 +17,15 @@ input::-webkit-input-placeholder {
     font-style: italic;
 }
 input:-moz-placeholder { /* Firefox 18- */
-    color: #ffffff !important;  
+    color: #ffffff !important;
     font-style: italic;
 }
 input::-moz-placeholder {  /* Firefox 19+ */
-    color: #ffffff !important;  
+    color: #ffffff !important;
     font-style: italic;
 }
-input:-ms-input-placeholder {  
-    color: #ffffff !important;  
+input:-ms-input-placeholder {
+    color: #ffffff !important;
     font-style: italic;
 }
 /* Bootstrap custom css */
@@ -85,8 +85,14 @@ p.info a {
     height: auto;
 }
 .social-icons {
-    margin: 20px 0 0 30px;
+    margin: 20px 0 0 0;
 }
+
+.social-icons img{
+    width: 40px;
+    height: 40px;
+}
+
 .icon {
     /*background: rgba(255, 255, 255, 0.63);*/
     border-radius: 100%;
@@ -261,7 +267,7 @@ footer {
     right: 12px;
 }
 
-.post-content {    
+.post-content {
    display: inline-block;
 }
 .row {

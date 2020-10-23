@@ -1,5 +1,11 @@
 <div class="social-icons">
-	{% for link in site.data.social %}
-        <a class="icon" target="_blank" rel="noopener" href="{{ link.link }}" aria-label="{{ link.name }}"><i class="fa {{ link.icon }}"></i></a>
+	{% for i in site.data.social %}
+        <a class="icon" target="_blank" rel="noopener" href="{{ i.link }}" aria-label="{{ i.name }}">
+            {% if i.imglink %}
+                <img src="{{ i.imglink }}"/>
+            {% else %}
+                <i class="fa {{ i.icon }}"></i>
+            {% endif %}
+        </a>
     {% endfor %}
 </div>
