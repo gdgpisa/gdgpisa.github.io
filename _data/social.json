@@ -2,21 +2,31 @@
   {
     "name": "Facebook",
     "icon": "fa-facebook",
-    "link": "http://facebook.com/gdgPisa"
+    "link": "https://facebook.com/gdgPisa"
   },
   {
     "name": "Twitter",
     "icon": "fa-twitter",
-    "link": "http://twitter.com/gdgPisa"
+    "link": "https://twitter.com/gdgPisa"
+  },
+  {
+    "name": "Instagram",
+    "icon": "fa-instagram",
+    "link": "https://www.instagram.com/gdgpisa/"
+  },
+  {
+    "name": "Linkedin",
+    "icon": "fa-linkedin",
+    "link": "https://www.linkedin.com/company/gdgpisa/"
   },
   {
     "name": "GitHub",
     "icon": "fa-github",
-    "link": "http://github.com/gdgPisa"
+    "link": "https://github.com/gdgPisa"
   },
   {
-    "name": "Meetup",
-    "icon": "fa-meetup",
-    "link": "https://www.meetup.com/GDG-Pisa/"
+    "name": "Dev",
+    "imglink": "/static/img/gdg-community-dev.png",
+    "link": "https://gdg.community.dev/gdg-pisa/"
   }
 ]
