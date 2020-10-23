@@ -31,6 +31,11 @@
     "icon": "fa-meetup"
   },
   {
+    "text": "Dev",
+    "url": "https://gdg.community.dev/gdg-pisa/",
+    "imglink": "/static/img/gdg-community-dev.png"
+  },
+  {
     "text": "Github",
     "url": "https://www.Github.com/gdgpisa",
     "icon": "fa-github"
