@@ -1,5 +1,33 @@
 [
 	{
+		"name": "DevFest Italia 2020",
+		"image": "dev-fest-italia-2020.png",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-devfest-italia-2020/",
+		"date": "October 17 2020",
+		"tags": ["DevFest", "QuarantineTogheter", "Android", "Cloud", "Data", "Inclusion", "ML/AI", "Mobile", "Web"]
+	},
+	{
+		"name": "Facciamo Co-Design",
+		"image": "facciamo-co-design.png",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-facciamo-co-design/",
+		"date": "October 10 2020",
+		"tags": ["Design", "WomenTechmakers"]
+	},
+	{
+		"name": "Intro to Flutter",
+		"image": "intro-to-flutter.png",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-intro-to-flutter/",
+		"date": "July 29 2020",
+		"tags": ["Flutter", "WomenTechmakers","QuarantineTogheter"]
+	},
+	{
+		"name": "Jurassic Programming: lo sviluppo prima dei PC.",
+		"image": "jurassic-programming.png",
+		"url": "https://www.meetup.com/GDG-Pisa/events/271186348/",
+		"date": "June 24 2020",
+		"tags": ["Amarcord", "QuarantineTogheter"]
+	},
+	{
 		"name": "Let's Breakout the Love!",
 		"image": "breakout-the-love.png",
 		"url": "https://www.meetup.com/GDG-Pisa/events/270254610/",
