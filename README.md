@@ -15,6 +15,7 @@
      + [Docker](#docker)
   + [Writing a post](#writing-a-post-)
   + [Updating the feedback form shortlink](#updating-the-feedback-form-shortlink-️)
+  + [Updating the service worker](#updating-the-service-worker-)
   + [Website Structure](#website-structure-)
   + [Contributing](#contributing-)
   + [License](#license-)
@@ -194,6 +195,24 @@ permalink: /feedbackform/
 ```
 
 And change the `redirect_to` field to the desired one.
+
+## Updating the Service Worker ⚙
+
+Before committing an update in this repo, you should install [Workbox CLI](https://developers.google.com/web/tools/workbox/modules/workbox-cli) and generate a new Service Worker. To update correctly the SW, run `workbox wizard` from your shell in the root of this repo. Our currently enable setup is summarized by Workbox question here:
+
+| Workbox | Configuration |
+| --- | --- |
+|  What is the root of your web app (i.e. which directory do you deploy)? | _site/ |
+| Which file types would you like to precache? | html, xml, json, css, scss, md, eot, svg, ttf, woff, woff2, otf, js, png, jpg, webapp, jpeg, gif |
+| Where would you like your service worker file to be saved? | sw.js |
+| Where would you like to save these configuration options? | static/js/workbox-config.js |
+| Does your web app manifest include search parameter(s) in the 'start_url', other than 'utm_' or 'fbclid' (like '?source=pwa')? | N |
+
+
+If you followed this configuration you could easily generate the updated Service Worker with `workbox generateSW static/js/workbox-config.js`.
+
+### ⚠️ In case of error during the generation
+If during the generation appears an error of invalid configuration, edit `static/js/workbox-config.js` and remove the key `ignoreURLParametersMatching` and its values.
 
 ## Website Structure 🗺
 
