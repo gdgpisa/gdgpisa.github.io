@@ -8,7 +8,7 @@
 		"linkedin": "dianabernabei",
 		"info": "CS student, Front-end web developer and dreamer",
 		"link": "https://www.dianabernabei.com/",
-		"tags": ["Organizer", "WTM"]
+		"tags": ["Former Organizer", "WTM"]
 	},
 	{
 		"name": "Giovanni Bartolomeo",
@@ -27,7 +27,7 @@
 		"instagram": "iosonododo",
 		"linkedin": "domenico-blanco-700877171",
 		"github": "domenicoblanco",
-		"tags": ["Organizer", "Telegram bot","Raspberry Pi"]
+		"tags": ["Former Organizer", "Telegram bot", "Raspberry Pi"]
 	},
 	{
 		"name": "Chiara Corrado",
@@ -43,18 +43,18 @@
 	},
 	{
 		"name": "Nicola Corti",
-		"info": "Co-manager and co-founder of GDG Pisa. Android developer @ Yelp and Community Lover!",
+		"info": "Co-manager and co-founder of GDG Pisa. Kotlin Google Developer Expert. Android Developer @ Spotify and Community Lover!",
 		"image": "nicolacorti.jpg",
 		"twitter": "cortinico",
 		"github": "cortinico",
 		"link": "https://ncorti.com/",
-		"tags": ["Organizer", "Founder"]
+		"tags": ["Organizer", "Founder", "WTM"]
 	},
 	{
 		"name": "Gianni Modica",
 		"image": "giannimodica.jpg",
 		"twitter": "infernatico",
-		"info": "Co-manager and co-founder of GDG Pisa. Android software developer for Car2Go",
+		"info": "Co-manager and co-founder of GDG Pisa. Android software developer for ShareNow",
 		"tags": ["Former Organizer", "Founder"]
 	},
 	{
