@@ -1,5 +1,33 @@
 [
 	{
+		"name": "#IWD 2021 | International Women's Day",
+		"image": "iwd-2021.png",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-iwd-2021-international-womens-day/",
+		"date": "April 27 2021",
+		"tags": ["WomenTechMakers"]
+	},
+	{
+		"name": "Road to Google Cloud Certification",
+		"image": "road-to-gcp-certification.png",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-road-to-google-cloud-certification/",
+		"date": "April 12 2021",
+		"tags": ["Cloud"]
+	},
+	{
+		"name": "#Hashcode 2021",
+		"image": "hash-code-2021.png",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-google-hash-code-2021/",
+		"date": "February 25 2021",
+		"tags": ["HashCode"]
+	},
+	{
+		"name": "Reti Neurali Ricorrenti Profonde e Randomizzate - Deep Reservoir Computing",
+		"image": "deep-reservoir.png",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-reti-neurali-ricorrenti-profonde-e-randomizzate-deep-reservoir-computing/",
+		"date": "November 23 2020",
+		"tags": ["MachineLearning", "QuarantineTogheter", "Data", "Data", "ML/AI"]
+	},
+	{
 		"name": "DevFest Italia 2020",
 		"image": "dev-fest-italia-2020.png",
 		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-devfest-italia-2020/",
