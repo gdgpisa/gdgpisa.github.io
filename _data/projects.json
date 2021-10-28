@@ -1,5 +1,26 @@
 [
 	{
+		"name": "ADI x GDG Pisa - Android Days: Day 1",
+		"image": "adi_gdg_android_days_1.png",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-adi-x-gdg-pisa-android-days-day-1/",
+		"date": "Oct 30 2021",
+		"tags": ["Android", "Online"]
+	},
+	{
+		"name": "Aperibirra Tech",
+		"image": "aperibirra_tech_oct_2021.jpg",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-aperibirra-tech/",
+		"date": "Oct 22 2021",
+		"tags": ["Beer","Friends","Networking"]
+	},
+	{
+		"name": "I/O Extended 2021 @ GDG Pisa",
+		"image": "io_extended_2021.png",
+		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-io-extended-2021-gdg-pisa/",
+		"date": "May 18 2021",
+		"tags": ["IO","Android","Cloud","Data","ML/AI"]
+	},
+	{
 		"name": "#IWD 2021 | International Women's Day",
 		"image": "iwd-2021.png",
 		"url": "https://gdg.community.dev/events/details/google-gdg-pisa-presents-iwd-2021-international-womens-day/",
