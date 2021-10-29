@@ -1,5 +1,55 @@
 [
 	{
+		"name": "Nicola Corti",
+		"info": "Co-manager and co-founder of GDG Pisa. Kotlin Google Developer Expert. Android Developer @ Spotify and Community Lover!",
+		"image": "nicolacorti.jpg",
+		"twitter": "cortinico",
+		"github": "cortinico",
+		"link": "https://ncorti.com/",
+		"tags": ["Organizer", "Founder", "WTM"]
+	},
+	{
+		"name": "Giovanni Bartolomeo",
+		"image": "giovannibartolomeo.jpg",
+		"info": "Open Source evangelist, Back-End Developer, annoyng security paranoid and Beer 🍺 lover. But I also have flaws...",
+		"facebook": "giobarty",
+		"twitter": "Giobarty01",
+		"tags": ["Organizer"]
+	},
+	{
+		"name": "Chiara Corrado",
+		"info": "Software Architect. 💻<br>Support Women in Technology. 💪",
+		"image": "chiaracorrado.jpeg",
+		"facebook": "chiara.corrado",
+		"twitter": "kiaruzza",
+		"instagram": "kiaruzza_dev",
+		"linkedin": "chiaracorrado",
+		"github": "kiaruzza",
+		"link": "https://chiaracorrado.dev/",
+		"tags": ["Organizer", "WTM"]
+	},
+	{
+		"name": "Leonardo Dipilato",
+		"info": "Aerospace Engineer by day, ML Enthusiast by night",
+		"image": "leonardodipilato.jpg",
+		"facebook": "leonardo.dipilato.3",
+		"instagram": "leonardodipilato",
+		"linkedin": "leonardo-dipilato-512a42167",
+		"github": "LeonardoDipilato",
+		"tags": ["Organizer"]
+	},
+	{
+		"name": "Mariagiovanna Rotundo",
+		"image": "mariagiovanna_rotundo.png",
+		"facebook": "mariagiovanna.rotundo",
+		"tags": ["Organizer"]
+	},
+	{
+		"name": "Gabriele Pappalardo",
+		"image": "gabrielepappalardo.jpg",
+		"tags": ["Organizer"]
+	},
+	{
 		"name": "Diana Bernabei",
 		"image": "dianabernabei.jpg",
 		"twitter": "dianabernabei",
@@ -11,14 +61,6 @@
 		"tags": ["Former Organizer", "WTM"]
 	},
 	{
-		"name": "Giovanni Bartolomeo",
-		"image": "giovannibartolomeo.jpg",
-		"info": "Open Source evangelist, Back-End Developer, annoyng security paranoid and Beer 🍺 lover. But I also have flaws...",
-		"facebook": "giobarty",
-		"twitter": "Giobarty01",
-		"tags": ["Organizer"]
-	},
-	{
 		"name": "Domenico Blanco",
 		"image": "domenicoblanco.jpeg",
 		"info": "IoT and Raspberry Pi enthusiast. Currently developing PWA and working on home automation.",
@@ -28,27 +70,6 @@
 		"linkedin": "domenico-blanco-700877171",
 		"github": "domenicoblanco",
 		"tags": ["Former Organizer", "Telegram bot", "Raspberry Pi"]
-	},
-	{
-		"name": "Chiara Corrado",
-		"info": "Software & Technology Lover. 💻<br>Support Women in Technology. 💪<br>Discover new places. 🌍<br>Debianized. 🌈",
-		"image": "chiaracorrado.jpeg",
-		"facebook": "chiara.corrado",
-		"twitter": "kiaruzza",
-		"instagram": "kiaruzza_dev",
-		"linkedin": "chiaracorrado",
-		"github": "kiaruzza",
-		"link": "https://medium.com/@kiaruzza_dev",
-		"tags": ["Organizer", "WTM"]
-	},
-	{
-		"name": "Nicola Corti",
-		"info": "Co-manager and co-founder of GDG Pisa. Kotlin Google Developer Expert. Android Developer @ Spotify and Community Lover!",
-		"image": "nicolacorti.jpg",
-		"twitter": "cortinico",
-		"github": "cortinico",
-		"link": "https://ncorti.com/",
-		"tags": ["Organizer", "Founder", "WTM"]
 	},
 	{
 		"name": "Gianni Modica",
@@ -64,21 +85,5 @@
 		"github": "thymbahutymba",
 		"linkedin": "andrea-stevanato-643510162",
 		"tags": ["Telegram bot"]
-	},
-	{
-		"name": "Leonardo Dipilato",
-		"info": "Aerospace Engineer by day, ML Enthusiast by night",
-		"image": "leonardodipilato.jpg",
-		"facebook": "leonardo.dipilato.3",
-		"instagram": "leonardodipilato",
-		"linkedin": "leonardo-dipilato-512a42167",
-		"github": "LeonardoDipilato",
-		"tags": ["Organizer"]
-	},
-	{
-		"name": "Mariagiovanna Rotundo",
-		"image": "mariagiovanna_rotundo.jpg",
-		"facebook": "mariagiovanna.rotundo",
-		"tags": ["Organizer"]
 	}
 ]
