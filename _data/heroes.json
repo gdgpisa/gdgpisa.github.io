@@ -18,7 +18,7 @@
 	},
 	{
 		"name": "Chiara Corrado",
-		"info": "Software & Technology Lover. 💻<br>Support Women in Technology. 💪<br>Discover new places. 🌍<br>Debianized. 🌈",
+		"info": "Software Architect. 💻<br>Support Women in Technology. 💪",
 		"image": "chiaracorrado.jpeg",
 		"facebook": "chiara.corrado",
 		"twitter": "kiaruzza",
@@ -40,8 +40,13 @@
 	},
 	{
 		"name": "Mariagiovanna Rotundo",
-		"image": "mariagiovanna_rotundo.jpg",
+		"image": "mariagiovanna_rotundo.png",
 		"facebook": "mariagiovanna.rotundo",
+		"tags": ["Organizer"]
+	},
+	{
+		"name": "Gabriele Pappalardo",
+		"image": "gabrielepappalardo.jpg",
 		"tags": ["Organizer"]
 	},
 	{
