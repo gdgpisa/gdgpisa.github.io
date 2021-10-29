@@ -41,24 +41,19 @@ Qui il testo dell'annuncio:
 
 > # Ragazze, sviluppatrici, piccole o grandi programmatrici: cerchiamo voi!
 > 
-> Siamo Develer, un'azienda di sviluppo hardware e software. 
+> Siamo **Develer**, un'azienda di sviluppo hardware e software. 
 > 
-> ### Vogliamo diventare un ambiente ancora più **inclusivo** e **accogliente**,
+> Vogliamo diventare un ambiente ancora più **inclusivo** e **accogliente**, e sappiamo bene che questo non è possibile senza la vostra presenza!  
 > 
-> ### e sappiamo bene che questo non è possibile senza la vostra presenza!  
+> In cambio, vi offriamo un lavoro stimolante in una sede moderna e confortevole, colleghe e colleghi simpatici e fortemente appassionati di nuove tecnologie, e tanti benefit.  
+>
+> Se non sapete chi siamo, e vi va di approfondire, venite a conoscerci sul nostro sito: [https://www.develer.com/](https://www.develer.com/)
 > 
-> ### In cambio, vi offriamo un lavoro stimolante in una sede moderna e confortevole,
-> 
-> ### colleghe e colleghi simpatici e fortemente appassionati di nuove tecnologie, e tanti benefit.  
-> 
-> 
-> Se non sapete chi siamo, e vi va di approfondire, venite a conoscerci sul nostro sito: https://www.develer.com/
-> 
-> Stiamo crescendo molto e le posizioni aperte sono tante https://www.develer.com/lavora-con-noi/
+> Stiamo crescendo molto e le posizioni aperte sono tante [https://www.develer.com/lavora-con-noi/](https://www.develer.com/lavora-con-noi/)
 > 
 > Se non trovate l'opportunità adatta a voi, non preoccupatevi! 
-> 
-> Scrivete a **claudia@develer.com**, inviando il vostro cv, e insieme proveremo a capire se possiamo costruire un percorso adatto alle reciproche esigenze.
+>                         
+> Scrivete a <a href="mailto:claudia@develer.com">claudia@develer.com</a>, inviando il vostro cv, e insieme proveremo a capire se possiamo costruire un percorso adatto alle reciproche esigenze.
 
 ![Recruiting3](/static/img/recruiting/3.jpg)
 
