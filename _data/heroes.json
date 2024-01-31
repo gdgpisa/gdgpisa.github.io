@@ -1,20 +1,25 @@
 [
 	{
 		"name": "Nicola Corti",
-		"info": "Co-manager and co-founder of GDG Pisa. Kotlin Google Developer Expert. Android Developer @ Spotify and Community Lover!",
+		"info": "Co-manager and co-founder of GDG Pisa. Kotlin Google Developer Expert. Android Developer @ Meta and Community Lover!",
 		"image": "nicolacorti.jpg",
 		"twitter": "cortinico",
 		"github": "cortinico",
 		"link": "https://ncorti.com/",
-		"tags": ["Organizer", "Founder", "WTM"]
+		"tags": [
+			"Organizer",
+			"Founder",
+			"WTM"
+		]
 	},
 	{
 		"name": "Giovanni Bartolomeo",
 		"image": "giovannibartolomeo.jpg",
-		"info": "Open Source evangelist, Back-End Developer, annoyng security paranoid and Beer 🍺 lover. But I also have flaws...",
 		"facebook": "giobarty",
 		"twitter": "Giobarty01",
-		"tags": ["Organizer"]
+		"tags": [
+			"Organizer"
+		]
 	},
 	{
 		"name": "Chiara Corrado",
@@ -26,28 +31,40 @@
 		"linkedin": "chiaracorrado",
 		"github": "kiaruzza",
 		"link": "https://chiaracorrado.dev/",
-		"tags": ["Organizer", "WTM"]
+		"tags": [
+			"Organizer",
+			"WTM"
+		]
 	},
 	{
 		"name": "Leonardo Dipilato",
-		"info": "Aerospace Engineer by day, ML Enthusiast by night",
+		"info": "CFD Engineer, GDG Pisa Community Lead, and ML/DS enthusiast",
 		"image": "leonardodipilato.jpg",
 		"facebook": "leonardo.dipilato.3",
 		"instagram": "leonardodipilato",
 		"linkedin": "leonardo-dipilato-512a42167",
 		"github": "LeonardoDipilato",
-		"tags": ["Organizer"]
+		"tags": [
+			"Organizer"
+		]
 	},
 	{
 		"name": "Mariagiovanna Rotundo",
 		"image": "mariagiovanna_rotundo.png",
 		"facebook": "mariagiovanna.rotundo",
-		"tags": ["Organizer"]
+		"linkedin": "mariagiovanna-rotundo",
+		"tags": [
+			"Organizer"
+		]
 	},
 	{
 		"name": "Gabriele Pappalardo",
+		"info": "Software Developer @ JetBrains | M.Sc. in Computer Science (Software Curriculum) | GDG Pisa Community’s Manager",
 		"image": "gabrielepappalardo.jpg",
-		"tags": ["Organizer"]
+		"linkedin": "gabryon99",
+		"tags": [
+			"Organizer"
+		]
 	},
 	{
 		"name": "Diana Bernabei",
@@ -58,7 +75,10 @@
 		"linkedin": "dianabernabei",
 		"info": "CS student, Front-end web developer and dreamer",
 		"link": "https://www.dianabernabei.com/",
-		"tags": ["Former Organizer", "WTM"]
+		"tags": [
+			"Former Organizer",
+			"WTM"
+		]
 	},
 	{
 		"name": "Domenico Blanco",
@@ -69,14 +89,21 @@
 		"instagram": "iosonododo",
 		"linkedin": "domenico-blanco-700877171",
 		"github": "domenicoblanco",
-		"tags": ["Former Organizer", "Telegram bot", "Raspberry Pi"]
+		"tags": [
+			"Former Organizer",
+			"Telegram bot",
+			"Raspberry Pi"
+		]
 	},
 	{
 		"name": "Gianni Modica",
 		"image": "giannimodica.jpg",
 		"twitter": "infernatico",
-		"info": "Co-manager and co-founder of GDG Pisa. Android software developer for ShareNow",
-		"tags": ["Former Organizer", "Founder"]
+		"info": "Co-manager and co-founder of GDG Pisa. Android software developer for Google",
+		"tags": [
+			"Former Organizer",
+			"Founder"
+		]
 	},
 	{
 		"name": "Andrea Stevanato",
@@ -84,13 +111,18 @@
 		"instagram": "andrea.stevanato",
 		"github": "thymbahutymba",
 		"linkedin": "andrea-stevanato-643510162",
-		"tags": ["Telegram bot"]
+		"tags": [
+			"Telegram bot"
+		]
 	},
 	{
 		"name": "Davide Ginnasio",
+		"info": "Full stack Developer/DevOps presso TD Group Italia S.r.l.",
 		"image": "davideginnasio.png",
 		"github": "davideginna",
 		"linkedin": "davideginna",
-		"tags": ["Organizer"]
+		"tags": [
+			"Organizer"
+		]
 	}
 ]
