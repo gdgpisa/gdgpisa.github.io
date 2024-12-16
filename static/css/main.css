@@ -117,7 +117,7 @@ p.info a {
 }
 
 .menu ul li a:hover, .menu ul li a:focus, li.current-menu-item > a{
-    background: #1976D2;
+    background: #ff0000;
 }
 li.current-menu-item:before {
     content: "";
