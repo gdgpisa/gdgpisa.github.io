@@ -114,6 +114,7 @@ p.info a {
 .menu ul li {
     list-style: none;
     margin: 5px 0;
+    text-shadow: yellow 1px 1px 1px;
 }
 
 .menu ul li a:hover, .menu ul li a:focus, li.current-menu-item > a{
