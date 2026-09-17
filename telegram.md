@@ -1,5 +1,5 @@
 ---
 layout: page
-redirect_to: "https://t.me/+nq8ZVuQr0_82NTA0"
+redirect_to: "https://t.me/+kS2vxtz9T1E0NDVk"
 permalink: /telegram
 ---
