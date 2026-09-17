@@ -13,7 +13,8 @@
   {
     "text": "WTM",
     "url": "/wtm",
-    "imglink": "/static/img/wtm_logo.png"
+    "imglink": "/static/img/wtm_logo.png",
+    "visible": false
   },
   {
     "text": "Seminari",

@@ -1,9 +1,9 @@
 [
 	{
 		"name": "Nicola Corti",
+		"surname": "Corti",
 		"info": "Co-manager and co-founder of GDG Pisa. Kotlin Google Developer Expert. Android Developer @ Meta and Community Lover!",
 		"image": "nicolacorti.jpg",
-		"twitter": "cortinico",
 		"github": "cortinico",
 		"link": "https://ncorti.com/",
 		"tags": [
@@ -14,19 +14,21 @@
 	},
 	{
 		"name": "Giovanni Bartolomeo",
+		"surname": "Bartolomeo",
 		"image": "giovannibartolomeo.jpg",
 		"facebook": "giobarty",
 		"github": "giobart",
 		"tags": [
 			"Organizer"
-		]
+		],
+		"visible": false
 	},
 	{
 		"name": "Chiara Corrado",
+		"surname": "Corrado",
 		"info": "Software Architect. 💻<br>Support Women in Technology. 💪",
 		"image": "chiaracorrado.jpeg",
 		"facebook": "chiara.corrado",
-		"twitter": "kiaruzza",
 		"instagram": "kiaruzza_dev",
 		"linkedin": "chiaracorrado",
 		"github": "kiaruzza",
@@ -34,10 +36,12 @@
 		"tags": [
 			"Organizer",
 			"WTM"
-		]
+		],
+		"visible": false
 	},
 	{
 		"name": "Leonardo Dipilato",
+		"surname": "Dipilato",
 		"info": "CFD Engineer, GDG Pisa Community Lead, and ML/DS enthusiast",
 		"image": "leonardodipilato.jpg",
 		"facebook": "leonardo.dipilato.3",
@@ -50,15 +54,19 @@
 	},
 	{
 		"name": "Mariagiovanna Rotundo",
+		"surname": "Rotundo",
+		"info": "PhD student in Computer Science at University of Pisa. GDG Pisa and WTM Pisa Lead.",
 		"image": "mariagiovanna_rotundo.png",
 		"facebook": "mariagiovanna.rotundo",
 		"linkedin": "mariagiovanna-rotundo",
 		"tags": [
-			"Organizer"
+			"Organizer",
+			"WTM"
 		]
 	},
 	{
 		"name": "Gabriele Pappalardo",
+		"surname": "Pappalardo",
 		"info": "Software Developer @ JetBrains | M.Sc. in Computer Science (Software Curriculum) | GDG Pisa Community’s Manager",
 		"image": "gabrielepappalardo.jpg",
 		"linkedin": "gabryon99",
@@ -68,8 +76,8 @@
 	},
 	{
 		"name": "Diana Bernabei",
+		"surname": "Bernabei",
 		"image": "dianabernabei.jpg",
-		"twitter": "dianabernabei",
 		"instagram": "dianabernabei",
 		"github": "dianaberna",
 		"linkedin": "dianabernabei",
@@ -78,14 +86,15 @@
 		"tags": [
 			"Former Organizer",
 			"WTM"
-		]
+		],
+		"visible": false
 	},
 	{
 		"name": "Domenico Blanco",
+		"surname": "Blanco",
 		"image": "domenicoblanco.jpeg",
 		"info": "IoT and Raspberry Pi enthusiast. Currently developing PWA and working on home automation.",
 		"facebook": "domenico.blanco.16",
-		"twitter": "domenicoblanco",
 		"instagram": "iosonododo",
 		"linkedin": "domenico-blanco-700877171",
 		"github": "domenicoblanco",
@@ -93,34 +102,133 @@
 			"Former Organizer",
 			"Telegram bot",
 			"Raspberry Pi"
-		]
+		],
+		"visible": false
 	},
 	{
 		"name": "Gianni Modica",
+		"surname": "Modica",
 		"image": "giannimodica.jpg",
-		"twitter": "infernatico",
 		"info": "Co-manager and co-founder of GDG Pisa. Android software developer for Google",
 		"tags": [
 			"Former Organizer",
 			"Founder"
-		]
+		],
+		"visible": false
 	},
 	{
 		"name": "Andrea Stevanato",
+		"surname": "Stevanato",
 		"image": "andreastevanato.jpeg",
 		"instagram": "andrea.stevanato",
 		"github": "thymbahutymba",
 		"linkedin": "andrea-stevanato-643510162",
 		"tags": [
 			"Telegram bot"
-		]
+		],
+		"visible": false
 	},
 	{
 		"name": "Davide Ginnasio",
+		"surname": "Ginnasio",
 		"info": "Full stack Developer/DevOps presso TD Group Italia S.r.l.",
-		"image": "davideginnasio.jpg",
+		"image": "davideginnasio.png",
 		"github": "davideginna",
 		"linkedin": "davideginna",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Annamaria Gandolfo",
+		"surname": "Gandolfo",
+		"linkedin": "annamaria-gandolfo-b52742121",
+		"image": "annamariagandolfo.jpeg",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Michele Sponsale",
+		"surname": "Sponsale",
+		"linkedin": "michele-sponsale-664b8010b",
+		"github": "LudWittg",
+		"image": "michelesponsale.jpg",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Antonio De Lucreziis",
+		"surname": "De Lucreziis",
+		"info": "Mathematics student in Pisa and self-taught programmer for 10+ years.",
+		"image": "antoniodelucreziis.jpg",
+		"github": "aziis98",
+		"link": "https://aziis98.com/",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Davide Brienza",
+		"surname": "Brienza",
+		"linkedin": "davide-brienza",
+		"github": "DavideBri",
+		"image": "davidebrienza.jpg",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Davide Pio Lomonaco",
+		"surname": "Lomonaco",
+		"linkedin": "davidepiolomonaco",
+		"image": "davidepiolomonaco.jpg",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Giada Del Testa",
+		"surname": "Del Testa",
+		"linkedin": "giadadeltesta",
+		"image": "giadadeltesta.jpg",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Irene Evangelista",
+		"surname": "Evangelista",
+		"linkedin": "irene-evangelista-580669175",
+		"image": "ireneevangelista.jpg",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Luigi Lamorte",
+		"surname": "Lamorte",
+		"linkedin": "lamorte99",
+		"image": "luigilamorte.jpg",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Luigi De Bianchi",
+		"surname": "De Bianchi",
+		"linkedin": "luigi-de-bianchi-881309120",
+		"image": "luigidebianchi.jpeg",
+		"tags": [
+			"Organizer"
+		]
+	},
+	{
+		"name": "Matteo Marchetti",
+		"surname": "Marchetti",
+		"linkedin": "matteommarchetti",
+		"image": "matteomarchetti.jpg",
 		"tags": [
 			"Organizer"
 		]

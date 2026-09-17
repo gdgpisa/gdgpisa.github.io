@@ -1,5 +1,6 @@
 <ul class="list-separator nav navbar-nav well well-primary {{ page.layout }}">
 {% for i in site.data.urls %}
+	{% if i.visible == false %}{% continue %}{% endif %}
 	{% assign current = nil %}
 	{% assign pageurl = page.url | split:'/' | last %}
 	{% assign menuurl = i.url | split:'/' | last %}
