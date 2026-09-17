@@ -3,6 +3,7 @@
 		<span class="label tag-filter tag-cloud all text-left">Reset</span>
         {% assign tagarray = site.tagarray %}
         {% for hero in site.data.heroes %}
+            {% if hero.visible == false %}{% continue %}{% endif %}
             {% for tag in hero.tags %}
                 {% assign tagarray = tagarray | push: tag %}
             {% endfor %}

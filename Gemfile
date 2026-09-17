@@ -5,7 +5,7 @@ group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll-gist'
   gem 'jekyll-watch'
-  gem 'jekyll-redirect-from'
+  gem 'jekyll-redirect-from', '~> 0.16'
   gem 'kramdown'
   gem 'rouge'
   gem 'jekyll-workbox-plugin'
