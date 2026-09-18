@@ -1,0 +1,36 @@
+{
+  "name": "gdgpisa-website",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@iconify-json/material-symbols": "^1.2.92",
+    "@iconify-json/mdi": "^1.2.3",
+    "@material-symbols/svg-400": "^0.47.4",
+    "@mdi/js": "^7.4.47",
+    "astro": "^7.3.3",
+    "simple-icons": "^16.31.0"
+  },
+  "allowScripts": {
+    "esbuild": true
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@playwright/test": "^1.63.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.1"
+  }
+}

@@ -1,0 +1,63 @@
+---
+interface Props {
+  name: string;
+  info?: string;
+  image: string;
+  github?: string;
+  facebook?: string;
+  instagram?: string;
+  linkedin?: string;
+  link?: string;
+  tags: string[];
+}
+
+const { name, info, image, github, facebook, instagram, linkedin, link, tags } = Astro.props;
+
+function badgeClass(tag: string) {
+  const t = tag.toLowerCase();
+  if (t === 'organizer') return 'badge--organizer';
+  if (t === 'former organizer') return 'badge--former-organizer';
+  if (t === 'founder') return 'badge--founder';
+  if (t === 'wtm') return 'badge--wtm';
+  return 'badge--default';
+}
+---
+
+<article class="card hero-card" data-tags={JSON.stringify(tags.map((t) => t.toLowerCase()))}>
+  <img src={`/static/img/heroes/${image}`} alt={name} loading="lazy" />
+  <div class="card-body">
+    <h3>{name}</h3>
+    {info && <p class="hero-card__info">{info}</p>}
+    <div class="hero-card__tags">
+      {tags.map((tag) => <span class={`badge ${badgeClass(tag)}`}>{tag}</span>)}
+    </div>
+    <div class="hero-card__links">
+      {facebook && <a href={`https://facebook.com/${facebook}`} target="_blank" rel="noopener">Facebook</a>}
+      {instagram && <a href={`https://instagr.am/${instagram}`} target="_blank" rel="noopener">Instagram</a>}
+      {github && <a href={`https://github.com/${github}`} target="_blank" rel="noopener">GitHub</a>}
+      {linkedin && <a href={`https://linkedin.com/in/${linkedin}`} target="_blank" rel="noopener">LinkedIn</a>}
+      {link && <a href={link} target="_blank" rel="noopener">Sito</a>}
+    </div>
+  </div>
+</article>
+
+<style>
+  .hero-card__info {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+  .hero-card__tags {
+    margin: var(--space-2) 0;
+  }
+  .hero-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    font-size: 0.85rem;
+  }
+  .hero-card__links a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 600;
+  }
+</style>

@@ -1,0 +1,22 @@
+---
+// Google's own Material Symbols (outlined), via @material-symbols/svg-400.
+// Each file is a standalone <svg> with no fill attribute (defaults to
+// black), so we inject fill="currentColor" to match the surrounding text.
+import link from '@material-symbols/svg-400/outlined/link.svg?raw';
+import sun from '@material-symbols/svg-400/outlined/light_mode.svg?raw';
+import moon from '@material-symbols/svg-400/outlined/dark_mode.svg?raw';
+
+export type IconName = 'link' | 'sun' | 'moon';
+
+interface Props {
+  name: IconName;
+}
+
+const { name } = Astro.props;
+
+const icons: Record<IconName, string> = { link, sun, moon };
+
+const markup = icons[name].replace('<svg ', '<svg class="icon" fill="currentColor" aria-hidden="true" ');
+---
+
+<Fragment set:html={markup} />

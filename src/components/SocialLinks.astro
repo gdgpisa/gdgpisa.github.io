@@ -1,0 +1,31 @@
+---
+import { socialLinks } from '../data/social';
+import BrandIcon from './BrandIcon.astro';
+---
+
+<div class="social-links">
+  {
+    socialLinks.map((s) => (
+      <a href={s.url} target="_blank" rel="noopener" aria-label={s.name} class="social-links__item">
+        <BrandIcon name={s.icon} monochrome />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .social-links {
+    display: flex;
+    gap: var(--space-3);
+  }
+  .social-links__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+</style>

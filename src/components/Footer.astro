@@ -1,0 +1,26 @@
+---
+import SocialLinks from './SocialLinks.astro';
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>GDG Pisa - Google Developer Group Pisa</p>
+    <SocialLinks />
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-surface);
+    padding: var(--space-5) 0;
+    margin-top: var(--space-6);
+  }
+  .site-footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    text-align: center;
+    color: var(--color-text-muted);
+  }
+</style>

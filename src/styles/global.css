@@ -1,0 +1,139 @@
+@import './tokens.css';
+@import './fonts.css';
+@import './reset.css';
+
+.container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* Global default so every icon (Icon.astro / BrandIcon.astro) is a sane
+   size out of the box. Without this, each renders at its raw source size —
+   48x48 for Material Symbols, unset (defaults to 300x150) for MDI/brand
+   icons — wherever a component doesn't add its own override. This file is
+   a plain (non-scoped) stylesheet, so it's the one place a selector is
+   guaranteed to reach an SVG rendered deep inside a child component. */
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: var(--space-3);
+}
+
+/* "Sticker" card: thick outline + hard offset shadow (no blur), the bold
+   playful treatment used for feature/activity cards. Border/shadow use
+   --color-text so it's just as crisp in dark mode. Any color accent goes
+   on top (e.g. .sticker-card__stripe), never as the card's own background
+   behind white text. */
+.sticker-card {
+  position: relative;
+  background: var(--color-bg);
+  border: 3px solid var(--color-text);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 0 var(--color-text);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.sticker-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 0 var(--color-text);
+}
+
+.sticker-card__stripe {
+  height: 6px;
+  border-radius: 20px 20px 0 0;
+}
+
+.sticker-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 3px solid var(--color-text);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 0 var(--color-text);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.sticker-pill:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 var(--color-text);
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1.5px solid currentColor;
+  margin: 0 var(--space-1) var(--space-1) 0;
+}
+
+.badge--organizer {
+  color: var(--color-role-organizer);
+}
+.badge--former-organizer {
+  color: var(--color-role-former-organizer);
+}
+.badge--founder {
+  color: var(--color-role-founder);
+}
+.badge--wtm {
+  color: var(--color-role-wtm);
+}
+.badge--default {
+  color: var(--color-text-muted);
+}
+
+.top-nav {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .top-nav {
+    display: flex;
+  }
+}

@@ -1,0 +1,59 @@
+---
+// Icon shapes from Material Design Icons (mdi), matching the icon set used
+// on links.gdgpisa.it, resolved at build time from the Iconify MDI dataset.
+// Brand hex colors come from simple-icons (mdi's JSON has no color data).
+import mdiData from '@iconify-json/mdi/icons.json';
+import { siFacebook, siInstagram, siYoutube, siGithub, siTelegram, siMeetup } from 'simple-icons';
+
+// LinkedIn was pulled from simple-icons after a legal request from
+// LinkedIn/Microsoft — no .hex available there, so this is their known
+// official brand blue, hardcoded.
+const LINKEDIN_HEX = '0A66C2';
+
+export type BrandName =
+  | 'facebook'
+  | 'instagram'
+  | 'youtube'
+  | 'github'
+  | 'telegram'
+  | 'meetup'
+  | 'linkedin'
+  | 'community';
+
+interface Props {
+  name: BrandName;
+  /** true = render in currentColor instead of the brand's own hue (e.g. on a colored background where the brand color would clash or fail contrast). */
+  monochrome?: boolean;
+}
+
+const { name, monochrome = false } = Astro.props;
+
+const mdiSlug: Record<BrandName, string> = {
+  facebook: 'facebook',
+  instagram: 'instagram',
+  youtube: 'youtube',
+  github: 'github',
+  telegram: 'telegram',
+  meetup: 'meetup',
+  linkedin: 'linkedin',
+  community: 'code-tags',
+};
+
+const hex: Record<BrandName, string> = {
+  facebook: siFacebook.hex,
+  instagram: siInstagram.hex,
+  youtube: siYoutube.hex,
+  github: siGithub.hex,
+  telegram: siTelegram.hex,
+  meetup: siMeetup.hex,
+  linkedin: LINKEDIN_HEX,
+  community: '4285F4', // unused while always rendered monochrome, kept for type completeness
+};
+
+const icons = mdiData.icons as Record<string, { body: string }>;
+const icon = icons[mdiSlug[name]];
+const viewBox = `0 0 ${mdiData.width} ${mdiData.height}`;
+const color = monochrome ? 'currentColor' : `#${hex[name]}`;
+---
+
+<svg class="icon" viewBox={viewBox} style={{ color }} aria-hidden="true" set:html={icon.body} />

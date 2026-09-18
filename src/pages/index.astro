@@ -1,0 +1,435 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import UpcomingEvent from '../components/UpcomingEvent.astro';
+import Icon from '../components/Icon.astro';
+
+const activities = [
+  {
+    title: 'Meetup',
+    image: '/static/img/balloon_1.png',
+    stripe: 'var(--color-google-blue)',
+    text: 'Birra, chiacchiere e tech talk senza filtri: il nido della community, dove si scambiano idee, esperienze e consigli tra una risata e l’altra.',
+  },
+  {
+    title: 'Codelab',
+    image: '/static/img/balloon_2.png',
+    stripe: 'var(--color-google-red)',
+    text: 'Si impara facendo. Workshop pratici per mettere le mani in pasta su una tecnologia, dalle basi ai trucchi del mestiere.',
+  },
+  {
+    title: 'Hackathon',
+    image: '/static/img/balloon_3.png',
+    stripe: 'var(--color-google-yellow)',
+    text: 'Codice, sfida, adrenalina. Team di sviluppatori, designer e appassionati si sfidano per costruire qualcosa di nuovo in tempo record.',
+  },
+  {
+    title: 'Talk',
+    image: '/static/img/balloon_4.png',
+    stripe: 'var(--color-google-green)',
+    text: 'Uno speaker, un argomento, tante domande. Format snello: talk, Q&A finale, e spazio aperto alla discussione.',
+  },
+];
+
+const allHeroes = await getCollection('heroes');
+const team = allHeroes
+  .filter((h) => h.data.visible !== false)
+  .sort((a, b) => a.data.surname.localeCompare(b.data.surname));
+// On wide viewports the grid below forces exactly 2 rows, centered — column
+// count derived from the live team size so it stays correct as people are added/removed.
+const teamCols = Math.ceil(team.length / 2);
+---
+
+<BaseLayout title="GDG Pisa" description="Il Google Developer Group di Pisa: eventi, community, tecnologia.">
+  <section class="hero">
+    <div class="hero__blob hero__blob--blue" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--red" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--yellow" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--green" aria-hidden="true"></div>
+    <div class="hero__grain" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <img src="/static/img/loghi/logo-gdg-pisa-square-no-name.svg" alt="" class="hero__logo" width="72" height="72" />
+      <p class="hero__overline">Google Developer Group</p>
+      <h1>GDG Pisa</h1>
+      <p class="hero__tagline">Tecnologia, community e persone: il punto di ritrovo degli sviluppatori a Pisa.</p>
+      <div class="hero__actions">
+        <a class="sticker-pill hero__pill" href="https://gdg.community.dev/gdg-pisa/" target="_blank" rel="noopener">
+          I nostri eventi →
+        </a>
+        <a class="sticker-pill hero__pill hero__pill--ghost" href="https://links.gdgpisa.it/" target="_blank" rel="noopener">
+          Unisciti alla community →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="intro">
+      <h3>Cosa è un GDG</h3>
+      <p>
+        Il <strong>Google Developer Group</strong> è una community in cui si possono condividere liberamente le
+        proprie idee, le proprie conoscenze ed esperienze in campo tecnologico. Non è richiesta nessuna competenza
+        particolare, se sei semplicemente interessato alla tecnologia non ti resta che entrare in contatto con noi 😉
+      </p>
+    </section>
+
+    <section class="next-event">
+      <h3>Il nostro prossimo evento</h3>
+      <UpcomingEvent />
+    </section>
+
+    <section class="activities-section">
+      <h3>Come vivere GDG Pisa</h3>
+      <div class="activities">
+        {
+          activities.map((a) => (
+            <div class="sticker-card activities__item">
+              <div class="sticker-card__stripe" style={{ background: a.stripe }} />
+              <div class="activities__body">
+                <img src={a.image} alt="" width="64" height="64" />
+                <div>
+                  <h4>{a.title}</h4>
+                  <p>{a.text}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <p class="cta-line">
+        <a class="sticker-pill" href="https://goo.gl/forms/EiD8DFAztmgSPYot1">Proponi il tuo evento →</a>
+      </p>
+    </section>
+
+    <section class="devfest">
+      <h3>DevFest Pisa</h3>
+      <a class="sticker-card devfest__card" href="https://devfest.gdgpisa.it/" target="_blank" rel="noopener">
+        <div class="devfest__body">
+          <p class="devfest__eyebrow">18 aprile 2026 · MACC</p>
+          <h4>DevFest Pisa 2026 — Leaning into the Future</h4>
+          <p>
+            Il nostro evento annuale più grande: un giorno intero di talk su AI, Web, Cloud e molto altro, dal 2018
+            (eravamo alla "edizione 0.1" 😄). L'anno scorso: <strong>500+ partecipanti</strong>,
+            <strong>30+ speaker</strong> da <strong>5+ nazioni</strong>.
+          </p>
+          <span class="devfest__cta">Scopri DevFest Pisa 2026 →</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="team">
+      <h3>Il nostro team</h3>
+      <p>Le persone che organizzano e fanno crescere GDG Pisa, evento dopo evento.</p>
+      <div class="team__grid" style={{ '--team-cols': teamCols }}>
+        {
+          team.map((hero) => (
+            <a class="team__member" href="/heroes/" title={hero.data.name}>
+              <img src={`/static/img/heroes/${hero.data.image}`} alt={hero.data.name} loading="lazy" />
+              <span>{hero.data.name}</span>
+            </a>
+          ))
+        }
+      </div>
+      <a class="sticker-pill" href="/heroes/">Vedi tutto il team →</a>
+    </section>
+
+    <section class="follow">
+      <h2>Seguici sui nostri canali</h2>
+      <p>Eventi, foto, novità dalla community: trovi tutti i nostri canali in un unico posto.</p>
+      <div class="follow__grid">
+        <a class="sticker-pill follow__pill" href="https://links.gdgpisa.it/" target="_blank" rel="noopener">
+          <Icon name="link" />
+          Tutti i nostri link
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56vh;
+    /* Near-black navy→forest base: dark enough that white text clears
+       4.5:1 even where a blob glow crosses into the text column. */
+    background: linear-gradient(160deg, #0a1128 0%, #0c1f1a 100%);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero__blob {
+    position: absolute;
+    width: 46vw;
+    height: 46vw;
+    max-width: 520px;
+    max-height: 520px;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.32;
+    pointer-events: none;
+  }
+  .hero__blob--blue {
+    top: -18%;
+    left: -12%;
+    background: var(--color-google-blue);
+  }
+  .hero__blob--red {
+    top: -16%;
+    right: -14%;
+    background: var(--color-google-red);
+  }
+  .hero__blob--yellow {
+    bottom: -22%;
+    left: 8%;
+    background: var(--color-google-yellow);
+    opacity: 0.22;
+  }
+  .hero__blob--green {
+    bottom: -18%;
+    right: -10%;
+    background: var(--color-google-green);
+  }
+  .hero__grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .hero__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-6) var(--space-3);
+  }
+  .hero__logo {
+    background: white;
+    border-radius: var(--radius-pill);
+    padding: var(--space-2);
+    margin-bottom: var(--space-3);
+    box-shadow: var(--shadow-card-hover);
+  }
+  .hero__overline {
+    margin: 0 0 var(--space-1);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #cfe0ff;
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 4rem);
+    margin: 0 0 var(--space-2);
+    color: white;
+  }
+  .hero__tagline {
+    /* Solid white, no opacity reduction: this text is normal-weight at
+       ~17.6px (not "large text" per WCAG), so it needs the full 4.5:1
+       the opaque overlay guarantees — a lighter alpha would eat the margin. */
+    font-size: 1.1rem;
+    max-width: 40ch;
+    margin: 0;
+  }
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+  /* .sticker-pill already renders well here (solid --color-bg pill, dark
+     border/text) since the hero background is dark. The ghost variant is
+     the secondary action: outline-only, white on the dark hero bg. */
+  .hero__pill--ghost {
+    background: transparent;
+    border-color: white;
+    color: white;
+    box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.4);
+  }
+  .hero__pill--ghost:hover {
+    box-shadow: 6px 6px 0 0 rgba(255, 255, 255, 0.4);
+  }
+  .intro {
+    padding-top: var(--space-5);
+  }
+  /* Each major section gets its own tinted panel — a pastel-per-section
+     rhythm (à la devfest.gdgpisa.it: yellow CFP block, cyan tickets block,
+     etc) so sections read as distinct zones instead of one long white page. */
+  .next-event,
+  .activities-section,
+  .team,
+  .follow {
+    border-radius: 24px;
+    padding: var(--space-5) var(--space-4);
+    margin: var(--space-6) 0;
+  }
+  .next-event {
+    background: color-mix(in srgb, var(--color-google-blue) 10%, var(--color-surface));
+  }
+  .activities-section {
+    background: color-mix(in srgb, var(--color-google-yellow) 12%, var(--color-surface));
+  }
+  .team {
+    background: color-mix(in srgb, var(--color-google-green) 10%, var(--color-surface));
+  }
+  .follow {
+    background: color-mix(in srgb, var(--color-google-red) 8%, var(--color-surface));
+  }
+  .next-event h3,
+  .activities-section h3,
+  .team h3,
+  .follow h2 {
+    margin-top: 0;
+  }
+
+  /* No tinted panel here — the section already has one big sticker-card as
+     its only content, so the card itself carries the visual weight. */
+  .devfest {
+    margin: var(--space-6) 0;
+  }
+  .devfest__card {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text);
+    overflow: hidden;
+  }
+  .devfest__body {
+    padding: var(--space-5) var(--space-4);
+    background: linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--color-google-yellow) 14%, var(--color-bg)),
+      var(--color-bg) 60%
+    );
+  }
+  .devfest__eyebrow {
+    margin: 0;
+    font-weight: 700;
+    color: var(--color-link);
+  }
+  .devfest__card h4 {
+    margin: var(--space-1) 0 var(--space-2);
+    font-size: 1.4rem;
+  }
+  .devfest__card p:not(.devfest__eyebrow) {
+    color: var(--color-text-muted);
+  }
+  .devfest__cta {
+    display: inline-block;
+    margin-top: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    background: var(--color-primary-dark);
+    color: white;
+  }
+
+  .activities {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    margin: var(--space-4) 0;
+  }
+  @media (min-width: 640px) {
+    .activities {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .activities__item {
+    overflow: hidden;
+  }
+  .activities__body {
+    display: flex;
+    gap: var(--space-3);
+    align-items: flex-start;
+    padding: var(--space-4);
+  }
+  .activities__body img {
+    flex-shrink: 0;
+  }
+  .activities__body h4 {
+    margin: 0 0 var(--space-1);
+  }
+  .activities__body p {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+  .cta-line {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-5);
+  }
+
+  .team {
+    text-align: center;
+  }
+  .team p {
+    color: var(--color-text-muted);
+  }
+  .team__grid {
+    /* Flexbox, not grid: with flex-wrap, justify-content:center re-centers
+       each wrapped line independently, so a ragged last row centers too —
+       grid's justify-content only centers the whole track, not each row. */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3) var(--space-4);
+    margin: var(--space-4) auto;
+  }
+  /* Above this width, cap the row width so exactly teamCols members fit per
+     line — i.e. exactly 2 rows (still centered, see .team__grid above). */
+  @media (min-width: 640px) {
+    .team__grid {
+      max-width: calc(var(--team-cols) * 88px + (var(--team-cols) - 1) * var(--space-4));
+    }
+  }
+  .team__member {
+    flex: 0 0 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  .team__member img {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-pill);
+    object-fit: cover;
+    border: 3px solid var(--color-text);
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  .team__member:hover img {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 0 var(--color-text);
+  }
+  .team__member span {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .follow {
+    text-align: center;
+  }
+  .follow p {
+    color: var(--color-text-muted);
+  }
+  .follow__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+  }
+  .follow__pill svg {
+    width: 22px;
+    height: 22px;
+  }
+</style>

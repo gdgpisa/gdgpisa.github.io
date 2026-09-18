@@ -1,0 +1,79 @@
+---
+import Icon from './Icon.astro';
+---
+
+<button
+  type="button"
+  id="theme-toggle"
+  class="theme-toggle"
+  aria-label="Cambia tema chiaro/scuro"
+>
+  <span class="theme-toggle__icon theme-toggle__icon--sun"><Icon name="sun" /></span>
+  <span class="theme-toggle__icon theme-toggle__icon--moon"><Icon name="moon" /></span>
+</button>
+
+<style>
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-pill);
+    border: none;
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+  .theme-toggle__icon {
+    width: 20px;
+    height: 20px;
+  }
+  /* Default (light, no explicit choice): show the sun (click for dark). */
+  .theme-toggle__icon--sun {
+    display: flex;
+  }
+  .theme-toggle__icon--moon {
+    display: none;
+  }
+  /* System is dark and there's no explicit override: show the moon. Must
+     match tokens.css's dark-mode condition exactly, or the icon and the
+     actual active theme disagree. */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) .theme-toggle__icon--sun {
+      display: none;
+    }
+    :root:not([data-theme='light']) .theme-toggle__icon--moon {
+      display: flex;
+    }
+  }
+  /* Explicit override always wins, regardless of system preference. */
+  :root[data-theme='dark'] .theme-toggle__icon--sun {
+    display: none;
+  }
+  :root[data-theme='dark'] .theme-toggle__icon--moon {
+    display: flex;
+  }
+</style>
+
+<script>
+  const STORAGE_KEY = 'gdgpisa-theme';
+  const root = document.documentElement;
+  const button = document.getElementById('theme-toggle');
+
+  function effectiveTheme(): 'light' | 'dark' {
+    const explicit = root.getAttribute('data-theme');
+    if (explicit === 'light' || explicit === 'dark') return explicit;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  button?.addEventListener('click', () => {
+    const next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem(STORAGE_KEY, next);
+    } catch {
+      // localStorage unavailable (private mode, blocked storage): the
+      // toggle still works for this page load, it just won't persist.
+    }
+  });
+</script>

@@ -1,0 +1,112 @@
+---
+import { navigation } from '../data/navigation';
+import ThemeToggle from './ThemeToggle.astro';
+
+const currentPath = Astro.url.pathname;
+const items = navigation.filter((item) => item.visible !== false);
+
+function isCurrent(url: string) {
+  if (url === '/') return currentPath === '/';
+  return currentPath.startsWith(url);
+}
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/">
+      <img src="/static/img/loghi/logo-gdg-pisa.svg" alt="GDG Pisa" width="130" height="36" />
+    </a>
+    <div class="site-header__actions">
+      <nav class="top-nav" aria-label="Navigazione principale">
+        {
+          items.map((item) => (
+            <a
+              href={item.url}
+              aria-current={isCurrent(item.url) ? 'page' : undefined}
+              target={item.url.startsWith('http') ? '_blank' : undefined}
+              rel={item.url.startsWith('http') ? 'noopener' : undefined}
+            >
+              {item.text}
+            </a>
+          ))
+        }
+      </nav>
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+  }
+  .site-header__inner {
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 var(--space-3);
+    background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 3px solid transparent;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all 0.25s ease-out;
+  }
+  /* Scrolled: shrink into a floating rounded pill, detached from the top
+     edge, in the same thick-border/hard-shadow language as .sticker-card.
+     Toggled by the tiny scroll script below (mirrors the effect on
+     devfest.gdgpisa.it, restyled to match our look). */
+  :global(body.scrolled) .site-header {
+    padding-top: var(--space-2);
+  }
+  :global(body.scrolled) .site-header__inner {
+    max-width: 420px;
+    height: 56px;
+    padding: 0 var(--space-2) 0 var(--space-3);
+    background: var(--color-bg);
+    border-color: var(--color-text);
+    border-radius: var(--radius-pill);
+    box-shadow: 4px 4px 0 0 var(--color-text);
+  }
+  .site-header__brand {
+    display: flex;
+    align-items: center;
+  }
+  .site-header__brand img {
+    background: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+  }
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .top-nav {
+    gap: var(--space-4);
+  }
+  .top-nav a {
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .top-nav a[aria-current='page'] {
+    color: var(--color-link);
+  }
+</style>
+
+<script>
+  const setScrolled = () => document.body.classList.toggle('scrolled', window.scrollY > 0);
+  setScrolled();
+  window.addEventListener('scroll', setScrolled, { passive: true });
+</script>

@@ -1,0 +1,151 @@
+---
+import { fetchUpcomingEvent } from '../lib/community-event';
+import { formatDateTimeIt } from '../lib/dates';
+
+// Build-time snapshot: works without JS, decent for no-flash first paint.
+// A client script re-fetches on load to keep the card genuinely live.
+const event = await fetchUpcomingEvent();
+---
+
+<section class="upcoming-event" id="upcoming-event" aria-live="polite">
+  {
+    event ? (
+      <a class="upcoming-event__card" href={event.url} target="_blank" rel="noopener">
+        <img class="upcoming-event__banner" src={event.bannerUrl} alt="" loading="lazy" />
+        <div class="upcoming-event__body">
+          <p class="upcoming-event__eyebrow">Prossimo evento</p>
+          <h2 class="upcoming-event__title">{event.title}</h2>
+          <p class="upcoming-event__date">{formatDateTimeIt(new Date(event.startDate))}</p>
+          <p class="upcoming-event__desc">{event.descriptionShort}</p>
+          <span class="upcoming-event__cta">Vedi dettagli e iscriviti →</span>
+        </div>
+      </a>
+    ) : (
+      <div class="upcoming-event__fallback">
+        <p>Nessun evento in programma al momento.</p>
+        <a href="https://gdg.community.dev/gdg-pisa/" target="_blank" rel="noopener">
+          Segui GDG Pisa su community.dev →
+        </a>
+      </div>
+    )
+  }
+</section>
+
+<style>
+  .upcoming-event {
+    margin-top: var(--space-4);
+  }
+  .upcoming-event__card {
+    display: block;
+    background: var(--color-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-text);
+    border: 3px solid var(--color-text);
+    box-shadow: 6px 6px 0 0 var(--color-text);
+    transition:
+      box-shadow 0.15s ease,
+      transform 0.15s ease;
+  }
+  .upcoming-event__card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 0 var(--color-text);
+  }
+  .upcoming-event__banner {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  .upcoming-event__body {
+    padding: var(--space-4);
+    background: linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--color-primary) 10%, var(--color-bg)),
+      var(--color-bg) 55%
+    );
+  }
+  .upcoming-event__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    margin: 0;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: var(--color-primary-dark);
+    color: white;
+  }
+  .upcoming-event__eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+  }
+  .upcoming-event__title {
+    margin: var(--space-2) 0 var(--space-1);
+    font-size: 1.5rem;
+  }
+  .upcoming-event__date {
+    margin: 0 0 var(--space-2);
+    /* --color-link, not --color-primary-dark: this text sits directly on
+       the page background, which changes with theme; --color-primary-dark
+       is fixed and falls just under 4.5:1 on the dark-mode background. */
+    color: var(--color-link);
+    font-weight: 700;
+  }
+  .upcoming-event__desc {
+    color: var(--color-text-muted);
+  }
+  .upcoming-event__cta {
+    display: inline-block;
+    margin-top: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    background: var(--color-primary-dark);
+    color: white;
+  }
+  .upcoming-event__fallback {
+    padding: var(--space-4);
+    text-align: center;
+    background: var(--color-bg);
+    border: 3px dashed var(--color-text);
+    border-radius: 20px;
+    color: var(--color-text-muted);
+  }
+</style>
+
+<script>
+  import { fetchUpcomingEvent } from '../lib/community-event';
+  import { formatDateTimeIt } from '../lib/dates';
+
+  async function refresh() {
+    const event = await fetchUpcomingEvent();
+    const section = document.getElementById('upcoming-event');
+    if (!event || !section) return;
+
+    section.innerHTML = `
+      <a class="upcoming-event__card" href="${event.url}" target="_blank" rel="noopener">
+        <img class="upcoming-event__banner" src="${event.bannerUrl}" alt="" loading="lazy" />
+        <div class="upcoming-event__body">
+          <p class="upcoming-event__eyebrow">Prossimo evento</p>
+          <h2 class="upcoming-event__title"></h2>
+          <p class="upcoming-event__date">${formatDateTimeIt(new Date(event.startDate))}</p>
+          <p class="upcoming-event__desc"></p>
+          <span class="upcoming-event__cta">Vedi dettagli e iscriviti →</span>
+        </div>
+      </a>
+    `;
+    // Set text content (not innerHTML) for user-controlled strings to avoid
+    // interpreting the remote title/description as markup.
+    section.querySelector('.upcoming-event__title')!.textContent = event.title;
+    section.querySelector('.upcoming-event__desc')!.textContent = event.descriptionShort;
+  }
+
+  refresh();
+</script>
