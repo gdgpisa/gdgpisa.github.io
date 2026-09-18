@@ -1,14 +1,10 @@
 ---
-import { navigation } from '../data/navigation';
 import ThemeToggle from './ThemeToggle.astro';
 
-const currentPath = Astro.url.pathname;
-const items = navigation.filter((item) => item.visible !== false);
-
-function isCurrent(url: string) {
-  if (url === '/') return currentPath === '/';
-  return currentPath.startsWith(url);
-}
+const links = [
+  { text: 'DevFest', url: 'https://devfest.gdgpisa.it/' },
+  { text: 'I nostri link', url: 'https://links.gdgpisa.it/' },
+];
 ---
 
 <header class="site-header">
@@ -17,16 +13,11 @@ function isCurrent(url: string) {
       <img src="/static/img/loghi/logo-gdg-pisa.svg" alt="GDG Pisa" width="130" height="36" />
     </a>
     <div class="site-header__actions">
-      <nav class="top-nav" aria-label="Navigazione principale">
+      <nav class="top-nav" aria-label="Link rapidi">
         {
-          items.map((item) => (
-            <a
-              href={item.url}
-              aria-current={isCurrent(item.url) ? 'page' : undefined}
-              target={item.url.startsWith('http') ? '_blank' : undefined}
-              rel={item.url.startsWith('http') ? 'noopener' : undefined}
-            >
-              {item.text}
+          links.map((link) => (
+            <a href={link.url} target="_blank" rel="noopener">
+              {link.text}
             </a>
           ))
         }
@@ -69,7 +60,7 @@ function isCurrent(url: string) {
     padding-top: var(--space-2);
   }
   :global(body.scrolled) .site-header__inner {
-    max-width: 420px;
+    max-width: 560px;
     height: 56px;
     padding: 0 var(--space-2) 0 var(--space-3);
     background: var(--color-bg);
@@ -89,19 +80,30 @@ function isCurrent(url: string) {
   .site-header__actions {
     display: flex;
     align-items: center;
-    gap: var(--space-4);
+    gap: var(--space-3);
   }
   .top-nav {
-    gap: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
   }
   .top-nav a {
     text-decoration: none;
     color: var(--color-text-muted);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
-  .top-nav a[aria-current='page'] {
+  .top-nav a:hover {
     color: var(--color-link);
+  }
+  @media (max-width: 480px) {
+    .top-nav a {
+      font-size: 0.75rem;
+    }
+    .site-header__actions {
+      gap: var(--space-2);
+    }
   }
 </style>
 

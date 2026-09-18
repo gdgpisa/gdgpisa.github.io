@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
 import HeroCard from '../../components/HeroCard.astro';
+import Icon from '../../components/Icon.astro';
 
 const allHeroes = await getCollection('heroes');
 const heroes = allHeroes.filter((h) => h.data.visible !== false).sort((a, b) => a.data.surname.localeCompare(b.data.surname));
@@ -12,7 +13,7 @@ const heroes = allHeroes.filter((h) => h.data.visible !== false).sort((a, b) => 
   subtitle="Le persone che organizzano e fanno crescere GDG Pisa, evento dopo evento."
   description="Hall of Fame di GDG Pisa: organizzatori e collaboratori."
 >
-  <a class="sticker-pill back-home" href="/">← Torna alla home</a>
+  <a class="sticker-pill back-home" href="/"><Icon name="arrow-back" />Torna alla home</a>
   <div class="card-grid">
     {
       heroes.map((h) => (

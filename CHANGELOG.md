@@ -18,9 +18,12 @@ The entire site was rebuilt from scratch, from Jekyll/Ruby to **Astro** — same
 - 👥 "Il nostro team" section on the homepage — **every** visible Hero, centered, forced into exactly 2 rows on wide viewports, with a lift+shadow hover on each photo
 - 🧩 Real icon libraries throughout: **Material Symbols** (Google's own) for UI icons, **Material Design Icons (mdi)** via Iconify for social/brand marks — matching the icon set used on `links.gdgpisa.it`. Brand icons render in their official color where shown solo, monochrome where grouped with UI icons
 - 📸 "Seguici sui nostri canali" section pointing at `links.gdgpisa.it` (the community's link-in-bio), replacing the old "Join us" cards
+- 🌍 "Cosa è un GDG" now has a real photo (GDG Pisa business cards) and two stat boxes — world/Italy chapter counts, **fetched live at build time** from `gdg.community.dev`'s own chapter sitemap (`src/lib/chapter-stats.ts`), rounded down to the nearest 5 and shown as "X+"
+- 🎙️ Icons on every button instead of a trailing "→": mic for "Proponi il tuo evento", calendar for "I nostri eventi", diversity_3 for "Unisciti alla community", group for "Vedi tutto il team", arrow_back for the Heroes page's "Torna alla home"
+- 🔗 Header (both normal and scrolled-pill states) links to `devfest.gdgpisa.it` and `links.gdgpisa.it`
 - ♿ WCAG **AA** color contrast audit across every text/background pair, in both themes (new `--color-link` and dark-mode role-badge tokens specifically for this)
 - 🐳 `Dockerfile` for a zero-install local dev loop (build + run verified)
-- 🧪 Vitest + Playwright wired into `package.json` (tests still to be written, see `TODO.md`)
+- 🧪 **Tests written**: Vitest unit tests for `dates.ts`/`community-event.ts` (9 tests), Playwright e2e for the upcoming-event widget, header scroll-shrink, theme toggle persistence, and all three redirects (7 tests) — all passing
 - 📄 This changelog, a `TODO.md`, and a rewritten `README.md` / `CLAUDE.md`
 
 ### 🔄 Changed

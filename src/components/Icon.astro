@@ -5,8 +5,13 @@
 import link from '@material-symbols/svg-400/outlined/link.svg?raw';
 import sun from '@material-symbols/svg-400/outlined/light_mode.svg?raw';
 import moon from '@material-symbols/svg-400/outlined/dark_mode.svg?raw';
+import mic from '@material-symbols/svg-400/outlined/mic.svg?raw';
+import group from '@material-symbols/svg-400/outlined/group.svg?raw';
+import calendar from '@material-symbols/svg-400/outlined/calendar_month.svg?raw';
+import community from '@material-symbols/svg-400/outlined/diversity_3.svg?raw';
+import arrowBack from '@material-symbols/svg-400/outlined/arrow_back.svg?raw';
 
-export type IconName = 'link' | 'sun' | 'moon';
+export type IconName = 'link' | 'sun' | 'moon' | 'mic' | 'group' | 'calendar' | 'community' | 'arrow-back';
 
 interface Props {
   name: IconName;
@@ -14,7 +19,16 @@ interface Props {
 
 const { name } = Astro.props;
 
-const icons: Record<IconName, string> = { link, sun, moon };
+const icons: Record<IconName, string> = {
+  link,
+  sun,
+  moon,
+  mic,
+  group,
+  calendar,
+  community,
+  'arrow-back': arrowBack,
+};
 
 const markup = icons[name].replace('<svg ', '<svg class="icon" fill="currentColor" aria-hidden="true" ');
 ---

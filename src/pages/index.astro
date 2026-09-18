@@ -3,6 +3,11 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import UpcomingEvent from '../components/UpcomingEvent.astro';
 import Icon from '../components/Icon.astro';
+import { fetchChapterStats, roundedStat } from '../lib/chapter-stats';
+
+const chapterStats = await fetchChapterStats();
+const worldStat = chapterStats ? roundedStat(chapterStats.world) : '1950+';
+const italyStat = chapterStats ? roundedStat(chapterStats.italy) : '20+';
 
 const activities = [
   {
@@ -54,10 +59,12 @@ const teamCols = Math.ceil(team.length / 2);
       <p class="hero__tagline">Tecnologia, community e persone: il punto di ritrovo degli sviluppatori a Pisa.</p>
       <div class="hero__actions">
         <a class="sticker-pill hero__pill" href="https://gdg.community.dev/gdg-pisa/" target="_blank" rel="noopener">
-          I nostri eventi →
+          <Icon name="calendar" />
+          I nostri eventi
         </a>
         <a class="sticker-pill hero__pill hero__pill--ghost" href="https://links.gdgpisa.it/" target="_blank" rel="noopener">
-          Unisciti alla community →
+          <Icon name="community" />
+          Unisciti alla community
         </a>
       </div>
     </div>
@@ -65,12 +72,36 @@ const teamCols = Math.ceil(team.length / 2);
 
   <main class="container">
     <section class="intro">
-      <h3>Cosa è un GDG</h3>
-      <p>
-        Il <strong>Google Developer Group</strong> è una community in cui si possono condividere liberamente le
-        proprie idee, le proprie conoscenze ed esperienze in campo tecnologico. Non è richiesta nessuna competenza
-        particolare, se sei semplicemente interessato alla tecnologia non ti resta che entrare in contatto con noi 😉
-      </p>
+      <img
+        class="intro__photo"
+        src="/static/img/gdgpisa-business-cards.jpg"
+        alt="Biglietti da visita di GDG Pisa sparsi su un tavolo"
+        loading="lazy"
+      />
+      <div class="intro__text">
+        <h3>Cosa è un GDG</h3>
+        <p>
+          Il <strong>Google Developer Group</strong> è una community in cui si possono condividere liberamente le
+          proprie idee, le proprie conoscenze ed esperienze in campo tecnologico. Non è richiesta nessuna competenza
+          particolare, se sei semplicemente interessato alla tecnologia non ti resta che entrare in contatto con noi
+          😉
+        </p>
+        <p>
+          Di GDG ce ne sono tantissimi in giro per il mondo — <a href="https://gdg.community.dev/" target="_blank" rel="noopener">trova
+          quello più vicino a te</a> o dai un'occhiata a
+          <a href="https://gdg.community.dev/chapters/" target="_blank" rel="noopener">tutti i chapter</a>.
+        </p>
+        <div class="intro__stats">
+          <div class="intro__stat">
+            <span class="intro__stat-value">🌍 {worldStat}</span>
+            <span class="intro__stat-label">chapter nel mondo</span>
+          </div>
+          <div class="intro__stat">
+            <span class="intro__stat-value">🇮🇹 {italyStat}</span>
+            <span class="intro__stat-label">chapter in Italia</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="next-event">
@@ -97,7 +128,7 @@ const teamCols = Math.ceil(team.length / 2);
         }
       </div>
       <p class="cta-line">
-        <a class="sticker-pill" href="https://goo.gl/forms/EiD8DFAztmgSPYot1">Proponi il tuo evento →</a>
+        <a class="sticker-pill" href="https://goo.gl/forms/EiD8DFAztmgSPYot1"><Icon name="mic" />Proponi il tuo evento</a>
       </p>
     </section>
 
@@ -112,7 +143,7 @@ const teamCols = Math.ceil(team.length / 2);
             (eravamo alla "edizione 0.1" 😄). L'anno scorso: <strong>500+ partecipanti</strong>,
             <strong>30+ speaker</strong> da <strong>5+ nazioni</strong>.
           </p>
-          <span class="devfest__cta">Scopri DevFest Pisa 2026 →</span>
+          <span class="devfest__cta">Scopri DevFest Pisa 2026</span>
         </div>
       </a>
     </section>
@@ -130,7 +161,7 @@ const teamCols = Math.ceil(team.length / 2);
           ))
         }
       </div>
-      <a class="sticker-pill" href="/heroes/">Vedi tutto il team →</a>
+      <a class="sticker-pill" href="/heroes/"><Icon name="group" />Vedi tutto il team</a>
     </section>
 
     <section class="follow">
@@ -242,24 +273,70 @@ const teamCols = Math.ceil(team.length / 2);
     gap: var(--space-3);
     margin-top: var(--space-5);
   }
-  /* .sticker-pill already renders well here (solid --color-bg pill, dark
-     border/text) since the hero background is dark. The ghost variant is
-     the secondary action: outline-only, white on the dark hero bg. */
+  /* .sticker-pill's default shadow is var(--color-text) — dark, so on this
+     dark hero background it all but disappears. Both pills here need a
+     light shadow instead to actually read as "lifted" off the hero. */
+  .hero__pill {
+    box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.4);
+  }
+  .hero__pill:hover {
+    box-shadow: 6px 6px 0 0 rgba(255, 255, 255, 0.4);
+  }
   .hero__pill--ghost {
     background: transparent;
     border-color: white;
     color: white;
-    box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.4);
-  }
-  .hero__pill--ghost:hover {
-    box-shadow: 6px 6px 0 0 rgba(255, 255, 255, 0.4);
   }
   .intro {
-    padding-top: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  .intro h3 {
+    font-size: 1.7rem;
+  }
+  .intro p {
+    font-size: 1.1rem;
+  }
+  .intro__stats {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+  .intro__stat {
+    flex: 1;
+    text-align: center;
+    padding: var(--space-3);
+    background: var(--color-bg);
+    border: 3px solid var(--color-text);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 0 var(--color-text);
+  }
+  .intro__stat-value {
+    display: block;
+    font-family: var(--font-brand);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-link);
+  }
+  .intro__stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+  .intro__photo {
+    width: 100%;
+    max-height: 320px;
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    border: 3px solid var(--color-text);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0 0 var(--color-text);
   }
   /* Each major section gets its own tinted panel — a pastel-per-section
      rhythm (à la devfest.gdgpisa.it: yellow CFP block, cyan tickets block,
      etc) so sections read as distinct zones instead of one long white page. */
+  .intro,
   .next-event,
   .activities-section,
   .team,
@@ -267,6 +344,9 @@ const teamCols = Math.ceil(team.length / 2);
     border-radius: 24px;
     padding: var(--space-5) var(--space-4);
     margin: var(--space-6) 0;
+  }
+  .intro {
+    background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
   }
   .next-event {
     background: color-mix(in srgb, var(--color-google-blue) 10%, var(--color-surface));
@@ -280,6 +360,7 @@ const teamCols = Math.ceil(team.length / 2);
   .follow {
     background: color-mix(in srgb, var(--color-google-red) 8%, var(--color-surface));
   }
+  .intro h3,
   .next-event h3,
   .activities-section h3,
   .team h3,

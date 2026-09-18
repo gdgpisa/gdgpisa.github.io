@@ -60,7 +60,7 @@ src/
 ├── content/            📄 structured data (heroes.json)
 ├── content.config.ts   🔗 Astro content collections + Zod schemas
 ├── data/               🧭 navigation & social links (TypeScript)
-├── lib/                🧠 pure logic: date formatting, live event fetch
+├── lib/                🧠 pure logic: date formatting, live event fetch, chapter stats
 ├── layouts/            🏗️ page shells (BaseLayout, PageLayout)
 ├── components/         🧩 Header, HeroCard, UpcomingEvent, Icon, BrandIcon, ...
 ├── scripts/            🖱️ small client-side islands (theme toggle logic)
@@ -73,6 +73,7 @@ public/
 
 - **Heroes** (`/heroes/`) — the Hall of Fame, sourced from `src/content/heroes/heroes.json`. Not in the nav (the homepage already shows the whole team) but linked from there and still a real page. Add someone new by adding an entry there (and their photo in `public/static/img/heroes/`); set `"visible": false` to hide someone without deleting their record.
 - **Prossimo evento** — the homepage widget fetches live data from the (unofficial, public) community.dev API for chapter `854` — see `src/lib/community-event.ts`. It always has a graceful fallback if that call fails.
+- **Chapter stats** — the "Cosa è un GDG" world/Italy chapter-count boxes are fetched at build time from community.dev's chapter sitemap — see `src/lib/chapter-stats.ts`. Falls back to a static value if the fetch fails.
 - **Icons** — `Icon.astro` wraps Google's Material Symbols (generic UI icons); `BrandIcon.astro` wraps Material Design Icons (mdi, via Iconify) for social/brand marks, with the real brand color by default or `monochrome` to match surrounding text.
 
 ## Contributing 🤝

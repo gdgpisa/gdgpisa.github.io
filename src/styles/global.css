@@ -127,13 +127,3 @@
 .badge--default {
   color: var(--color-text-muted);
 }
-
-.top-nav {
-  display: none;
-}
-
-@media (min-width: 900px) {
-  .top-nav {
-    display: flex;
-  }
-}

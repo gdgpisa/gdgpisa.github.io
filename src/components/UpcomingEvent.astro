@@ -17,14 +17,14 @@ const event = await fetchUpcomingEvent();
           <h2 class="upcoming-event__title">{event.title}</h2>
           <p class="upcoming-event__date">{formatDateTimeIt(new Date(event.startDate))}</p>
           <p class="upcoming-event__desc">{event.descriptionShort}</p>
-          <span class="upcoming-event__cta">Vedi dettagli e iscriviti →</span>
+          <span class="upcoming-event__cta">Vedi dettagli e iscriviti</span>
         </div>
       </a>
     ) : (
       <div class="upcoming-event__fallback">
         <p>Nessun evento in programma al momento.</p>
         <a href="https://gdg.community.dev/gdg-pisa/" target="_blank" rel="noopener">
-          Segui GDG Pisa su community.dev →
+          Segui GDG Pisa su community.dev
         </a>
       </div>
     )
@@ -137,7 +137,7 @@ const event = await fetchUpcomingEvent();
           <h2 class="upcoming-event__title"></h2>
           <p class="upcoming-event__date">${formatDateTimeIt(new Date(event.startDate))}</p>
           <p class="upcoming-event__desc"></p>
-          <span class="upcoming-event__cta">Vedi dettagli e iscriviti →</span>
+          <span class="upcoming-event__cta">Vedi dettagli e iscriviti</span>
         </div>
       </a>
     `;
