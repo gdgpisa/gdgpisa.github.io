@@ -17,3 +17,6 @@ test-results/
 playwright-report/
 blob-report/
 playwright/.cache/
+
+# Local AI assistant notes
+CLAUDE.md

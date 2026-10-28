@@ -24,7 +24,7 @@ The entire site was rebuilt from scratch, from Jekyll/Ruby to **Astro** — same
 - ♿ WCAG **AA** color contrast audit across every text/background pair, in both themes (new `--color-link` and dark-mode role-badge tokens specifically for this)
 - 🐳 `Dockerfile` for a zero-install local dev loop (build + run verified)
 - 🧪 **Tests written**: Vitest unit tests for `dates.ts`/`community-event.ts` (9 tests), Playwright e2e for the upcoming-event widget, header scroll-shrink, theme toggle persistence, and all three redirects (7 tests) — all passing
-- 📄 This changelog, a `TODO.md`, and a rewritten `README.md` / `CLAUDE.md`
+- 📄 This changelog, a `TODO.md`, and a rewritten `README.md`
 
 ### 🔄 Changed
 - `_data/*.json` → `src/content/*` (Astro content collections, Zod-validated) and `src/data/*.ts`

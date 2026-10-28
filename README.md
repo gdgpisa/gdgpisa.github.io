@@ -59,13 +59,13 @@ docker run --rm -p 4321:4321 gdgpisa-site
 src/
 ├── content/            📄 structured data (heroes.json)
 ├── content.config.ts   🔗 Astro content collections + Zod schemas
-├── data/               🧭 navigation & social links (TypeScript)
+├── data/               🧭 social links (TypeScript)
 ├── lib/                🧠 pure logic: date formatting, live event fetch, chapter stats
 ├── layouts/            🏗️ page shells (BaseLayout, PageLayout)
-├── components/         🧩 Header, HeroCard, UpcomingEvent, Icon, BrandIcon, ...
-├── scripts/            🖱️ small client-side islands (theme toggle logic)
+├── components/         🧩 Header (+ nav links), ThemeToggle, HeroCard, UpcomingEvent, Icon, BrandIcon, ...
 ├── styles/             🎨 design tokens, fonts, resets, global styles
-└── pages/              📑 routes (home, heroes, redirects, 404)
+└── pages/              📑 routes (home, heroes, 404)
+astro.config.mjs        🔀 site config + short-link redirects (/feedbackform, /telegram, /gassistant)
 public/
 ├── fonts/product-sans/ 🅰️ self-hosted Product Sans font files
 └── static/img/         🖼️ every image the site actually uses
