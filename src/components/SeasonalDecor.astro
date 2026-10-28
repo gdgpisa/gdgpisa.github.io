@@ -2,7 +2,8 @@
 // Seasonal decorations (Halloween, Christmas). Both layers ship in the HTML
 // but stay hidden until the script below sets <html data-season="...">
 // from the visitor's date (see src/lib/seasons.ts for the date ranges).
-// Preview any season with ?season=halloween|christmas, or ?season=none.
+// Only in `npm run dev` can ?season=halloween|christmas|none force one, to
+// preview it locally; the deployed site always follows the date.
 
 // Small deterministic PRNG so the build output is stable across builds.
 let seed = 42;
@@ -166,6 +167,7 @@ const flakes = Array.from({ length: 40 }, () => ({
 <script>
   import { activeSeason } from '../lib/seasons';
 
-  const season = activeSeason(new Date(), new URLSearchParams(location.search).get('season'));
+  const override = import.meta.env.DEV ? new URLSearchParams(location.search).get('season') : null;
+  const season = activeSeason(new Date(), override);
   if (season) document.documentElement.dataset.season = season;
 </script>

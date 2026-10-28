@@ -20,7 +20,7 @@ Feel free to fork ⸑ or star ⭐️ this repo! Contributions are really appreci
 - 🎪 **DevFest Pisa** callout linking to [devfest.gdgpisa.it](https://devfest.gdgpisa.it/)
 - 🅰️ **Google's Product Sans** as the site's typeface
 - 🧩 Real icon libraries — Google's **Material Symbols** for UI icons, **Material Design Icons** for social/brand marks
-- 🎃🎄 **Seasonal decorations** — Halloween bats & pumpkin, Christmas snow & Santa hat, switched on automatically by date (`src/lib/seasons.ts`); preview with `?season=halloween` / `?season=christmas`
+- 🎃🎄 **Seasonal decorations** — Halloween bats & pumpkin, Christmas snow & Santa hat, switched on automatically by date (`src/lib/seasons.ts`); preview locally with `npm run dev` + `?season=halloween` / `?season=christmas`
 - ♿ **WCAG AA** color contrast across light and dark themes
 
 ## Getting started 🛠

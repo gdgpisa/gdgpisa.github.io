@@ -40,7 +40,7 @@ export function seasonFor(date: Date): Season | null {
 }
 
 /**
- * Season to show: `override` (from the `?season=` query param) wins when it
+ * Season to show: `override` (the dev-only `?season=` query param) wins when it
  * names a known season, `none` forces no season, anything else falls back
  * to the date.
  */
