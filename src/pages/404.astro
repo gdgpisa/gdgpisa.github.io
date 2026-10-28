@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Pagina non trovata">
+  <main class="container not-found">
+    <h1>404</h1>
+    <p>Pagina non trovata.</p>
+    <a href="/">Torna alla home</a>
+  </main>
+</BaseLayout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding: var(--space-6) 0;
+  }
+</style>

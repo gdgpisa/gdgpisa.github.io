@@ -1,0 +1,173 @@
+---
+// Seasonal decorations (Halloween, Christmas). Both layers ship in the HTML
+// but stay hidden until the script below sets <html data-season="...">
+// from the visitor's date (see src/lib/seasons.ts for the date ranges).
+// Only in `npm run dev` can ?season=halloween|christmas|none force one, to
+// preview it locally; the deployed site always follows the date.
+
+// Small deterministic PRNG so the build output is stable across builds.
+let seed = 42;
+const rand = () => {
+  seed = (seed * 16807) % 2147483647;
+  return seed / 2147483647;
+};
+
+const bats = [
+  // Negative delays: every bat is already mid-flight on page load.
+  { top: 22, duration: 16, delay: -2, size: 44 },
+  { top: 48, duration: 20, delay: -9, size: 32 },
+  { top: 70, duration: 18, delay: -13, size: 38 },
+  { top: 35, duration: 22, delay: -5, size: 26 },
+];
+
+const flakes = Array.from({ length: 40 }, () => ({
+  left: rand() * 100,
+  top: rand() * 100,
+  size: 3 + rand() * 5,
+  duration: 8 + rand() * 10,
+  delay: -rand() * 18,
+  drift: (rand() - 0.5) * 80,
+  opacity: 0.5 + rand() * 0.5,
+}));
+---
+
+<div class="season-layer season-layer--halloween" aria-hidden="true">
+  {
+    bats.map((bat) => (
+      <span
+        class="bat"
+        style={`top:${bat.top}%;width:${bat.size}px;animation-duration:${bat.duration}s;animation-delay:${bat.delay}s`}
+      >
+        <img src="/static/img/seasons/bat.svg" alt="" />
+      </span>
+    ))
+  }
+</div>
+
+<div class="season-layer season-layer--christmas" aria-hidden="true">
+  {
+    flakes.map((f) => (
+      <span
+        class="flake"
+        style={`left:${f.left.toFixed(1)}%;--y:${f.top.toFixed(1)}%;width:${f.size.toFixed(1)}px;height:${f.size.toFixed(1)}px;opacity:${f.opacity.toFixed(2)};--drift:${f.drift.toFixed(0)}px;animation-duration:${f.duration.toFixed(1)}s;animation-delay:${f.delay.toFixed(1)}s`}
+      />
+    ))
+  }
+</div>
+
+<style>
+  .season-layer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    /* Above page content, below the sticky header (900). */
+    z-index: 800;
+  }
+  :global(html[data-season='halloween']) .season-layer--halloween,
+  :global(html[data-season='christmas']) .season-layer--christmas {
+    display: block;
+  }
+
+  /* Logo accessories, drawn on the header brand link. */
+  :global(html[data-season]) :global(.site-header__brand) {
+    position: relative;
+  }
+  :global(html[data-season]) :global(.site-header__brand)::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+  }
+  :global(html[data-season='halloween']) :global(.site-header__brand)::after {
+    width: 26px;
+    height: 26px;
+    right: -12px;
+    bottom: -8px;
+    background-image: url('/static/img/seasons/pumpkin.svg');
+  }
+  :global(html[data-season='christmas']) :global(.site-header__brand)::after {
+    width: 34px;
+    height: 28px;
+    left: -12px;
+    top: -14px;
+    transform: rotate(-18deg);
+    background-image: url('/static/img/seasons/santa-hat.svg');
+  }
+
+  .bat {
+    position: absolute;
+    left: 0;
+    animation-name: bat-fly;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* Faint glow keeps the dark bats visible over the dark hero/theme. */
+    filter: drop-shadow(0 0 3px rgba(255, 167, 38, 0.7));
+  }
+  .bat img {
+    display: block;
+    width: 100%;
+    animation: bat-flap 0.35s ease-in-out infinite alternate;
+  }
+  @keyframes bat-fly {
+    0% {
+      transform: translate(-80px, 0);
+    }
+    50% {
+      transform: translate(50vw, -6vh);
+    }
+    100% {
+      transform: translate(calc(100vw + 80px), 4vh);
+    }
+  }
+  @keyframes bat-flap {
+    to {
+      transform: scaleY(0.45);
+    }
+  }
+
+  .flake {
+    --snow: #a9cdee;
+    position: absolute;
+    top: -10px;
+    border-radius: 50%;
+    background: var(--snow);
+    animation-name: snow-fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='light'])) .flake {
+      --snow: #ffffff;
+    }
+  }
+  :global(:root[data-theme='dark']) .flake {
+    --snow: #ffffff;
+  }
+  @keyframes snow-fall {
+    to {
+      transform: translate(var(--drift), calc(100vh + 20px));
+    }
+  }
+
+  /* No motion: bats stay home, snow freezes where it is. */
+  @media (prefers-reduced-motion: reduce) {
+    .bat {
+      display: none;
+    }
+    .flake {
+      top: var(--y);
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  import { activeSeason } from '../lib/seasons';
+
+  const override = import.meta.env.DEV ? new URLSearchParams(location.search).get('season') : null;
+  const season = activeSeason(new Date(), override);
+  if (season) document.documentElement.dataset.season = season;
+</script>

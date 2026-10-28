@@ -1,0 +1,94 @@
+:root {
+  color-scheme: light dark;
+
+  /* Brand palette (preserved from the previous site). --color-primary is a
+     decorative/graphical color (hero gradient, shadows, icon fills) — it
+     does NOT meet 4.5:1 as text on white (~3.1:1) so never use it for text
+     or for a background behind small text. Use --color-link for colored
+     text, --color-primary-dark for solid chips/badges with white text
+     (both verified ≥4.5:1, see comments below). */
+  --color-primary: #2196f3;
+  --color-primary-dark: #1976d2;
+  --color-primary-light: #bbdefb;
+  --color-accent: #01c87b;
+
+  /* Classic 4-color Google palette, decorative use only (icon fills,
+     border stripes, sticker outlines on a neutral bg). None of these pass
+     4.5:1 as text or as a background behind white text — pair them with
+     --color-text (dark) on top, never with white text on top of them. */
+  --color-google-blue: #4285f4;
+  --color-google-red: #ea4335;
+  --color-google-yellow: #fbbc05;
+  --color-google-green: #34a853;
+
+  /* Colored text sitting directly on --color-bg/--color-surface (nav active
+     state, links, dates). Theme-aware: must stay >=4.5:1 against page bg. */
+  --color-link: #1976d2;
+
+  /* Hero role badge colors: outline badges (colored text + border, on
+     --color-surface/--color-bg). Each verified >=4.5:1 in light mode;
+     dark-mode variants below are separately verified >=4.5:1 on dark bg. */
+  --color-role-wtm: #008080;
+  --color-role-organizer: #492aa0;
+  --color-role-founder: #d32f2f;
+  --color-role-former-organizer: #c2410c;
+
+  --color-bg: #ffffff;
+  --color-surface: #f7f8fa;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5f6368;
+  --color-border: rgba(0, 0, 0, 0.08);
+
+  --font-brand: 'Product Sans', 'Google Sans Text', Roboto, system-ui, sans-serif;
+  --font-body: 'Product Sans', Roboto, system-ui, -apple-system, sans-serif;
+
+  --radius-card: 12px;
+  --radius-pill: 999px;
+  --shadow-card: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-card-hover: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+  --content-max-width: 1080px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+}
+
+/* Dark mode: follows system preference by default (guarded so an explicit
+   data-theme="light" can override it), or is forced via data-theme="dark"
+   regardless of system preference. Both branches must stay identical. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-bg: #121212;
+    --color-surface: #1e1e1e;
+    --color-text: #f1f1f1;
+    --color-text-muted: #a8adb3;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --shadow-card: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --shadow-card-hover: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+    --color-link: #64b5f6;
+    --color-role-wtm: #4db6ac;
+    --color-role-organizer: #b39ddb;
+    --color-role-founder: #e57373;
+    --color-role-former-organizer: #ffb74d;
+  }
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #121212;
+  --color-surface: #1e1e1e;
+  --color-text: #f1f1f1;
+  --color-text-muted: #a8adb3;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --shadow-card: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+  --color-link: #64b5f6;
+  --color-role-wtm: #4db6ac;
+  --color-role-organizer: #b39ddb;
+  --color-role-founder: #e57373;
+  --color-role-former-organizer: #ffb74d;
+}
