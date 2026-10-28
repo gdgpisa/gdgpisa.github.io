@@ -14,7 +14,7 @@ const event = await fetchUpcomingEvent();
         <img class="upcoming-event__banner" src={event.bannerUrl} alt="" loading="lazy" />
         <div class="upcoming-event__body">
           <p class="upcoming-event__eyebrow">Prossimo evento</p>
-          <h2 class="upcoming-event__title">{event.title}</h2>
+          <h3 class="upcoming-event__title">{event.title}</h3>
           <p class="upcoming-event__date">{formatDateTimeIt(new Date(event.startDate))}</p>
           <p class="upcoming-event__desc">{event.descriptionShort}</p>
           <span class="upcoming-event__cta">Vedi dettagli e iscriviti</span>
@@ -134,7 +134,7 @@ const event = await fetchUpcomingEvent();
         <img class="upcoming-event__banner" src="${event.bannerUrl}" alt="" loading="lazy" />
         <div class="upcoming-event__body">
           <p class="upcoming-event__eyebrow">Prossimo evento</p>
-          <h2 class="upcoming-event__title"></h2>
+          <h3 class="upcoming-event__title"></h3>
           <p class="upcoming-event__date">${formatDateTimeIt(new Date(event.startDate))}</p>
           <p class="upcoming-event__desc"></p>
           <span class="upcoming-event__cta">Vedi dettagli e iscriviti</span>

@@ -46,6 +46,8 @@
 
 .card img {
   width: 100%;
+  /* Override the width/height attributes astro:assets adds. */
+  height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }

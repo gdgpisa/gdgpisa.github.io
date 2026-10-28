@@ -1,9 +1,16 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import UpcomingEvent from '../components/UpcomingEvent.astro';
 import Icon from '../components/Icon.astro';
 import { fetchChapterStats, roundedStat } from '../lib/chapter-stats';
+import { heroImage } from '../lib/hero-images';
+import businessCards from '../assets/gdgpisa-business-cards.jpg';
+import balloon1 from '../assets/balloon_1.png';
+import balloon2 from '../assets/balloon_2.png';
+import balloon3 from '../assets/balloon_3.png';
+import balloon4 from '../assets/balloon_4.png';
 
 const chapterStats = await fetchChapterStats();
 const worldStat = chapterStats ? roundedStat(chapterStats.world) : '1950+';
@@ -12,25 +19,25 @@ const italyStat = chapterStats ? roundedStat(chapterStats.italy) : '20+';
 const activities = [
   {
     title: 'Meetup',
-    image: '/static/img/balloon_1.png',
+    image: balloon1,
     stripe: 'var(--color-google-blue)',
     text: 'Birra, chiacchiere e tech talk senza filtri: il nido della community, dove si scambiano idee, esperienze e consigli tra una risata e l’altra.',
   },
   {
     title: 'Codelab',
-    image: '/static/img/balloon_2.png',
+    image: balloon2,
     stripe: 'var(--color-google-red)',
     text: 'Si impara facendo. Workshop pratici per mettere le mani in pasta su una tecnologia, dalle basi ai trucchi del mestiere.',
   },
   {
     title: 'Hackathon',
-    image: '/static/img/balloon_3.png',
+    image: balloon3,
     stripe: 'var(--color-google-yellow)',
     text: 'Codice, sfida, adrenalina. Team di sviluppatori, designer e appassionati si sfidano per costruire qualcosa di nuovo in tempo record.',
   },
   {
     title: 'Talk',
-    image: '/static/img/balloon_4.png',
+    image: balloon4,
     stripe: 'var(--color-google-green)',
     text: 'Uno speaker, un argomento, tante domande. Format snello: talk, Q&A finale, e spazio aperto alla discussione.',
   },
@@ -72,14 +79,16 @@ const teamCols = Math.ceil(team.length / 2);
 
   <main class="container">
     <section class="intro">
-      <img
+      <Image
         class="intro__photo"
-        src="/static/img/gdgpisa-business-cards.jpg"
+        src={businessCards}
         alt="Biglietti da visita di GDG Pisa sparsi su un tavolo"
-        loading="lazy"
+        widths={[480, 800, 1080, 1600]}
+        sizes="(max-width: 1080px) 100vw, 1080px"
+        loading="eager"
       />
       <div class="intro__text">
-        <h3>Cosa è un GDG</h3>
+        <h2>Cosa è un GDG</h2>
         <p>
           Il <strong>Google Developer Group</strong> è una community in cui si possono condividere liberamente le
           proprie idee, le proprie conoscenze ed esperienze in campo tecnologico. Non è richiesta nessuna competenza
@@ -105,21 +114,21 @@ const teamCols = Math.ceil(team.length / 2);
     </section>
 
     <section class="next-event">
-      <h3>Il nostro prossimo evento</h3>
+      <h2>Il nostro prossimo evento</h2>
       <UpcomingEvent />
     </section>
 
     <section class="activities-section">
-      <h3>Come vivere GDG Pisa</h3>
+      <h2>Come vivere GDG Pisa</h2>
       <div class="activities">
         {
           activities.map((a) => (
             <div class="sticker-card activities__item">
               <div class="sticker-card__stripe" style={{ background: a.stripe }} />
               <div class="activities__body">
-                <img src={a.image} alt="" width="64" height="64" />
+                <Image src={a.image} alt="" width={64} height={64} densities={[1, 2]} />
                 <div>
-                  <h4>{a.title}</h4>
+                  <h3>{a.title}</h3>
                   <p>{a.text}</p>
                 </div>
               </div>
@@ -133,11 +142,11 @@ const teamCols = Math.ceil(team.length / 2);
     </section>
 
     <section class="devfest">
-      <h3>DevFest Pisa</h3>
+      <h2>DevFest Pisa</h2>
       <a class="sticker-card devfest__card" href="https://devfest.gdgpisa.it/" target="_blank" rel="noopener">
         <div class="devfest__body">
           <p class="devfest__eyebrow">18 aprile 2026 · MACC</p>
-          <h4>DevFest Pisa 2026 — Leaning into the Future</h4>
+          <h3>DevFest Pisa 2026 — Leaning into the Future</h3>
           <p>
             Il nostro evento annuale più grande: un giorno intero di talk su AI, Web, Cloud e molto altro, dal 2018
             (eravamo alla "edizione 0.1" 😄). L'anno scorso: <strong>500+ partecipanti</strong>,
@@ -149,13 +158,13 @@ const teamCols = Math.ceil(team.length / 2);
     </section>
 
     <section class="team">
-      <h3>Il nostro team</h3>
+      <h2>Il nostro team</h2>
       <p>Le persone che organizzano e fanno crescere GDG Pisa, evento dopo evento.</p>
       <div class="team__grid" style={{ '--team-cols': teamCols }}>
         {
           team.map((hero) => (
             <a class="team__member" href="/heroes/" title={hero.data.name}>
-              <img src={`/static/img/heroes/${hero.data.image}`} alt={hero.data.name} loading="lazy" />
+              <Image src={heroImage(hero.data.image)} alt="" width={72} height={72} densities={[1, 2]} fit="cover" />
               <span>{hero.data.name}</span>
             </a>
           ))
@@ -292,7 +301,7 @@ const teamCols = Math.ceil(team.length / 2);
     flex-direction: column;
     gap: var(--space-4);
   }
-  .intro h3 {
+  .intro h2 {
     font-size: 1.7rem;
   }
   .intro p {
@@ -326,6 +335,7 @@ const teamCols = Math.ceil(team.length / 2);
   }
   .intro__photo {
     width: 100%;
+    height: auto;
     max-height: 320px;
     aspect-ratio: 21 / 9;
     object-fit: cover;
@@ -360,12 +370,20 @@ const teamCols = Math.ceil(team.length / 2);
   .follow {
     background: color-mix(in srgb, var(--color-google-red) 8%, var(--color-surface));
   }
-  .intro h3,
-  .next-event h3,
-  .activities-section h3,
-  .team h3,
+  .intro h2,
+  .next-event h2,
+  .activities-section h2,
+  .devfest h2,
+  .team h2,
   .follow h2 {
     margin-top: 0;
+  }
+  /* Section titles were h3 before the heading-order fix; keep their size. */
+  .next-event h2,
+  .activities-section h2,
+  .devfest h2,
+  .team h2 {
+    font-size: 1.17em;
   }
 
   /* No tinted panel here — the section already has one big sticker-card as
@@ -392,7 +410,7 @@ const teamCols = Math.ceil(team.length / 2);
     font-weight: 700;
     color: var(--color-link);
   }
-  .devfest__card h4 {
+  .devfest__card h3 {
     margin: var(--space-1) 0 var(--space-2);
     font-size: 1.4rem;
   }
@@ -432,8 +450,9 @@ const teamCols = Math.ceil(team.length / 2);
   .activities__body img {
     flex-shrink: 0;
   }
-  .activities__body h4 {
+  .activities__body h3 {
     margin: 0 0 var(--space-1);
+    font-size: 1em;
   }
   .activities__body p {
     margin: 0;

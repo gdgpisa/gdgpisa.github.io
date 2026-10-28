@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import { heroImage } from '../lib/hero-images';
+
 interface Props {
   name: string;
   info?: string;
@@ -24,9 +27,14 @@ function badgeClass(tag: string) {
 ---
 
 <article class="card hero-card" data-tags={JSON.stringify(tags.map((t) => t.toLowerCase()))}>
-  <img src={`/static/img/heroes/${image}`} alt={name} loading="lazy" />
+  <Image
+    src={heroImage(image)}
+    alt=""
+    widths={[320, 640, 960]}
+    sizes="(max-width: 639px) calc(100vw - 32px), 360px"
+  />
   <div class="card-body">
-    <h3>{name}</h3>
+    <h2>{name}</h2>
     {info && <p class="hero-card__info">{info}</p>}
     <div class="hero-card__tags">
       {tags.map((tag) => <span class={`badge ${badgeClass(tag)}`}>{tag}</span>)}
@@ -42,6 +50,9 @@ function badgeClass(tag: string) {
 </article>
 
 <style>
+  .card-body h2 {
+    font-size: 1.17em;
+  }
   .hero-card__info {
     color: var(--color-text-muted);
     font-size: 0.9rem;
