@@ -22,8 +22,11 @@ The entire site was rebuilt from scratch, from Jekyll/Ruby to **Astro** — same
 - 🎙️ Icons on every button instead of a trailing "→": mic for "Proponi il tuo evento", calendar for "I nostri eventi", diversity_3 for "Unisciti alla community", group for "Vedi tutto il team", arrow_back for the Heroes page's "Torna alla home"
 - 🔗 Header (both normal and scrolled-pill states) links to `devfest.gdgpisa.it` and `links.gdgpisa.it`
 - ♿ WCAG **AA** color contrast audit across every text/background pair, in both themes (new `--color-link` and dark-mode role-badge tokens specifically for this)
+- 🐙 "Fork me on GitHub" octocat corner linking to the repo (theme-aware, shrinks on narrow/zoomed viewports so it never covers the theme toggle)
+- 🎃🎄 **Seasonal decorations** that switch on automatically by date (Europe/Rome): Halloween (Oct 24 – Nov 1) puts a pumpkin on the logo and bats across the page, Christmas (Dec 1 – Jan 6) a Santa hat and falling snow. Ranges live in `src/lib/seasons.ts`; preview any time with `?season=halloween|christmas|none`. Respects `prefers-reduced-motion`
+- 🚢 `.github/workflows/deploy.yml` — unit tests + build + `actions/deploy-pages` on push to `main`
 - 🐳 `Dockerfile` for a zero-install local dev loop (build + run verified)
-- 🧪 **Tests written**: Vitest unit tests for `dates.ts`/`community-event.ts` (9 tests), Playwright e2e for the upcoming-event widget, header scroll-shrink, theme toggle persistence, and all three redirects (7 tests) — all passing
+- 🧪 **Tests written**: Vitest unit tests for `dates.ts`/`community-event.ts`/`seasons.ts` (16 tests), Playwright e2e for the upcoming-event widget, header scroll-shrink, theme toggle persistence, and all three redirects (7 tests) — all passing
 - 📄 This changelog, a `TODO.md`, and a rewritten `README.md`
 
 ### 🔄 Changed
