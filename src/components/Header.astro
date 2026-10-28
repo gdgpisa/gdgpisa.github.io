@@ -97,6 +97,13 @@ const links = [
   .top-nav a:hover {
     color: var(--color-link);
   }
+  /* Keep clear of the shrunken GitHubCorner (56px) on narrow screens;
+     once scrolled the corner is gone and the pill layout takes over. */
+  @media (max-width: 1240px) {
+    :global(body:not(.scrolled)) .site-header__inner {
+      padding-right: calc(56px + var(--space-1));
+    }
+  }
   @media (max-width: 480px) {
     .top-nav a {
       font-size: 0.75rem;
