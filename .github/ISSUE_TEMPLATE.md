@@ -1,16 +1,16 @@
-*Thanks for reporting this issue with out website* 😁❤️
+*Thanks for reporting this issue with our website* 😁❤️
 *Please fill-in the details and remove the useless sections*
 
 ## Expected Behavior
-*Example: "typing in the searchbar should display search results"*
+*Example: "clicking a team photo should open the Heroes page"*
 
 ## Actual Behavior
-*Example: "the searchbar is not displaying results"*
+*Example: "nothing happens when clicking a team photo"*
 
 ## Steps to Reproduce the Problem
 
-  1. *Example "Click on the Seminars page"*
-  1. *Example "Write something in the searchbar"*
+  1. *Example "Open the homepage on mobile"*
+  1. *Example "Tap a photo in the Il nostro team section"*
   1.
 
 ## Screenshot

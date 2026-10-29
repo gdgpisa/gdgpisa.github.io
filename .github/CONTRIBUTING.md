@@ -2,7 +2,7 @@
 
 ([Italian is below](#come-contribuire-))
 
-I'm really glad you're reading this, because we need volunteer to help our website grow and get better.
+I'm really glad you're reading this, because we need volunteers to help our website grow and get better.
 
 Here just some guidelines to help improve our development experience:
 
@@ -18,7 +18,7 @@ Here just some guidelines to help improve our development experience:
 
 * Please provide a clear **description** of what you're doing (either a bugfix or a new feature).
 * Please pay attention to your **diff**, avoid committing unrelated files.
-* Please make sure your branch **build locally** before sending a pull request.
+* Please make sure your branch **builds locally** and the tests pass before sending a pull request: `npm run build`, `npm run check`, `npm run test:unit` (and `npm run test:e2e` for UI changes). See the [README](../README.md#getting-started-) to get started.
 
 # Come contribuire 🇮🇹
 
@@ -38,4 +38,4 @@ Queste sono solo alcune linee guida che ci aiutano a gestire il nostro sito web 
 
 * Fornisci una **descrizione** chiara di cosa va a modificare la pull request (bugfix o feature che sia).
 * Cerca di fare attenzione al tuo **diff**, evita di includere modifiche a file che non sono collegati alla pull request.
-* Assicurati che il tuo branch **compili localmente** prima di aprire una pull request.
+* Assicurati che il tuo branch **compili localmente** e che i test passino prima di aprire una pull request: `npm run build`, `npm run check`, `npm run test:unit` (e `npm run test:e2e` per modifiche alla UI). Vedi il [README](../README.md#getting-started-) per iniziare.
