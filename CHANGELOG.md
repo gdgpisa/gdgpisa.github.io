@@ -2,7 +2,15 @@
 
 All notable changes to this project are documented here.
 
-## [Unreleased] — 2026-09-18 🚀 The Astro rewrite
+## [Unreleased]
+
+### 🧹 Cleanup after launch
+- 🛑 `public/sw.js` kill switch: retires the Workbox service worker the old Jekyll site registered, so returning visitors stop getting the cached old site
+- 📦 Dropped unused `@iconify-json/material-symbols` and `@mdi/js` dependencies
+- 🧩 Content schema uses `astro/zod` (the `z` re-export from `astro:content` is deprecated); `astro check` is now at 0 hints
+- 📄 `TODO.md`, contributing guide and issue template updated for the Astro site
+
+## 2026-10-28 🚀 The Astro rewrite — live on gdgpisa.it
 
 The entire site was rebuilt from scratch, from Jekyll/Ruby to **Astro** — same community, much lighter stack, more modern look. 🎉
 

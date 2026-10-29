@@ -17,10 +17,8 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
-    "@iconify-json/material-symbols": "^1.2.92",
     "@iconify-json/mdi": "^1.2.3",
     "@material-symbols/svg-400": "^0.47.4",
-    "@mdi/js": "^7.4.47",
     "astro": "^7.3.3",
     "simple-icons": "^16.31.0"
   },
