@@ -8,9 +8,6 @@ Open items now that the Astro site is live on gdgpisa.it.
 ## 🎨 Design polish
 - [ ] Real favicon set (apple-touch-icon, PNG sizes) beyond the current SVG-only favicon
 
-## 🔗 Broken links
-- [ ] `/gassistant` points to `assistant.google.com/services/a/uid/00000087670de15f`, which 404s on Google's own server — Google discontinued Conversational Actions in June 2023, so this link is permanently dead. Decide: drop the redirect, or point it somewhere else
-
 ## 📈 Later / nice to have
 - [ ] Analytics: Universal Analytics is dead since July 2024 and was intentionally **not** replaced — decide on GA4 vs. a privacy-friendly option (Plausible/Umami) if tracking is wanted again
 - [ ] Submit `https://gdgpisa.it/sitemap-index.xml` to Google Search Console (the old `/sitemap.xml` was a mislabeled RSS feed)

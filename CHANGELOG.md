@@ -6,6 +6,7 @@ All notable changes to this project are documented here.
 
 ### 🧹 Cleanup after launch
 - 🛑 `public/sw.js` kill switch: retires the Workbox service worker the old Jekyll site registered, so returning visitors stop getting the cached old site
+- ✂️ Removed the `/gassistant` redirect: it pointed at a Google Assistant Action, and Google shut Conversational Actions down in June 2023, so the target 404s
 - 📦 Dropped unused `@iconify-json/material-symbols` and `@mdi/js` dependencies
 - 🧩 Content schema uses `astro/zod` (the `z` re-export from `astro:content` is deprecated); `astro check` is now at 0 hints
 - 📄 `TODO.md`, contributing guide and issue template updated for the Astro site

@@ -66,7 +66,7 @@ src/
 ├── components/         🧩 Header (+ nav links), ThemeToggle, HeroCard, UpcomingEvent, Icon, BrandIcon, ...
 ├── styles/             🎨 design tokens, fonts, resets, global styles
 └── pages/              📑 routes (home, heroes, 404)
-astro.config.mjs        🔀 site config + short-link redirects (/feedbackform, /telegram, /gassistant)
+astro.config.mjs        🔀 site config + short-link redirects (/feedbackform, /telegram)
 public/
 ├── fonts/product-sans/ 🅰️ self-hosted Product Sans font files
 └── static/img/         🖼️ logos, seasonal SVGs (photos live in src/assets/ so Astro can optimize them)
