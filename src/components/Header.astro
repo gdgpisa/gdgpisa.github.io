@@ -2,8 +2,10 @@
 import ThemeToggle from './ThemeToggle.astro';
 
 const links = [
-  { text: 'DevFest', url: 'https://devfest.gdgpisa.it/' },
-  { text: 'I nostri link', url: 'https://links.gdgpisa.it/' },
+  { text: 'DevFest', url: 'https://devfest.gdgpisa.it/', external: true },
+  { text: 'Team', url: '/heroes/', external: false },
+  { text: 'Proponi un talk', short: 'Talk', url: 'https://goo.gl/forms/EiD8DFAztmgSPYot1', external: true },
+  { text: 'I nostri link', short: 'Link', url: 'https://links.gdgpisa.it/', external: true },
 ];
 ---
 
@@ -16,8 +18,19 @@ const links = [
       <nav class="top-nav" aria-label="Link rapidi">
         {
           links.map((link) => (
-            <a href={link.url} target="_blank" rel="noopener">
-              {link.text}
+            <a
+              href={link.url}
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noopener' : undefined}
+            >
+              {link.short ? (
+                <>
+                  <span class="top-nav__full">{link.text}</span>
+                  <span class="top-nav__short">{link.short}</span>
+                </>
+              ) : (
+                link.text
+              )}
             </a>
           ))
         }
@@ -71,6 +84,7 @@ const links = [
   .site-header__brand {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
   }
   .site-header__brand img {
     background: white;
@@ -97,6 +111,18 @@ const links = [
   .top-nav a:hover {
     color: var(--color-link);
   }
+  .top-nav__short {
+    display: none;
+  }
+  /* Four links don't fit next to the logo on phones: use short labels. */
+  @media (max-width: 520px) {
+    .top-nav__full {
+      display: none;
+    }
+    .top-nav__short {
+      display: inline;
+    }
+  }
   /* Keep clear of the shrunken GitHubCorner (56px) on narrow screens;
      once scrolled the corner is gone and the pill layout takes over. */
   @media (max-width: 1240px) {
@@ -109,6 +135,21 @@ const links = [
       font-size: 0.75rem;
     }
     .site-header__actions {
+      gap: var(--space-2);
+    }
+  }
+  @media (max-width: 400px) {
+    .site-header__brand img {
+      width: 100px;
+      height: auto;
+      padding: 4px 8px;
+    }
+    .top-nav {
+      gap: 12px;
+    }
+  }
+  @media (max-width: 340px) {
+    .top-nav {
       gap: var(--space-2);
     }
   }
