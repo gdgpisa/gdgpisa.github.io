@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { file } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 function slugify(name: string): string {
   return name
@@ -32,7 +33,7 @@ const heroes = defineCollection({
     facebook: z.string().optional(),
     instagram: z.string().optional(),
     linkedin: z.string().optional(),
-    link: z.string().url().optional(),
+    link: z.url().optional(),
     tags: z.array(z.string()).default([]),
     visible: z.boolean().default(true),
   }),
