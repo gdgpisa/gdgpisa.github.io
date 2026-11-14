@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "^3.7.4",
     "@iconify-json/mdi": "^1.2.3",
     "@material-symbols/svg-400": "^0.47.4",
-    "astro": "^7.3.3",
+    "astro": "^7.4.7",
     "simple-icons": "^16.31.0"
   },
   "allowScripts": {
