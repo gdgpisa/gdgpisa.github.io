@@ -104,6 +104,21 @@
   box-shadow: 6px 6px 0 0 var(--color-text);
 }
 
+/* Icon chip: a leading icon sits in a round badge tinted with the colour of the
+   section it lives in, same principle as the link buttons on links.gdgpisa.it.
+   Sections declare their colour through --panel-color (see index.astro); outside
+   a tinted section the chip falls back to Google blue. */
+.sticker-pill:has(> .icon:first-child) {
+  padding-left: var(--space-2);
+}
+
+.sticker-pill > .icon:first-child {
+  box-sizing: content-box;
+  padding: var(--space-2);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--panel-color, var(--color-google-blue)) 25%, var(--color-bg));
+}
+
 .badge {
   display: inline-block;
   padding: var(--space-1) var(--space-2);

@@ -145,14 +145,15 @@ const teamCols = Math.ceil(team.length / 2);
       <h2>DevFest Pisa</h2>
       <a class="sticker-card devfest__card" href="https://devfest.gdgpisa.it/" target="_blank" rel="noopener">
         <div class="devfest__body">
-          <p class="devfest__eyebrow">18 aprile 2026 · MACC</p>
-          <h3>DevFest Pisa 2026 — Leaning into the Future</h3>
+          <p class="devfest__eyebrow">Coming soon</p>
+          <h3>DevFest Pisa 2027</h3>
           <p>
             Il nostro evento annuale più grande: un giorno intero di talk su AI, Web, Cloud e molto altro, dal 2018
-            (eravamo alla "edizione 0.1" 😄). L'anno scorso: <strong>500+ partecipanti</strong>,
-            <strong>30+ speaker</strong> da <strong>5+ nazioni</strong>.
+            (eravamo alla "edizione 0.1" 😄). Nel 2026, al MACC: <strong>circa 500 partecipanti</strong>,
+            <strong>34 sessioni</strong> e tutto esaurito.
           </p>
-          <span class="devfest__cta">Scopri DevFest Pisa 2026</span>
+          <p>Data, call for speaker e call for sponsor saranno pubblicate sul sito del DevFest.</p>
+          <span class="devfest__cta">Vai al sito del DevFest Pisa</span>
         </div>
       </a>
     </section>
@@ -247,12 +248,15 @@ const teamCols = Math.ceil(team.length / 2);
     align-items: center;
     padding: var(--space-6) var(--space-3);
   }
+  /* "Sticker" badge like the logo on links.gdgpisa.it. The hero is dark in both
+     themes, so border and shadow use fixed colors (same shadow as .hero__pill). */
   .hero__logo {
     background: white;
+    border: 3px solid #111;
     border-radius: var(--radius-pill);
     padding: var(--space-2);
     margin-bottom: var(--space-3);
-    box-shadow: var(--shadow-card-hover);
+    box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.4);
   }
   .hero__overline {
     margin: 0 0 var(--space-1);
@@ -295,6 +299,12 @@ const teamCols = Math.ceil(team.length / 2);
     background: transparent;
     border-color: white;
     color: white;
+  }
+  /* The ghost pill has white text on the dark hero: its icon chip needs a
+     translucent white badge instead of the default light tint. The icon is
+     rendered by the Icon component, hence :global(). */
+  .hero__pill--ghost > :global(.icon:first-child) {
+    background: rgba(255, 255, 255, 0.2);
   }
   .intro {
     display: flex;
@@ -354,6 +364,20 @@ const teamCols = Math.ceil(team.length / 2);
     border-radius: 24px;
     padding: var(--space-5) var(--space-4);
     margin: var(--space-6) 0;
+  }
+  /* --panel-color tints the icon chip of the sticker pills inside each section
+     (see global.css). Keep it in sync with the section background below. */
+  .next-event {
+    --panel-color: var(--color-google-blue);
+  }
+  .activities-section {
+    --panel-color: var(--color-google-yellow);
+  }
+  .team {
+    --panel-color: var(--color-google-green);
+  }
+  .follow {
+    --panel-color: var(--color-google-red);
   }
   .intro {
     background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
@@ -527,9 +551,5 @@ const teamCols = Math.ceil(team.length / 2);
     justify-content: center;
     gap: var(--space-4);
     margin-top: var(--space-4);
-  }
-  .follow__pill svg {
-    width: 22px;
-    height: 22px;
   }
 </style>

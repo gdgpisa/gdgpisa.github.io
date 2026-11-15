@@ -6,7 +6,7 @@ const MOCK_EVENT_RESPONSE = {
       title: 'Mock DevFest Talk',
       start_date: '2026-10-01T16:30:00Z',
       description_short: 'A mocked event, so this test never depends on the live community.dev API.',
-      cropped_banner_url: 'https://example.com/banner.jpg',
+      cropped_picture_url: 'https://example.com/picture.jpg',
       url: 'https://gdg.community.dev/events/details/mock/',
       event_type_title: 'Free registration',
     },

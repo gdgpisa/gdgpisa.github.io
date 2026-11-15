@@ -1,18 +1,27 @@
 ---
 import SocialLinks from './SocialLinks.astro';
+
+// Build-time year: correct right after a deploy. The site is only rebuilt on push, so the
+// script below refreshes it in the browser and the copyright never goes stale in January.
+const buildYear = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
   <div class="container site-footer__inner">
-    <p>GDG Pisa - Google Developer Group Pisa</p>
     <SocialLinks />
+    <p class="site-footer__credits">
+      Made with <span role="img" aria-label="love">❤️</span> by GDG Pisa · © GDG Pisa{' '}<span id="footer-year"
+        >{buildYear}</span
+      >
+    </p>
   </div>
+  {/* Decorative Google-colour stripe; same footer as links.gdgpisa.it. */}
+  <div class="site-footer__stripe" aria-hidden="true"></div>
 </footer>
 
 <style>
   .site-footer {
     background: var(--color-surface);
-    padding: var(--space-5) 0;
     margin-top: var(--space-6);
   }
   .site-footer__inner {
@@ -20,7 +29,32 @@ import SocialLinks from './SocialLinks.astro';
     flex-direction: column;
     align-items: center;
     gap: var(--space-3);
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-5);
     text-align: center;
     color: var(--color-text-muted);
   }
+  .site-footer__credits {
+    margin: 0;
+  }
+  /* Bands of increasing width: blue, green, yellow, red, blue, green. */
+  .site-footer__stripe {
+    height: 10px;
+    background: linear-gradient(
+      to right,
+      var(--color-google-blue) 0 5%,
+      var(--color-google-green) 5% 10%,
+      var(--color-google-yellow) 10% 20%,
+      var(--color-google-red) 20% 35%,
+      var(--color-google-blue) 35% 60%,
+      var(--color-google-green) 60% 100%
+    );
+  }
 </style>
+
+<script>
+  const yearElement = document.getElementById('footer-year');
+  if (yearElement) {
+    yearElement.textContent = String(new Date().getFullYear());
+  }
+</script>

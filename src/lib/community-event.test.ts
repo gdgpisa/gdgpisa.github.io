@@ -13,7 +13,7 @@ describe('fetchUpcomingEvent', () => {
           title: 'Tutto quello che avrei voluto sapere prima di fare un videogioco',
           start_date: '2026-10-01T16:30:00Z',
           description_short: 'Explore the basics of game development.',
-          cropped_banner_url: 'https://res.cloudinary.com/example/banner.jpg',
+          cropped_picture_url: 'https://res.cloudinary.com/example/picture.jpg',
           url: 'https://gdg.community.dev/events/details/example/',
           event_type_title: 'Free registration',
         },
@@ -30,7 +30,7 @@ describe('fetchUpcomingEvent', () => {
       title: apiResponse.results[0].title,
       startDate: apiResponse.results[0].start_date,
       descriptionShort: apiResponse.results[0].description_short,
-      bannerUrl: apiResponse.results[0].cropped_banner_url,
+      pictureUrl: apiResponse.results[0].cropped_picture_url,
       url: apiResponse.results[0].url,
       eventType: apiResponse.results[0].event_type_title,
     });

@@ -1,6 +1,7 @@
 ---
 import { fetchUpcomingEvent } from '../lib/community-event';
 import { formatDateTimeIt } from '../lib/dates';
+import Icon from './Icon.astro';
 
 // Build-time snapshot: works without JS, decent for no-flash first paint.
 // A client script re-fetches on load to keep the card genuinely live.
@@ -11,7 +12,9 @@ const event = await fetchUpcomingEvent();
   {
     event ? (
       <a class="upcoming-event__card" href={event.url} target="_blank" rel="noopener">
-        <img class="upcoming-event__banner" src={event.bannerUrl} alt="" loading="lazy" />
+        <div class="upcoming-event__picture-frame">
+          <img class="upcoming-event__picture" src={event.pictureUrl} alt="" width="500" height="500" loading="lazy" />
+        </div>
         <div class="upcoming-event__body">
           <p class="upcoming-event__eyebrow">Prossimo evento</p>
           <h3 class="upcoming-event__title">{event.title}</h3>
@@ -22,7 +25,8 @@ const event = await fetchUpcomingEvent();
       </a>
     ) : (
       <div class="upcoming-event__fallback">
-        <p>Nessun evento in programma al momento.</p>
+        <p class="upcoming-event__fallback-title">Coming soon</p>
+        <p>Stiamo preparando il prossimo evento.</p>
         <a href="https://gdg.community.dev/gdg-pisa/" target="_blank" rel="noopener">
           Segui GDG Pisa su community.dev
         </a>
@@ -31,7 +35,31 @@ const event = await fetchUpcomingEvent();
   }
 </section>
 
-<style>
+{/*
+  Button to the event page, below the card. It lives outside #upcoming-event because
+  the client script replaces that section's content; the script only updates this
+  link's href and reveals it. Hidden while there is no event to point at.
+*/}
+<p class="upcoming-event__actions">
+  <a
+    class="sticker-pill"
+    id="upcoming-event-button"
+    href={event?.url}
+    target="_blank"
+    rel="noopener"
+    hidden={!event}
+  >
+    <Icon name="calendar" />Prossimo evento
+  </a>
+</p>
+
+<!--
+  is:global on purpose: the client script below rebuilds the card with innerHTML, and
+  markup created that way does not get Astro's scoped-style attribute, so scoped rules
+  would not match it (the refreshed card showed up unstyled). The class names are all
+  prefixed with "upcoming-event", so there is no risk of clashing with other components.
+-->
+<style is:global>
   .upcoming-event {
     margin-top: var(--space-4);
   }
@@ -52,10 +80,33 @@ const event = await fetchUpcomingEvent();
     transform: translate(-2px, -2px);
     box-shadow: 8px 8px 0 0 var(--color-text);
   }
-  .upcoming-event__banner {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+  /* The API picture is square and contains the event title: show it whole, never
+     cropped (same picture used on links.gdgpisa.it). Stacked above the text on
+     mobile, side by side from tablet width up (see the media query below). */
+  /* The pictures made for GDG Community already contain a black frame with a hard
+     shadow (about 4px on the top/left and 22px on the bottom/right of the 1000px
+     image). Inside our own rounded card that frame would be doubled and cut at the
+     corners, so the picture is enlarged and shifted inside this frame to hide it.
+     Values are in pixels of the source image; a picture without that frame only
+     loses a thin strip at the edges. links.gdgpisa.it does the same in its
+     style.css: keep the numbers in sync. */
+  .upcoming-event__picture-frame {
+    --source-size: 1000;
+    --crop-top-left: 5;
+    --crop-bottom-right: 23;
+    --visible-size: calc(var(--source-size) - var(--crop-top-left) - var(--crop-bottom-right));
+
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+  .upcoming-event__picture {
+    display: block;
+    width: calc(100% * var(--source-size) / var(--visible-size));
+    max-width: none;
+    height: auto;
+    /* Percentages in margins refer to the frame width, also for the top margin. */
+    margin-top: calc(-100% * var(--crop-top-left) / var(--visible-size));
+    margin-left: calc(-100% * var(--crop-top-left) / var(--visible-size));
   }
   .upcoming-event__body {
     padding: var(--space-4);
@@ -110,6 +161,35 @@ const event = await fetchUpcomingEvent();
     background: var(--color-primary-dark);
     color: white;
   }
+  .upcoming-event__actions {
+    margin: var(--space-4) 0 0;
+    text-align: center;
+  }
+  /* The global .sticker-pill sets display, which would override the hidden attribute. */
+  .upcoming-event__actions [hidden] {
+    display: none;
+  }
+  @media (min-width: 720px) {
+    .upcoming-event__card {
+      display: grid;
+      grid-template-columns: minmax(0, 360px) 1fr;
+    }
+    /* Divider on the body, not on the picture frame: a border there would make
+       the frame non-square and throw the crop off. */
+    .upcoming-event__body {
+      border-left: 3px solid var(--color-text);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+  .upcoming-event__fallback-title {
+    margin: 0 0 var(--space-1);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
   .upcoming-event__fallback {
     padding: var(--space-4);
     text-align: center;
@@ -131,7 +211,9 @@ const event = await fetchUpcomingEvent();
 
     section.innerHTML = `
       <a class="upcoming-event__card" href="${event.url}" target="_blank" rel="noopener">
-        <img class="upcoming-event__banner" src="${event.bannerUrl}" alt="" loading="lazy" />
+        <div class="upcoming-event__picture-frame">
+          <img class="upcoming-event__picture" src="${event.pictureUrl}" alt="" width="500" height="500" loading="lazy" />
+        </div>
         <div class="upcoming-event__body">
           <p class="upcoming-event__eyebrow">Prossimo evento</p>
           <h3 class="upcoming-event__title"></h3>
@@ -145,6 +227,12 @@ const event = await fetchUpcomingEvent();
     // interpreting the remote title/description as markup.
     section.querySelector('.upcoming-event__title')!.textContent = event.title;
     section.querySelector('.upcoming-event__desc')!.textContent = event.descriptionShort;
+
+    const button = document.getElementById('upcoming-event-button') as HTMLAnchorElement | null;
+    if (button) {
+      button.href = event.url;
+      button.hidden = false;
+    }
   }
 
   refresh();
