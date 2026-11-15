@@ -4,6 +4,18 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+### 🔗 Aligned with links.gdgpisa.it
+- 🦶 New footer: "Made with ❤️ by GDG Pisa · © GDG Pisa <year>" (year always current) and a Google-colour stripe, same as on `links.gdgpisa.it`
+- 🔘 Social icons are now round "sticker" buttons (thick border + hard shadow), like the social bar on the links page; the hero logo badge got the same treatment
+- 🟡 Sticker pill buttons: the leading icon now sits in a round chip tinted with the colour of its section, same principle as the link buttons on the links page
+- 📬 Social list: added **Email** and **Telegram**, removed **Meetup**; same order as the links page
+- 🎪 DevFest section: 2026 edition replaced by a "Coming soon" card for **DevFest Pisa 2027**, pointing at `devfest.gdgpisa.it` (speaker/sponsor info will live there); stats updated with the 2026 numbers from the sponsor deck
+- 🗓️ "Prossimo evento" button under the event card, linking straight to the event page
+- 🖼️ Event card now uses the square event picture, shown whole (the wide banner was being cropped and cut the title); picture beside the text on wide screens
+- ✂️ The black frame baked into the event pictures is cropped away, so it no longer doubles up with the card border or gets cut at the rounded corners
+- 🐛 Fixed the event card losing its styling after the client-side refresh (the rebuilt markup did not match the scoped CSS)
+- 📅 With no event scheduled, the "prossimo evento" box now says "Coming soon"
+
 ### 🧹 Cleanup after launch
 - 🛑 `public/sw.js` kill switch: retires the Workbox service worker the old Jekyll site registered, so returning visitors stop getting the cached old site
 - ✂️ Removed the `/gassistant` redirect: it pointed at a Google Assistant Action, and Google shut Conversational Actions down in June 2023, so the target 404s

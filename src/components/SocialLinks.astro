@@ -16,16 +16,33 @@ import BrandIcon from './BrandIcon.astro';
 <style>
   .social-links {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var(--space-3);
   }
+  /* Round "sticker" buttons, same look as the social bar on links.gdgpisa.it. */
   .social-links__item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    border: 3px solid var(--color-text);
     border-radius: var(--radius-pill);
-    background: var(--color-surface);
+    background: var(--color-bg);
     color: var(--color-text);
+    box-shadow: 3px 3px 0 0 var(--color-text);
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  .social-links__item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 0 var(--color-text);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .social-links__item {
+      transition: none;
+    }
   }
 </style>
